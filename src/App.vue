@@ -28,6 +28,18 @@ export default {
   margin: 0;
 }
 
+body::-webkit-scrollbar {
+  width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+  background: #6de0ec;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #007bff;
+}
+
 .container {
   width: 100%;
   padding-right: 15px;

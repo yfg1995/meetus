@@ -251,12 +251,10 @@ section {
   top: 50%;
   left: 0;
   transform: translateY(-50%);
+  fill: #007bff;
 }
 .member__contact li a:hover {
   color: #007bff;
-}
-.member__contact li a:hover svg {
-  fill: #007bff;
 }
 .member__links {
   margin-top: 40px;
