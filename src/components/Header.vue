@@ -58,6 +58,10 @@ li {
   margin: 0 20px;
 }
 
+ul li:last-of-type {
+  margin-right: 0;
+}
+
 ul li a {
   position: relative;
   padding: 0 0 10px;
