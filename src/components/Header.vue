@@ -1,5 +1,5 @@
 <template>
-  <header>
+  <header id="header">
     <div class="container">
       <div class="header flex">
         <div class="logo">
@@ -28,18 +28,51 @@
 </template>
 
 <script>
-export default {};
+import { onMounted } from "vue";
+
+export default {
+  setup() {
+    onMounted(() => {
+      window.onscroll = () => {
+        scrollFunction();
+      };
+
+      function scrollFunction() {
+        if (
+          document.body.scrollTop > 120 ||
+          document.documentElement.scrollTop > 120
+        ) {
+          document.getElementById("header").className = "headerScroll";
+        } else {
+          document.getElementById("header").className = "";
+        }
+      }
+    });
+
+    return {};
+  },
+};
 </script>
 
 <style scoped>
 header {
   background: linear-gradient(to right, #007bff, #6de0ec);
+  transition: background 0.4s, all 0.4s linear;
+  min-height: 120px;
+  align-items: center;
+  display: flex;
 }
-
+.headerScroll {
+  background: #000;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 99;
+  min-height: 100px;
+}
 .header {
   justify-content: space-between;
   align-items: center;
-  min-height: 120px;
 }
 
 a {

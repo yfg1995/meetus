@@ -40,7 +40,7 @@
           <div class="contact__form flex">
             <div class="contact__form--input">
               <input type="text" placeholder="Enter your name" />
-              <input type="text" placeholder="Enter email address" />
+              <input type="email" placeholder="Enter email address" />
               <input type="text" placeholder="Enter subject" />
             </div>
 
