@@ -46,7 +46,7 @@ export default {
             const time = value / speed;
             if (data < value) {
               counter.innerText = Math.ceil(data + time);
-              setTimeout(animate, 70);
+              setTimeout(animate, 100);
             } else {
               counter.innerText = value;
             }

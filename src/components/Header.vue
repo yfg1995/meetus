@@ -29,18 +29,22 @@
 
 <script>
 import { onMounted } from "vue";
+import { useRoute } from "vue-router";
 
 export default {
   setup() {
+    const route = useRoute();
+
     onMounted(() => {
-      window.onscroll = () => {
+      window.onscroll = function () {
         scrollFunction();
       };
 
       function scrollFunction() {
         if (
-          document.body.scrollTop > 120 ||
-          document.documentElement.scrollTop > 120
+          (document.body.scrollTop > 300 ||
+            document.documentElement.scrollTop > 120) &&
+          route.name != "contact"
         ) {
           document.getElementById("header").className = "headerScroll";
         } else {
@@ -49,18 +53,20 @@ export default {
       }
     });
 
-    return {};
+    return {
+      route,
+    };
   },
 };
 </script>
 
 <style scoped>
 header {
-  background: linear-gradient(to right, #007bff, #6de0ec);
-  transition: background 0.4s, all 0.4s linear;
-  min-height: 120px;
-  align-items: center;
   display: flex;
+  align-items: center;
+  background: linear-gradient(to right, #007bff, #6de0ec);
+  transition: background 0.5s, all 0.5s ease-in-out;
+  min-height: 120px;
 }
 .headerScroll {
   background: #000;
@@ -68,7 +74,7 @@ header {
   top: 0;
   width: 100%;
   z-index: 99;
-  min-height: 100px;
+  min-height: 80px;
 }
 .header {
   justify-content: space-between;
@@ -98,6 +104,7 @@ ul li:last-of-type {
 ul li a {
   position: relative;
   padding: 0 0 10px;
+  font-size: 0.875rem;
 }
 
 ul li a:before {

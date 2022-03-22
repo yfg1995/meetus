@@ -154,7 +154,8 @@ input {
 .footer__links li a {
   transition: all 300ms linear 0s;
 }
-.footer__links svg:hover {
+.footer__links svg:hover,
+.footer__links li a:hover svg {
   fill: #007bff;
 }
 </style>

@@ -1,8 +1,6 @@
 <template>
   <Header />
-  <div class="router-view">
-    <router-view></router-view>
-  </div>
+  <router-view></router-view>
   <Testimonials v-if="$route.name != 'contact'" />
   <Footer />
 </template>
@@ -40,10 +38,6 @@ body::-webkit-scrollbar-track {
 
 body::-webkit-scrollbar-thumb {
   background: #007bff;
-}
-
-.router-view {
-  margin-top: 120px;
 }
 
 .container {
