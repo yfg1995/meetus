@@ -73,7 +73,7 @@ export default {};
   position: absolute;
   top: 5px;
   left: 0;
-  fill: #007bff;
+  fill: var(--clr-primary);
   width: 20px;
   height: 25px;
 }
@@ -102,7 +102,7 @@ export default {};
 }
 .contact__form input:focus,
 .contact__form textarea:focus {
-  border-color: #007bff;
+  border-color: var(--clr-primary);
 }
 .contact__form input:not(:last-of-type) {
   margin-bottom: 10px;
@@ -120,13 +120,13 @@ export default {};
 }
 .submit-btn {
   max-width: 200px;
-  background: #007bff;
+  background: var(--clr-primary);
   padding: 0px 50px;
   color: #fff;
   font-size: 0.875rem;
   line-height: 50px;
   border-radius: 5px;
-  border: 1px solid #007bff;
+  border: 1px solid var(--clr-primary);
   cursor: pointer;
   transition: all 300ms linear 0s;
   margin-top: 20px;
@@ -134,6 +134,6 @@ export default {};
 }
 .submit-btn:hover {
   background: transparent;
-  color: #007bff;
+  color: var(--clr-primary);
 }
 </style>

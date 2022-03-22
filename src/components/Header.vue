@@ -64,12 +64,16 @@ export default {
 header {
   display: flex;
   align-items: center;
-  background: linear-gradient(to right, #007bff, #6de0ec);
+  background: linear-gradient(
+    to right,
+    var(--clr-primary),
+    var(--clr-secondary)
+  );
   transition: background 0.5s, all 0.5s ease-in-out;
   min-height: 120px;
 }
 .headerScroll {
-  background: #000;
+  background: #111;
   position: fixed;
   top: 0;
   width: 100%;
@@ -113,7 +117,7 @@ ul li a:before {
   bottom: 0;
   left: 0;
   width: 0%;
-  background: #007bff;
+  background: var(--clr-primary);
   height: 2px;
   transition: all 0.2s ease-in-out;
 }

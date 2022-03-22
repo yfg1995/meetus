@@ -75,7 +75,12 @@ export default {
   background: #e8e8e8;
 }
 .member__skill_progress-bar {
-  background: linear-gradient(to right, #766dff 0%, #88f3ff);
+  background: linear-gradient(
+    to left,
+    var(--clr-primary),
+    var(--clr-secondary)
+  );
+
   transition: width 1.5s ease-in-out;
   height: 10px;
   border-radius: 5px;

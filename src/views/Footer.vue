@@ -143,10 +143,17 @@ input {
   width: 42px;
   height: 42px;
   cursor: pointer;
-  background: #007bff;
+  background: var(--clr-primary);
+}
+.footer__newsletter--btn svg {
+  fill: #fff;
 }
 .footer__newsletter--btn:hover {
-  background: linear-gradient(to right, #007bff, #6de0ec);
+  background: linear-gradient(
+    to right,
+    var(--clr-primary),
+    var(--clr-secondary)
+  );
 }
 .footer__links li:not(:last-of-type) {
   margin-right: 15px;
@@ -156,6 +163,6 @@ input {
 }
 .footer__links svg:hover,
 .footer__links li a:hover svg {
-  fill: #007bff;
+  fill: var(--clr-primary);
 }
 </style>

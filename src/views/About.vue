@@ -190,7 +190,7 @@ section {
   padding-bottom: 0;
 }
 .about:not(:last-of-type) {
-  border-bottom: 2px solid #007bff;
+  border-bottom: 2px solid var(--clr-primary);
 }
 .member__card {
   align-items: center;
@@ -215,7 +215,11 @@ section {
   border-radius: 12px 12px 0 0;
   max-width: 40%;
   width: 100%;
-  background: linear-gradient(to bottom, #007bff, #6de0ec);
+  background: linear-gradient(
+    to bottom,
+    var(--clr-primary),
+    var(--clr-secondary)
+  );
   padding-bottom: 40%;
 }
 .member__img {
@@ -251,10 +255,10 @@ section {
   top: 50%;
   left: 0;
   transform: translateY(-50%);
-  fill: #007bff;
+  fill: var(--clr-primary);
 }
 .member__contact li a:hover {
-  color: #007bff;
+  color: var(--clr-primary);
 }
 .member__links {
   margin-top: 40px;
@@ -279,7 +283,11 @@ section {
   border-radius: 6px;
 }
 .member__links li a:hover {
-  background: linear-gradient(to right, #007bff, #6de0ec);
+  background: linear-gradient(
+    to right,
+    var(--clr-primary),
+    var(--clr-secondary)
+  );
 }
 .member__about {
   max-width: 500px;
@@ -315,7 +323,7 @@ section {
 .member__about--item svg {
   width: 30px;
   height: 30px;
-  fill: #007bff;
+  fill: var(--clr-primary);
 }
 .member__card h3 {
   margin-bottom: 15px;

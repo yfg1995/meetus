@@ -105,7 +105,7 @@ export default {
   flex-direction: column;
 }
 .swiper .testimonial-card {
-  border: 1px solid #eeeeee;
+  border: 1px solid #eee;
   border-radius: 10px;
   background: #fff;
   padding: 40px 28px;
