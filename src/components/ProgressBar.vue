@@ -21,12 +21,10 @@ export default {
   props: {
     skills: Array,
   },
-  setup(props) {
+  setup() {
     const members = computed(() => {
       return store.getters["members/members"];
     });
-
-    console.log(props.skills);
 
     onMounted(() => {
       const bars = document.querySelectorAll(".member__skill_progress-bar");

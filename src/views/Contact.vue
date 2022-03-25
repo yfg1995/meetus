@@ -1,5 +1,5 @@
 <template>
-  <section class="p_120 section-box-shadow">
+  <section class="p_120">
     <div class="container">
       <div class="contact__rows flex">
         <div class="contact__info">
@@ -37,7 +37,7 @@
         </div>
 
         <form>
-          <div class="contact__form flex">
+          <div class="contact__form flex justify-between">
             <div class="contact__form--input">
               <input type="text" placeholder="Enter your name" />
               <input type="email" placeholder="Enter email address" />
@@ -83,9 +83,6 @@ export default {};
 .contact__info--item h6 {
   font-size: 1rem;
   font-weight: bold;
-}
-.contact__form {
-  justify-content: space-between;
 }
 .contact__form input,
 .contact__form textarea {

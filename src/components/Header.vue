@@ -1,7 +1,7 @@
 <template>
   <header id="header">
     <div class="container">
-      <div class="header flex">
+      <div class="header flex justify-between align-center">
         <div class="logo">
           <router-link to="/">
             <h1 class="bold">meetus</h1>
@@ -17,6 +17,9 @@
           </li>
           <li>
             <router-link to="/services">services</router-link>
+          </li>
+          <li>
+            <router-link to="/portfolio">portfolio</router-link>
           </li>
           <li>
             <router-link to="/contact">contact</router-link>
@@ -69,7 +72,6 @@ header {
     var(--clr-primary),
     var(--clr-secondary)
   );
-  transition: background 0.5s, all 0.5s ease-in-out;
   min-height: 120px;
 }
 .headerScroll {
@@ -79,10 +81,10 @@ header {
   width: 100%;
   z-index: 99;
   min-height: 80px;
+  transition: background 0.5s, all 0.5s ease-in-out;
 }
-.header {
-  justify-content: space-between;
-  align-items: center;
+.headerScroll ul li a:before {
+  background: var(--clr-secondary);
 }
 
 a {
@@ -107,14 +109,14 @@ ul li:last-of-type {
 
 ul li a {
   position: relative;
-  padding: 0 0 10px;
+  padding: 5px 0 0;
   font-size: 0.875rem;
 }
 
 ul li a:before {
   position: absolute;
   content: "";
-  bottom: 0;
+  top: 0;
   left: 0;
   width: 0%;
   background: var(--clr-primary);

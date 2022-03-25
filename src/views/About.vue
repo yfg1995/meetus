@@ -97,7 +97,7 @@
         </div>
         <!-- member card -->
 
-        <div class="member__info flex">
+        <div class="member__info flex justify-between align-center">
           <div class="member__about">
             <h3 class="bold">about myself</h3>
             <p>
@@ -108,7 +108,7 @@
               laughed.
             </p>
 
-            <div class="member__about--items flex">
+            <div class="member__about--items flex justify-between align-center">
               <div class="member__about--item">
                 <svg viewBox="0 0 448 512">
                   <path
@@ -158,7 +158,7 @@
 <script>
 import { computed } from "vue";
 import store from "@/store/index.js";
-import ProgressBar from "../components/ProgressBar.vue";
+import ProgressBar from "@/components/ProgressBar.vue";
 
 export default {
   components: {
@@ -196,7 +196,7 @@ section {
   align-items: center;
   justify-content: space-between;
   border-bottom: 2px solid #eee;
-  padding-bottom: 120px;
+  padding-bottom: 150px;
 }
 .member__card h3,
 .member__card h4,
@@ -290,18 +290,13 @@ section {
   );
 }
 .member__about {
-  max-width: 500px;
+  max-width: 45%;
 }
 .member__about h3 {
   font-size: 2.25rem;
 }
 .member__about p {
   margin-bottom: 40px;
-}
-.member__about--items {
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
 }
 .member__about--item {
   border: 1px solid #eee;
@@ -338,17 +333,14 @@ section {
 .member__card p {
   max-width: 550px;
 }
-/* -------------------------------------------- */
 .member__info {
   padding-top: 120px;
-  justify-content: space-between;
-  align-items: center;
 }
 .member__info h3 {
   margin-bottom: 15px;
 }
 .member__skill_main {
-  max-width: 50%;
+  max-width: 47%;
   width: 100%;
 }
 </style>

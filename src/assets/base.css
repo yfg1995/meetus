@@ -119,9 +119,15 @@ p {
   color: #777;
 }
 
+h2,
 h3,
 h4,
-h6,
+h5,
+h6 {
+  color: #222;
+  cursor: default;
+}
+
 p {
   cursor: default;
 }
@@ -132,12 +138,23 @@ a {
 
 a,
 svg {
-  transition: all 0.2s ease-in-out;
+  transition: all 0.25s ease-in-out;
 }
 
 /* HELPERS */
 .flex {
   display: flex;
+}
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.align-center {
+  align-items: center;
 }
 
 .uppercase {
@@ -153,21 +170,20 @@ svg {
 }
 
 .section-box-shadow {
-  box-shadow: inset 0px 200px 70px 0px rgba(238, 238, 238, 0.7);
+  box-shadow: inset 0px 100px 70px 0px rgba(238, 238, 238);
 }
 
 /* MAIN TITLE */
 .main_title {
-  text-align: center;
+  max-width: 670px;
+  margin: -10px auto 75px;
+
   margin-bottom: 75px;
+  text-align: center;
 }
 .main_title h2 {
-  font-size: 3rem;
-}
-.main_title p {
-  max-width: 670px;
-  display: flex;
-  margin: auto;
+  font-size: 2.25rem;
+  margin-bottom: 5px;
 }
 
 /* MEDIA QUERY */

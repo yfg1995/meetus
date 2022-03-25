@@ -110,7 +110,6 @@ section {
   text-transform: uppercase;
   font-size: 1.313rem;
   margin-bottom: 20px;
-  color: #222;
 }
 .services_cards__item:hover {
   background: #fff;

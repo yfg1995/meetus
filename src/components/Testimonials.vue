@@ -1,5 +1,5 @@
 <template>
-  <section class="testimonials flex p_120">
+  <section class="testimonials p_120">
     <div class="container">
       <div class="main_title">
         <h2 class="bold uppercase">testimonials</h2>

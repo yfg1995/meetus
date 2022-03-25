@@ -85,7 +85,7 @@ export default {};
   background: #000;
 }
 .footer svg {
-  fill: #ccc;
+  fill: #fff;
   width: 18px;
   height: 18px;
 }
@@ -157,9 +157,6 @@ input {
 }
 .footer__links li:not(:last-of-type) {
   margin-right: 15px;
-}
-.footer__links li a {
-  transition: all 300ms linear 0s;
 }
 .footer__links svg:hover,
 .footer__links li a:hover svg {
