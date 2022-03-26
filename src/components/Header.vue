@@ -45,9 +45,9 @@ export default {
 
       function scrollFunction() {
         if (
-          (document.body.scrollTop > 300 ||
-            document.documentElement.scrollTop > 120) &&
-          route.name != "contact"
+          route.name != "contact" &&
+          (document.body.scrollTop > 120 ||
+            document.documentElement.scrollTop > 120)
         ) {
           document.getElementById("header").className = "headerScroll";
         } else {
@@ -81,7 +81,7 @@ header {
   width: 100%;
   z-index: 99;
   min-height: 80px;
-  transition: background 0.5s, all 0.5s ease-in-out;
+  transition: background 0.4s, all 0.5s ease-in-out;
 }
 .headerScroll ul li a:before {
   background: var(--clr-secondary);

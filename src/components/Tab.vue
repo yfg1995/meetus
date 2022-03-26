@@ -1,6 +1,6 @@
 <template>
   <div class="tab-content" v-show="title == selectedTitle">
-    <slot />
+    <div>hhh</div>
   </div>
 </template>
 

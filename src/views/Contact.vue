@@ -61,6 +61,9 @@ export default {};
 </script>
 
 <style scoped>
+section:first-of-type {
+  box-shadow: none;
+}
 .contact__info {
   max-width: 300px;
   width: 100%;

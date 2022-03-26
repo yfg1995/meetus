@@ -1,5 +1,5 @@
 <template>
-  <section class="p_120 section-box-shadow">
+  <section class="p_120">
     <div class="container">
       <div class="main_title">
         <h2 class="bold uppercase">our latest featured projects</h2>
@@ -7,11 +7,11 @@
       </div>
 
       <TabsWrapper>
-        <Tab title="all">all</Tab>
-        <Tab title="vector">1</Tab>
-        <Tab title="raster">2</Tab>
-        <Tab title="ui/ux">3</Tab>
-        <Tab title="printing">4</Tab>
+        <Tab title="all" />
+        <Tab title="vector" />
+        <Tab title="raster" />
+        <Tab title="ui/ux" />
+        <Tab title="printing" />
       </TabsWrapper>
     </div>
   </section>

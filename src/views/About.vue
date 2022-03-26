@@ -1,5 +1,5 @@
 <template lang="">
-  <section class="p_120 section-box-shadow">
+  <section class="p_120">
     <div class="container">
       <div class="about" v-for="(member, index) in members" :key="index">
         <div class="member__card flex">

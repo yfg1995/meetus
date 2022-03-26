@@ -15,3 +15,9 @@ export default {
 };
 </script>
 
+<style scoped>
+section:first-of-type {
+  box-shadow: none;
+}
+</style>
+

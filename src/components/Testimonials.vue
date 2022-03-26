@@ -12,7 +12,6 @@
 
       <div class="swiper">
         <swiper
-          :grabCursor="true"
           :slides-per-view="3"
           :spaceBetween="30"
           :allow-touch-move="true"
@@ -77,10 +76,10 @@
 </template>
 
 <script>
-import SwiperCore, { Autoplay } from "swiper/core";
-import { Swiper, SwiperSlide } from "swiper/vue";
 import "swiper/css";
 import Rating from "./UI-helpers/Rating.vue";
+import SwiperCore, { Autoplay } from "swiper/core";
+import { Swiper, SwiperSlide } from "swiper/vue";
 
 SwiperCore.use([Autoplay]);
 
@@ -104,7 +103,10 @@ export default {
   align-items: center;
   flex-direction: column;
 }
-.swiper .testimonial-card {
+.swiper-slide * {
+  cursor: grab;
+}
+.testimonial-card {
   border: 1px solid #eee;
   border-radius: 10px;
   background: #fff;

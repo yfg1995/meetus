@@ -102,7 +102,7 @@ input {
 }
 .footer__about,
 .footer__newsletter {
-  max-width: 490px;
+  max-width: 450px;
   width: 100%;
 }
 .footer__about {
