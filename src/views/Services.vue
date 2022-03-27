@@ -110,9 +110,13 @@ section {
   text-transform: uppercase;
   font-size: 1.313rem;
   margin-bottom: 20px;
+  transition: 300ms;
 }
 .services_cards__item:hover {
   background: #fff;
   box-shadow: 0px 10px 30px 0px rgb(0 0 0 / 8%);
+}
+.services_cards__item:hover h4 {
+  color: var(--clr-primary);
 }
 </style>

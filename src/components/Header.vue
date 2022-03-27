@@ -67,12 +67,12 @@ export default {
 header {
   display: flex;
   align-items: center;
+  min-height: 120px;
   background: linear-gradient(
     to right,
     var(--clr-primary),
     var(--clr-secondary)
   );
-  min-height: 120px;
 }
 .headerScroll {
   background: #111;
@@ -80,11 +80,19 @@ header {
   top: 0;
   width: 100%;
   z-index: 99;
-  min-height: 80px;
-  transition: background 0.4s, all 0.5s ease-in-out;
+  min-height: 70px;
+  transition: background 0.3s, all 0.4s ease-in-out;
 }
-.headerScroll ul li a:before {
+.headerScroll ul li a:before,
+.headerScroll ul li a:after {
   background: var(--clr-secondary);
+}
+.headerScroll h1 {
+  font-size: 1.625rem;
+}
+
+h1 {
+  font-size: 1.75rem;
 }
 
 a {
@@ -109,26 +117,33 @@ ul li:last-of-type {
 
 ul li a {
   position: relative;
-  padding: 5px 0 0;
+  padding: 5px 0;
   font-size: 0.875rem;
 }
 
-ul li a:before {
+ul li a:before,
+ul li a:after {
   position: absolute;
   content: "";
-  top: 0;
-  left: 0;
   width: 0%;
   background: var(--clr-primary);
   height: 2px;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.25s ease-in-out;
 }
 
-ul li a:hover:before {
+ul li a:before {
+  top: 0;
+  left: 0;
+}
+
+ul li a:after {
+  bottom: 0;
+  right: 0;
+}
+
+ul li a:hover:before,
+ul li a:hover:after,
+ul li a.router-link-active:before {
   width: 100%;
-}
-
-img {
-  object-fit: contain;
 }
 </style>

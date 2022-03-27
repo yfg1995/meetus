@@ -140,8 +140,8 @@ input {
   top: 50%;
   right: 20%;
   transform: translateY(-50%);
-  width: 42px;
-  height: 42px;
+  width: 44px;
+  height: 44px;
   cursor: pointer;
   background: var(--clr-primary);
 }

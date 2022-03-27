@@ -44,7 +44,7 @@
                 >
               </li>
               <li>
-                <a href="#">
+                <a :href="`mailto:${member.mail}`" target="_blank" class="member-mail" >
                   <svg viewBox="0 0 512 512">
                     <path
                       d="M256 352c-16.53 0-33.06-5.422-47.16-16.41L0 173.2V400C0 426.5 21.49 448 48 448h416c26.51 0 48-21.49 48-48V173.2l-208.8 162.5C289.1 346.6 272.5 352 256 352zM16.29 145.3l212.2 165.1c16.19 12.6 38.87 12.6 55.06 0l212.2-165.1C505.1 137.3 512 125 512 112C512 85.49 490.5 64 464 64h-416C21.49 64 0 85.49 0 112C0 125 6.01 137.3 16.29 145.3z"
@@ -104,7 +104,7 @@
               Inappropriate behavior is often laughed off as “boys will be
               boys,” women face higher conduct standards especially in the
               workplace. That's why it's crucial that, as women, our behavior on
-              the job is beyond reproach. inappropriate behavior is often
+              the job is beyond reproach. Inappropriate behavior is often
               laughed.
             </p>
 
@@ -249,6 +249,7 @@ section {
   padding-left: 30px;
   color: #777;
   font-size: 1rem;
+  cursor: default;
 }
 .member__contact svg {
   position: absolute;
@@ -257,8 +258,9 @@ section {
   transform: translateY(-50%);
   fill: var(--clr-primary);
 }
-.member__contact li a:hover {
+.member__contact .member-mail:hover {
   color: var(--clr-primary);
+  cursor: pointer;
 }
 .member__links {
   margin-top: 40px;
@@ -266,7 +268,7 @@ section {
 .member__links li {
   width: 40px;
   height: 40px;
-  transition: all 0.3s ease-in-out;
+  transition: all 300ms;
 }
 .member__links li:not(:last-of-type) {
   margin-right: 20px;
@@ -290,7 +292,7 @@ section {
   );
 }
 .member__about {
-  max-width: 45%;
+  max-width: 47%;
 }
 .member__about h3 {
   font-size: 2.25rem;
@@ -302,15 +304,12 @@ section {
   border: 1px solid #eee;
   padding: 20px;
   border-radius: 6px;
-  width: 30%;
-}
-.member__about--item:not(:last-of-type) {
-  margin-right: 20px;
+  width: calc((100% - 40px) / 3);
 }
 .member__about--item h4 {
   font-weight: bold;
   font-size: 1.5rem;
-  margin: 20px 0 5px;
+  margin: 15px 0 5px;
 }
 .member__about--item p {
   margin-bottom: 0;

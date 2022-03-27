@@ -5,6 +5,7 @@
         v-for="title in tabTitles"
         :key="title"
         @click="selectedTitle = title"
+        :class="{ active: selectedTitle == title ? true : false }"
       >
         {{ title }}
       </li>
@@ -43,6 +44,7 @@ export default {
 .tabs__header li:hover {
   color: var(--clr-primary);
 }
+/* HELPERS */
 .active {
   color: var(--clr-primary);
 }

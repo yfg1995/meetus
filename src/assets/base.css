@@ -67,6 +67,7 @@ body::-webkit-scrollbar-thumb {
 
 ::selection {
   background: var(--clr-primary);
+  color: #000;
 }
 
 *,
@@ -145,6 +146,10 @@ svg {
   transition: all 0.25s ease-in-out;
 }
 
+body section:first-of-type {
+  box-shadow: inset 0px 80px 70px 0px rgba(238, 238, 238);
+}
+
 /* HELPERS */
 .flex {
   display: flex;
@@ -171,10 +176,6 @@ svg {
 
 .p_120 {
   padding: 120px 0;
-}
-
-body section:first-of-type {
-  box-shadow: inset 0px 80px 70px 0px rgba(238, 238, 238);
 }
 
 /* MAIN TITLE */
