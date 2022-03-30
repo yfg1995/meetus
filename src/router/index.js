@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHistory } from 'vue-router';
 import Home from '../views/Home.vue';
 
 const router = createRouter({
@@ -22,14 +22,22 @@ const router = createRouter({
     {
       path: '/portfolio',
       name: 'portfolio',
-      component: () => import('../views/Portfolio.vue')
+      component: () => import('../views/pages/Portfolio.vue')
+    },
+    {
+      path: '/elements',
+      name: 'elements',
+      component: () => import('../views/pages/Elements.vue')
     },
     {
       path: '/contact',
       name: 'contact',
       component: () => import('../views/Contact.vue')
     },
-  ]
-})
+  ],
+  scrollBehavior() {
+    return { top: 0 }
+  },
+});
 
-export default router
+export default router;

@@ -5,7 +5,7 @@
 
 <script>
 import Services from "@/views/Services.vue";
-import Portfolio from "@/views/Portfolio.vue";
+import Portfolio from "@/views/pages/Portfolio.vue";
 
 export default {
   components: {

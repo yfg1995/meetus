@@ -18,8 +18,22 @@
           <li>
             <router-link to="/services">services</router-link>
           </li>
-          <li>
-            <router-link to="/portfolio">portfolio</router-link>
+
+          <li class="dropdown-toggle">
+            <a @mouseenter="toggleClass" @mouseleave="toggleClass" href=""
+              >pages</a
+            >
+            <ul
+              class="dropdown-menu"
+              :class="{ active: isActive ? true : false }"
+            >
+              <li>
+                <router-link to="/portfolio">portfolio</router-link>
+              </li>
+              <li>
+                <router-link to="/elements">elements</router-link>
+              </li>
+            </ul>
           </li>
           <li>
             <router-link to="/contact">contact</router-link>
@@ -31,17 +45,34 @@
 </template>
 
 <script>
-import { onMounted } from "vue";
+import { ref, onMounted } from "vue";
 import { useRoute } from "vue-router";
 
 export default {
   setup() {
     const route = useRoute();
+    const isActive = ref(false);
+
+    function toggleClass() {
+      isActive.value = !isActive.value;
+    }
 
     onMounted(() => {
       window.onscroll = function () {
         scrollFunction();
       };
+
+      document.addEventListener("mouseover", (e) => {
+        if (
+          (e.target.closest(".dropdown-toggle") &&
+            e.relatedTarget.closest(".dropdown-toggle")) ||
+          (e.target.closest(".dropdown-menu") &&
+            e.relatedTarget.closest(".dropdown-menu"))
+        ) {
+          isActive.value = !isActive.value;
+        }
+        e.preventDefault();
+      });
 
       function scrollFunction() {
         if (
@@ -58,6 +89,8 @@ export default {
 
     return {
       route,
+      toggleClass,
+      isActive,
     };
   },
 };
@@ -81,7 +114,7 @@ header {
   width: 100%;
   z-index: 99;
   min-height: 70px;
-  transition: background 0.3s, all 0.4s ease-in-out;
+  transition: background 0.4s, all 0.5s ease-in-out;
 }
 .headerScroll ul li a:before,
 .headerScroll ul li a:after {
@@ -90,15 +123,19 @@ header {
 .headerScroll h1 {
   font-size: 1.625rem;
 }
-
+.headerScroll .dropdown-menu {
+  top: 188%;
+}
+.headerScroll .dropdown-toggle a:not(".dropdown-menu") {
+  padding: 25px 0;
+}
 h1 {
   font-size: 1.75rem;
 }
 
 a {
-  text-decoration: none;
   color: #fff;
-  font-weight: bold;
+  font-weight: 500;
   text-transform: uppercase;
 }
 
@@ -145,5 +182,52 @@ ul li a:hover:before,
 ul li a:hover:after,
 ul li a.router-link-active:before {
   width: 100%;
+}
+/* DROPDOWN MENU */
+.dropdown-toggle {
+  position: relative;
+}
+.dropdown-toggle a {
+  padding: 50px 0;
+}
+.dropdown-menu {
+  position: absolute;
+  top: 285%;
+  left: 0;
+  min-width: 200px;
+  max-height: 118px;
+  display: none;
+  transition: all 300ms ease-in;
+  box-shadow: 0px 3px 16px 0px rgb(0 0 0 / 10%);
+  opacity: 0;
+  background: #fff;
+  z-index: 90;
+}
+.dropdown-menu li {
+  margin: 0;
+}
+.dropdown-menu li a:hover {
+  background: var(--clr-primary);
+  color: #fff;
+}
+.dropdown-menu li a {
+  color: #222;
+  padding: 18px;
+  display: block;
+  transition: 300ms ease-in-out;
+}
+.dropdown-menu li:not(:last-of-type) {
+  border-bottom: 1px solid #ededed;
+}
+.dropdown-menu li a:before,
+.dropdown-menu li a:after,
+.dropdown-toggle a:after,
+.dropdown-toggle a:before {
+  display: none;
+}
+/* HELPERS */
+.active {
+  display: block;
+  opacity: 1;
 }
 </style>

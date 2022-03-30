@@ -99,9 +99,6 @@ export default {
 <style scoped>
 .testimonials {
   background: #f9f9ff;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
 }
 .swiper-slide * {
   cursor: grab;

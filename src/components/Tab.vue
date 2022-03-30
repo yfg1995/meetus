@@ -1,6 +1,6 @@
 <template>
-  <div class="tab-content" v-show="title == selectedTitle">
-    <div></div>
+  <div class="container">
+    <div class="tab-content" v-show="title == selectedTitle">aaa</div>
   </div>
 </template>
 
@@ -22,6 +22,5 @@ export default {
 <style scoped>
 .tab-content {
   margin-top: 50px;
-  width: 100%;
 }
 </style>

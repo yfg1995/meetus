@@ -327,7 +327,6 @@ section {
 }
 .member__card h6 {
   letter-spacing: 2.1px;
-  margin-bottom: 12px;
 }
 .member__card p {
   max-width: 550px;

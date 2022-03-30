@@ -87,18 +87,17 @@ section {
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 400px 400px;
+  grid-template-rows: 360px 360px;
   grid-gap: 30px;
 }
 .services_cards__item {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 50px 35px;
+  padding: 35px;
   border-radius: 10px;
   transition: all 300ms linear 0s;
   background: #f9f9ff;
-  margin-bottom: 30px;
 }
 .services_cards__item img {
   width: 60px;
