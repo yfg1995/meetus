@@ -82,7 +82,7 @@ body::-webkit-scrollbar-thumb {
   box-sizing: border-box;
   margin: 0;
   position: relative;
-  font-weight: normal;
+  font-family: "Heebo", sans-serif;
 }
 
 body {
@@ -104,7 +104,8 @@ body {
   margin: 0 auto;
 }
 
-ul {
+ul,
+ol {
   padding-left: 0;
 }
 
@@ -126,11 +127,6 @@ h6 {
   font-size: 0.875rem;
 }
 
-p {
-  color: #777;
-  line-height: 26px;
-}
-
 h2,
 h3,
 h4,
@@ -141,6 +137,8 @@ h6 {
 }
 
 p {
+  color: #777;
+  line-height: 1.625rem;
   cursor: default;
 }
 
@@ -151,6 +149,10 @@ a {
 a,
 svg {
   transition: all 0.25s ease-in-out;
+}
+
+textarea {
+  resize: none;
 }
 
 body section:first-of-type {
@@ -193,12 +195,12 @@ body section:first-of-type {
   margin-bottom: 20px;
 }
 
-.mb40 {
-  margin-bottom: 40px;
+.mb50 {
+  margin-bottom: 50px;
 }
 
 .lh40 {
-  line-height: 40px;
+  line-height: 2.5rem;
 }
 
 /* MAIN TITLE */

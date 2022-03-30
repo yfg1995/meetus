@@ -213,14 +213,14 @@
 }
 /* ----------------------------- */
 .e-large {
-  line-height: 55px;
+  line-height: 3.438rem;
 }
 .large {
-  line-height: 45px;
+  line-height: 2.813rem;
 }
 .medium {
-  line-height: 35px;
+  line-height: 2.188rem;
 }
 .small {
-  line-height: 25px;
+  line-height: 1.563rem;
 }

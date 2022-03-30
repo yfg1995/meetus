@@ -1,7 +1,7 @@
 <template>
   <section>
     <div class="container">
-      <div class="section sample-text p_120 section-box-shadow">
+      <div class="section text-sample">
         <h3>text sample</h3>
         <p>
           Every avid independent filmmaker has <b class="bold">Bold</b> about
@@ -20,6 +20,7 @@
           replication project.
         </p>
       </div>
+      <!-- text-sample -->
 
       <div class="section sample-buttons">
         <h3>sample buttons</h3>
@@ -34,7 +35,7 @@
           <a href="#" class="generic-btn lh40 disable">disable</a>
         </div>
 
-        <div class="button-group mb40">
+        <div class="button-group mb50">
           <a href="#" class="generic-btn lh40 default-border">default</a>
           <a href="#" class="generic-btn lh40 primary-border">primary</a>
           <a href="#" class="generic-btn lh40 success-border">success</a>
@@ -56,7 +57,7 @@
           <a href="#" class="generic-btn lh40 disable radius">disable</a>
         </div>
 
-        <div class="button-group mb40">
+        <div class="button-group mb50">
           <a href="#" class="generic-btn lh40 default-border radius">default</a>
           <a href="#" class="generic-btn lh40 primary-border radius">primary</a>
           <a href="#" class="generic-btn lh40 success-border radius">success</a>
@@ -78,7 +79,7 @@
           <a href="#" class="generic-btn lh40 disable circle">disable</a>
         </div>
 
-        <div class="button-group mb40">
+        <div class="button-group mb50">
           <a href="#" class="generic-btn lh40 default-border circle">default</a>
           <a href="#" class="generic-btn lh40 primary-border circle">primary</a>
           <a href="#" class="generic-btn lh40 success-border circle">success</a>
@@ -124,7 +125,7 @@
           </a>
         </div>
 
-        <div class="button-group mb40">
+        <div class="button-group mb50">
           <a
             href="#"
             class="generic-btn lh40 default-border circle arrow arrow-c-primary"
@@ -219,6 +220,7 @@
           <a href="#" class="generic-btn primary-border small">small</a>
         </div>
       </div>
+      <!-- sample-buttons -->
 
       <div class="section left-aligned-col">
         <h3>left aligned</h3>
@@ -247,6 +249,7 @@
           </div>
         </div>
       </div>
+      <!-- left-aligned-col -->
 
       <div class="section right-aligned-col tar">
         <h3>right aligned</h3>
@@ -272,6 +275,7 @@
           </div>
         </div>
       </div>
+      <!-- right-aligned-col -->
 
       <div class="section definition">
         <h3>definition</h3>
@@ -310,6 +314,7 @@
           </div>
         </div>
       </div>
+      <!-- definition -->
 
       <div class="section block-quotes">
         <h3>block quotes</h3>
@@ -330,8 +335,12 @@
           </p>
         </div>
       </div>
+      <!-- block-quotes -->
 
-      <div class="section table"></div>
+      <div class="section table">
+        <h3>table</h3>
+      </div>
+      <!-- table -->
 
       <div class="section image-gallery">
         <h3>image gallery</h3>
@@ -367,6 +376,94 @@
           </div>
         </div>
       </div>
+      <!-- image-gallery -->
+
+      <div class="section typography-lists">
+        <div class="row flex justify-between">
+          <div class="col">
+            <h3>typography</h3>
+            <div class="typography">
+              <h1>This is header 01</h1>
+              <h2>This is header 02</h2>
+              <h3>This is header 03</h3>
+              <h4>This is header 04</h4>
+              <h5>This is header 05</h5>
+              <h6>This is header 06</h6>
+            </div>
+          </div>
+
+          <div class="col">
+            <h3>unordered list</h3>
+            <div class="unordered-list">
+              <ul>
+                <li>Fta Keys</li>
+                <li>For Women Only Your Computer Usage</li>
+                <li class="first-li">
+                  Facts Why Inkjet Printing Is Very Appealing
+                  <ul class="li-space-left__first-sub">
+                    <li>
+                      Addiction When Gambling Becomes
+                      <ul class="li-space-left__second-sub">
+                        <li>Protective Preventative Maintenance</li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li>Dealing With Technical Support 10 Useful Tips</li>
+                <li>Make Myspace Your Best Designed Space</li>
+                <li>Cleaning And Organizing Your Computer</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col">
+            <h3>ordered list</h3>
+            <div class="ordered-list">
+              <ol>
+                <li>Fta Keys</li>
+                <li>For Women Only Your Computer Usage</li>
+                <li>
+                  Facts Why Inkjet Printing Is Very Appealing
+                  <ol class="li-space-left__first-sub">
+                    <li>
+                      Addiction When Gambling Becomes
+                      <ol class="li-space-left__second-sub">
+                        <li>Protective Preventative Maintenance</li>
+                      </ol>
+                    </li>
+                  </ol>
+                </li>
+                <li>Dealing With Technical Support 10 Useful Tips</li>
+                <li>Make Myspace Your Best Designed Space</li>
+                <li>Cleaning And Organizing Your Computer</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- typography-lists -->
+
+      <div class="section forms">
+        <div class="row flex justify-between">
+          <div class="col">
+            <h3>form element</h3>
+            <form>
+              <div><input type="text" placeholder="First Name" /></div>
+              <div><input type="text" placeholder="Last Name" /></div>
+              <div><input type="email" placeholder="Email Address" /></div>
+              <div><input type="text" placeholder="Address" /></div>
+
+              <div><textarea placeholder="Message"></textarea></div>
+              <div><input type="text" placeholder="Primary color" /></div>
+              <div><input type="text" placeholder="Accent color" /></div>
+              <div><input type="text" placeholder="Secondary color" /></div>
+            </form>
+          </div>
+
+          <div class="col"></div>
+        </div>
+      </div>
+      <!-- forms -->
     </div>
   </section>
 </template>
@@ -396,28 +493,36 @@ del {
   color: var(--clr-primary);
 }
 
-h3,
-h4 {
-  font-size: 1.5rem;
-  font-weight: bold;
-  font-family: "Heebo", sans-serif;
-  text-transform: capitalize;
+h1 {
+  font-size: 2.25rem;
+}
+
+h2 {
+  font-size: 1.875rem;
 }
 
 h3 {
   font-size: 1.5rem;
   margin-bottom: 30px;
+  text-transform: capitalize;
+  font-weight: bold;
 }
 
 h4 {
   font-size: 1.125rem;
-  margin-bottom: 20px;
+}
+
+h5 {
+  font-size: 1rem;
+}
+
+h6 {
+  font-size: 0.875rem;
 }
 
 p {
   line-height: 1.5;
 }
-
 .section {
   padding: 100px 0;
 }
@@ -440,6 +545,7 @@ p {
 .generic-btn:not(:last-of-type) {
   margin-right: 25px;
 }
+
 /* ALIGNED COLUMS */
 .right-aligned {
   flex-direction: row-reverse;
@@ -454,6 +560,11 @@ p {
 /* DEFINITION COLUMNS */
 .definition-row__col {
   width: calc((100% - 80px) / 3);
+}
+.definition h4 {
+  margin-bottom: 20px;
+  font-weight: bold;
+  text-transform: capitalize;
 }
 
 /* BLOCK QUOTES */
@@ -496,5 +607,67 @@ p {
 }
 .image-gallery__container--item:hover {
   opacity: 0.8;
+}
+
+/* TYPOGRAPHY-LISTS */
+.typography * {
+  color: #777;
+}
+.typography h3 {
+  margin-bottom: 0;
+}
+.unordered-list li {
+  position: relative;
+  padding-left: 30px;
+}
+.unordered-list li:before {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border: 3px solid var(--elements-c-primary);
+  background: #fff;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  border-radius: 50%;
+}
+.first-li:before {
+  top: 7px !important;
+  transform: translateY(0) !important;
+}
+.unordered-list .li-space-left__first-sub li:before {
+  top: 7px !important;
+  transform: translateY(0) !important;
+}
+.unordered-list .li-space-left__second-sub li:before {
+  top: 22% !important;
+  transform: translateY(0) !important;
+}
+.unordered-list li,
+.ordered-list li {
+  color: #777;
+  line-height: 1.75rem;
+}
+ol {
+  counter-reset: my-awesome-counter;
+}
+
+ol li {
+  counter-increment: my-awesome-counter;
+}
+
+ol li::before {
+  content: "0" counter(my-awesome-counter) ". ";
+  color: var(--elements-c-primary);
+  font-weight: bold;
+}
+.ordered-list .li-space-left__first-sub li:before {
+  content: "a. ";
+  padding-left: 40px;
+}
+.ordered-list .li-space-left__second-sub li:before {
+  content: "i. ";
+  padding-left: 80px;
 }
 </style>

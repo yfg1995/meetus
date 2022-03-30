@@ -129,7 +129,8 @@ header {
 .headerScroll .dropdown-toggle a:not(".dropdown-menu") {
   padding: 25px 0;
 }
-h1 {
+
+.logo h1 {
   font-size: 1.75rem;
 }
 
@@ -211,7 +212,7 @@ ul li a.router-link-active:before {
   color: #fff;
 }
 .dropdown-menu li a {
-  color: #222;
+  color: var(--vt-c-black-soft);
   padding: 18px;
   display: block;
   transition: 300ms ease-in-out;

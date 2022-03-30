@@ -110,8 +110,6 @@ section:first-of-type {
 .contact__form textarea {
   height: 140px;
   padding: 15px;
-  font-family: "Roboto", sans-serif;
-  resize: none;
 }
 .contact__form--input,
 .contact__form--msg {
@@ -124,7 +122,7 @@ section:first-of-type {
   padding: 0px 50px;
   color: #fff;
   font-size: 0.875rem;
-  line-height: 50px;
+  line-height: 3.125rem;
   border-radius: 5px;
   border: 1px solid var(--clr-primary);
   cursor: pointer;
