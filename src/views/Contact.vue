@@ -1,7 +1,7 @@
 <template>
   <section class="p_120">
     <div class="container">
-      <div class="contact__rows flex">
+      <div class="contact__rows flex justify-between">
         <div class="contact__info">
           <div class="contact__info--item">
             <svg viewBox="0 0 576 512">
@@ -84,12 +84,12 @@ section:first-of-type {
   margin-bottom: 20px;
 }
 .contact__info--item h6 {
-  font-size: 1rem;
+  font-size: 1em;
   font-weight: bold;
 }
 .contact__form input,
 .contact__form textarea {
-  font-size: 0.875rem;
+  font-size: 0.875em;
   color: #999;
   border: 2px solid #eee;
   width: 100%;
@@ -121,8 +121,8 @@ section:first-of-type {
   background: var(--clr-primary);
   padding: 0px 50px;
   color: #fff;
-  font-size: 0.875rem;
-  line-height: 3.125rem;
+  font-size: 0.875em;
+  line-height: 3.125em;
   border-radius: 5px;
   border: 1px solid var(--clr-primary);
   cursor: pointer;

@@ -2,7 +2,7 @@
   <div class="member__skill_item" v-for="(skill, idx) in skills" :key="idx">
     <h4>
       {{ skill[0] }}
-      <span :data-progress="skill[1]" class="counter bold">0</span>%
+      <span :data-progress="skill[1]" class="counter">0</span>%
     </h4>
 
     <div class="member__skill_progress-br">
@@ -30,6 +30,7 @@ export default {
       const bars = document.querySelectorAll(".member__skill_progress-bar");
       const counters = document.querySelectorAll(".counter");
       const speed = 200;
+
       setInterval(() => {
         bars.forEach((bar) => {
           let getWidth = parseFloat(bar.dataset.progress);
@@ -52,6 +53,7 @@ export default {
           animate();
         });
       }, 300);
+      clearInterval();
     });
 
     return {
@@ -90,7 +92,10 @@ export default {
 .member__skill_item h4 {
   font-weight: bold;
   margin-bottom: 15px;
-  font-size: 0.875rem;
+  font-size: 0.875em;
   text-transform: capitalize;
+}
+.counter {
+  font-weight: bold;
 }
 </style>

@@ -108,16 +108,16 @@ export default {
   border-radius: 10px;
   background: #fff;
   padding: 40px 28px;
-  max-width: 360px;
+  width: 100%;
 }
 .swiper h4 {
-  font-size: 1.125rem;
-  font-weight: bold;
+  font-size: 1.125em;
+  font-weight: 500;
   text-transform: uppercase;
   margin-top: 16px;
 }
 .swiper p {
   font-style: italic;
-  font-size: 1rem;
+  font-size: 1em;
 }
 </style>

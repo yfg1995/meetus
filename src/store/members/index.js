@@ -63,6 +63,48 @@ export default {
           }
         },
       ],
+      tableStats: [
+        {
+          country: 'Canada',
+          flag: 'elements/f1.jpg',
+          visit: 509222
+        },
+        {
+          country: 'United States',
+          flag: 'elements/f2.jpg',
+          visit: 645032
+        },
+        {
+          country: 'United Kingdom',
+          flag: 'elements/f3.jpg',
+          visit: 386714
+        },
+        {
+          country: 'Germany',
+          flag: 'elements/f4.jpg',
+          visit: 415207
+        },
+        {
+          country: 'Australia',
+          flag: 'elements/f5.jpg',
+          visit: 117845
+        },
+        {
+          country: 'China',
+          flag: 'elements/f6.jpg',
+          visit: 522934
+        },
+        {
+          country: 'Bangladesh',
+          flag: 'elements/f7.jpg',
+          visit: 96714
+        },
+        {
+          country: 'Belgium',
+          flag: 'elements/f8.jpg',
+          visit: 197436
+        },
+      ],
     };
   },
   mutations,

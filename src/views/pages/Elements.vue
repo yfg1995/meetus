@@ -1,4 +1,4 @@
-<template>
+<template lang="">
   <section>
     <div class="container">
       <div class="section text-sample">
@@ -25,101 +25,101 @@
       <div class="section sample-buttons">
         <h3>sample buttons</h3>
         <div class="button-group mb20">
-          <a href="#" class="generic-btn lh40 default">default</a>
-          <a href="#" class="generic-btn lh40 primary">primary</a>
-          <a href="#" class="generic-btn lh40 success">success</a>
-          <a href="#" class="generic-btn lh40 info">info</a>
-          <a href="#" class="generic-btn lh40 warning">warning</a>
-          <a href="#" class="generic-btn lh40 danger">danger</a>
-          <a href="#" class="generic-btn lh40 link">link</a>
-          <a href="#" class="generic-btn lh40 disable">disable</a>
+          <a href="#" class="generic-btn default">default</a>
+          <a href="#" class="generic-btn primary">primary</a>
+          <a href="#" class="generic-btn success">success</a>
+          <a href="#" class="generic-btn info">info</a>
+          <a href="#" class="generic-btn warning">warning</a>
+          <a href="#" class="generic-btn danger">danger</a>
+          <a href="#" class="generic-btn link">link</a>
+          <a href="#" class="generic-btn disable">disable</a>
         </div>
 
         <div class="button-group mb50">
-          <a href="#" class="generic-btn lh40 default-border">default</a>
-          <a href="#" class="generic-btn lh40 primary-border">primary</a>
-          <a href="#" class="generic-btn lh40 success-border">success</a>
-          <a href="#" class="generic-btn lh40 info-border">info</a>
-          <a href="#" class="generic-btn lh40 warning-border">warning</a>
-          <a href="#" class="generic-btn lh40 danger-border">danger</a>
-          <a href="#" class="generic-btn lh40 link-border">link</a>
-          <a href="#" class="generic-btn lh40 disable">disable</a>
+          <a href="#" class="generic-btn default-border">default</a>
+          <a href="#" class="generic-btn primary-border">primary</a>
+          <a href="#" class="generic-btn success-border">success</a>
+          <a href="#" class="generic-btn info-border">info</a>
+          <a href="#" class="generic-btn warning-border">warning</a>
+          <a href="#" class="generic-btn danger-border">danger</a>
+          <a href="#" class="generic-btn link-border">link</a>
+          <a href="#" class="generic-btn disable">disable</a>
         </div>
 
         <div class="button-group mb20">
-          <a href="#" class="generic-btn lh40 default radius">default</a>
-          <a href="#" class="generic-btn lh40 primary radius">primary</a>
-          <a href="#" class="generic-btn lh40 success radius">success</a>
-          <a href="#" class="generic-btn lh40 info radius">info</a>
-          <a href="#" class="generic-btn lh40 warning radius">warning</a>
-          <a href="#" class="generic-btn lh40 danger radius">danger</a>
-          <a href="#" class="generic-btn lh40 link radius">link</a>
-          <a href="#" class="generic-btn lh40 disable radius">disable</a>
+          <a href="#" class="generic-btn default radius">default</a>
+          <a href="#" class="generic-btn primary radius">primary</a>
+          <a href="#" class="generic-btn success radius">success</a>
+          <a href="#" class="generic-btn info radius">info</a>
+          <a href="#" class="generic-btn warning radius">warning</a>
+          <a href="#" class="generic-btn danger radius">danger</a>
+          <a href="#" class="generic-btn link radius">link</a>
+          <a href="#" class="generic-btn disable radius">disable</a>
         </div>
 
         <div class="button-group mb50">
-          <a href="#" class="generic-btn lh40 default-border radius">default</a>
-          <a href="#" class="generic-btn lh40 primary-border radius">primary</a>
-          <a href="#" class="generic-btn lh40 success-border radius">success</a>
-          <a href="#" class="generic-btn lh40 info-border radius">info</a>
-          <a href="#" class="generic-btn lh40 warning-border radius">warning</a>
-          <a href="#" class="generic-btn lh40 danger-border radius">danger</a>
-          <a href="#" class="generic-btn lh40 link-border radius">link</a>
-          <a href="#" class="generic-btn lh40 disable radius">disable</a>
+          <a href="#" class="generic-btn default-border radius">default</a>
+          <a href="#" class="generic-btn primary-border radius">primary</a>
+          <a href="#" class="generic-btn success-border radius">success</a>
+          <a href="#" class="generic-btn info-border radius">info</a>
+          <a href="#" class="generic-btn warning-border radius">warning</a>
+          <a href="#" class="generic-btn danger-border radius">danger</a>
+          <a href="#" class="generic-btn link-border radius">link</a>
+          <a href="#" class="generic-btn disable radius">disable</a>
         </div>
 
         <div class="button-group mb20">
-          <a href="#" class="generic-btn lh40 default circle">default</a>
-          <a href="#" class="generic-btn lh40 primary circle">primary</a>
-          <a href="#" class="generic-btn lh40 success circle">success</a>
-          <a href="#" class="generic-btn lh40 info circle">info</a>
-          <a href="#" class="generic-btn lh40 warning circle">warning</a>
-          <a href="#" class="generic-btn lh40 danger circle">danger</a>
-          <a href="#" class="generic-btn lh40 link circle">link</a>
-          <a href="#" class="generic-btn lh40 disable circle">disable</a>
+          <a href="#" class="generic-btn default circle">default</a>
+          <a href="#" class="generic-btn primary circle">primary</a>
+          <a href="#" class="generic-btn success circle">success</a>
+          <a href="#" class="generic-btn info circle">info</a>
+          <a href="#" class="generic-btn warning circle">warning</a>
+          <a href="#" class="generic-btn danger circle">danger</a>
+          <a href="#" class="generic-btn link circle">link</a>
+          <a href="#" class="generic-btn disable circle">disable</a>
         </div>
 
         <div class="button-group mb50">
-          <a href="#" class="generic-btn lh40 default-border circle">default</a>
-          <a href="#" class="generic-btn lh40 primary-border circle">primary</a>
-          <a href="#" class="generic-btn lh40 success-border circle">success</a>
-          <a href="#" class="generic-btn lh40 info-border circle">info</a>
-          <a href="#" class="generic-btn lh40 warning-border circle">warning</a>
-          <a href="#" class="generic-btn lh40 danger-border circle">danger</a>
-          <a href="#" class="generic-btn lh40 link-border circle">link</a>
-          <a href="#" class="generic-btn lh40 disable circle">disable</a>
+          <a href="#" class="generic-btn default-border circle">default</a>
+          <a href="#" class="generic-btn primary-border circle">primary</a>
+          <a href="#" class="generic-btn success-border circle">success</a>
+          <a href="#" class="generic-btn info-border circle">info</a>
+          <a href="#" class="generic-btn warning-border circle">warning</a>
+          <a href="#" class="generic-btn danger-border circle">danger</a>
+          <a href="#" class="generic-btn link-border circle">link</a>
+          <a href="#" class="generic-btn disable circle">disable</a>
         </div>
 
         <div class="button-group mb20">
           <a
             href="#"
-            class="generic-btn lh40 default circle arrow arrow-c-black-soft"
+            class="generic-btn default circle arrow arrow-c-black-soft"
             >default
             <Arrow />
           </a>
           <a
             href="#"
-            class="generic-btn lh40 primary circle arrow primary-arrow"
+            class="generic-btn primary circle arrow primary-arrow"
             >primary
             <Arrow />
           </a>
           <a
             href="#"
-            class="generic-btn lh40 success circle arrow success-arrow"
+            class="generic-btn success circle arrow success-arrow"
             >success
             <Arrow />
           </a>
-          <a href="#" class="generic-btn lh40 info circle arrow info-arrow"
+          <a href="#" class="generic-btn info circle arrow info-arrow"
             >info
             <Arrow />
           </a>
           <a
             href="#"
-            class="generic-btn lh40 warning circle arrow warning-arrow"
+            class="generic-btn warning circle arrow warning-arrow"
             >warning
             <Arrow />
           </a>
-          <a href="#" class="generic-btn lh40 danger circle arrow danger-arrow"
+          <a href="#" class="generic-btn danger circle arrow danger-arrow"
             >danger
             <Arrow />
           </a>
@@ -128,7 +128,7 @@
         <div class="button-group mb50">
           <a
             href="#"
-            class="generic-btn lh40 default-border circle arrow arrow-c-primary"
+            class="generic-btn default-border circle arrow arrow-c-primary"
             >default
             <Arrow />
           </a>
@@ -136,7 +136,7 @@
             href="#"
             class="
               generic-btn
-              lh40
+            
               primary-border
               circle
               arrow
@@ -150,7 +150,7 @@
             href="#"
             class="
               generic-btn
-              lh40
+            
               success-border
               circle
               arrow
@@ -164,7 +164,7 @@
             href="#"
             class="
               generic-btn
-              lh40
+            
               info-border
               circle
               arrow
@@ -178,7 +178,7 @@
             href="#"
             class="
               generic-btn
-              lh40
+            
               warning-border
               circle
               arrow
@@ -192,7 +192,7 @@
             href="#"
             class="
               generic-btn
-              lh40
+            
               danger-border
               circle
               arrow
@@ -207,7 +207,7 @@
         <div class="button-group mb20">
           <a href="#" class="generic-btn primary e-large">extra large</a>
           <a href="#" class="generic-btn success large">large</a>
-          <a href="#" class="generic-btn lh40 primary">default</a>
+          <a href="#" class="generic-btn primary">default</a>
           <a href="#" class="generic-btn success medium">medium</a>
           <a href="#" class="generic-btn primary small">small</a>
         </div>
@@ -215,7 +215,7 @@
         <div class="button-group">
           <a href="#" class="generic-btn primary-border e-large">extra large</a>
           <a href="#" class="generic-btn success-border large">large</a>
-          <a href="#" class="generic-btn lh40 primary-border">default</a>
+          <a href="#" class="generic-btn primary-border">default</a>
           <a href="#" class="generic-btn success-border medium">medium</a>
           <a href="#" class="generic-btn primary-border small">small</a>
         </div>
@@ -339,6 +339,26 @@
 
       <div class="section table">
         <h3>table</h3>
+        <div class="progress-table">
+          <div class="table-head flex uppercase">
+            <div class="serial">#</div>
+            <div class="country">Countries</div>
+            <div class="visit">Visits</div>
+            <div class="percentage">Percentages</div>
+          </div>
+          <div class="table-row flex" v-for="(table, idx) in tableStats" :key="idx">
+            <div class="serial">0{{idx + 1}}</div>
+            <div class="country">
+              <img :src="table.flag" alt="flag" />{{table.country}}
+            </div>
+            <div class="visit">{{table.visit}}</div>
+            <div class="percentage">
+              <div class="progress-br">
+                <div class="progress-bar"></div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       <!-- table -->
 
@@ -457,6 +477,18 @@
               <div><input type="text" placeholder="Primary color" /></div>
               <div><input type="text" placeholder="Accent color" /></div>
               <div><input type="text" placeholder="Secondary color" /></div>
+
+              <svg viewBox="0 0 384 512">
+                <path d="M32 32C32 14.33 46.33 0 64 0H320C337.7 0 352 14.33 352 32C352 49.67 337.7 64 320 64H290.5L301.9 212.2C338.6 232.1 367.5 265.4 381.4 306.9L382.4 309.9C385.6 319.6 383.1 330.4 377.1 338.7C371.9 347.1 362.3 352 352 352H32C21.71 352 12.05 347.1 6.04 338.7C.0259 330.4-1.611 319.6 1.642 309.9L2.644 306.9C16.47 265.4 45.42 232.1 82.14 212.2L93.54 64H64C46.33 64 32 49.67 32 32zM224 384V480C224 497.7 209.7 512 192 512C174.3 512 160 497.7 160 480V384H224z"/>
+              </svg>
+
+              <svg viewBox="0 0 576 512">
+                <path d="M482.3 192C516.5 192 576 221 576 256C576 292 516.5 320 482.3 320H365.7L265.2 495.9C259.5 505.8 248.9 512 237.4 512H181.2C170.6 512 162.9 501.8 165.8 491.6L214.9 320H112L68.8 377.6C65.78 381.6 61.04 384 56 384H14.03C6.284 384 0 377.7 0 369.1C0 368.7 .1818 367.4 .5398 366.1L32 256L.5398 145.9C.1818 144.6 0 143.3 0 142C0 134.3 6.284 128 14.03 128H56C61.04 128 65.78 130.4 68.8 134.4L112 192H214.9L165.8 20.4C162.9 10.17 170.6 0 181.2 0H237.4C248.9 0 259.5 6.153 265.2 16.12L365.7 192H482.3z"/>
+              </svg>
+
+              <svg viewBox="0 0 512 512">
+                <path d="M512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256zM57.71 192.1L67.07 209.4C75.36 223.9 88.99 234.6 105.1 239.2L162.1 255.7C180.2 260.6 192 276.3 192 294.2V334.1C192 345.1 198.2 355.1 208 359.1C217.8 364.9 224 374.9 224 385.9V424.9C224 440.5 238.9 451.7 253.9 447.4C270.1 442.8 282.5 429.1 286.6 413.7L289.4 402.5C293.6 385.6 304.6 371.1 319.7 362.4L327.8 357.8C342.8 349.3 352 333.4 352 316.1V307.9C352 295.1 346.9 282.9 337.9 273.9L334.1 270.1C325.1 261.1 312.8 255.1 300.1 255.1H256.1C245.9 255.1 234.9 253.1 225.2 247.6L190.7 227.8C186.4 225.4 183.1 221.4 181.6 216.7C178.4 207.1 182.7 196.7 191.7 192.1L197.7 189.2C204.3 185.9 211.9 185.3 218.1 187.7L242.2 195.4C250.3 198.1 259.3 195 264.1 187.9C268.8 180.8 268.3 171.5 262.9 165L249.3 148.8C239.3 136.8 239.4 119.3 249.6 107.5L265.3 89.12C274.1 78.85 275.5 64.16 268.8 52.42L266.4 48.26C262.1 48.09 259.5 48 256 48C163.1 48 84.4 108.9 57.71 192.1L57.71 192.1zM437.6 154.5L412 164.8C396.3 171.1 388.2 188.5 393.5 204.6L410.4 255.3C413.9 265.7 422.4 273.6 433 276.3L462.2 283.5C463.4 274.5 464 265.3 464 256C464 219.2 454.4 184.6 437.6 154.5H437.6z"/>
+              </svg>
             </form>
           </div>
 
@@ -470,6 +502,8 @@
 
 
 <script>
+import { ref, computed, onMounted } from "vue";
+import store from "@/store/index.js";
 import LogoSvg from "@/components/UI-helpers/LogoSvg.vue";
 import Arrow from "@/components/UI-helpers/Arrow.vue";
 
@@ -477,6 +511,23 @@ export default {
   components: {
     LogoSvg,
     Arrow,
+  },
+  setup() {
+    const tableStats = computed(() => {
+      return store.getters["members/tableStats"];
+    });
+    let totalVisits = ref(null);
+
+    onMounted(() => {
+      tableStats.value.forEach((sum) => {
+        totalVisits.value += sum.visit;
+      });
+    });
+
+    return {
+      tableStats,
+      totalVisits,
+    };
   },
 };
 </script>
@@ -494,34 +545,36 @@ del {
 }
 
 h1 {
-  font-size: 2.25rem;
+  font-size: 2.25em;
 }
 
 h2 {
-  font-size: 1.875rem;
+  font-size: 1.875em;
 }
 
 h3 {
-  font-size: 1.5rem;
+  font-size: 1.5em;
   margin-bottom: 30px;
   text-transform: capitalize;
   font-weight: bold;
+  color: var(--vt-c-black-soft);
+  font-family: "Heebo", sans-serif;
 }
 
 h4 {
-  font-size: 1.125rem;
+  font-size: 1.125em;
 }
 
 h5 {
-  font-size: 1rem;
+  font-size: 1em;
 }
 
 h6 {
-  font-size: 0.875rem;
+  font-size: 0.875em;
 }
 
 p {
-  line-height: 1.5;
+  line-height: 1.5em;
 }
 .section {
   padding: 100px 0;
@@ -537,16 +590,17 @@ p {
 }
 .generic-btn {
   padding: 0 30px;
-  font-size: 1rem;
+  font-size: 1em;
   font-weight: 500;
   transition: all 0.3s ease-in-out;
   text-transform: capitalize;
+  line-height: 2.5em;
 }
 .generic-btn:not(:last-of-type) {
   margin-right: 25px;
 }
 
-/* ALIGNED COLUMS */
+/* ALIGNED COLUMNS */
 .right-aligned {
   flex-direction: row-reverse;
 }
@@ -573,11 +627,66 @@ p {
   padding: 30px 50px;
 }
 
+/* TABLE */
+.progress-table {
+  background: #fff;
+  padding: 15px 0px 30px 0px;
+  min-width: 800px;
+  overflow: hidden;
+}
+.table-head {
+  font-weight: 500;
+  color: var(--vt-c-black-soft);
+  font-size: 1.063em;
+  line-height: 2.5em;
+}
+.table-row {
+  display: flex;
+  padding: 15px 0;
+  border-top: 1px solid #edf3fd;
+}
+.table-row * {
+  display: flex;
+  align-items: center;
+  color: var(--vt-c-grey-soft);
+}
+.progress-table .serial {
+  width: 10%;
+  padding-left: 30px;
+}
+.progress-table .country {
+  width: 30%;
+}
+.table-row .country img {
+  margin-right: 15px;
+}
+.progress-table .visit {
+  width: 20%;
+}
+.progress-table .percentage {
+  width: 40%;
+  padding-right: 50px;
+}
+.table-row .progress-br {
+  width: 80%;
+  border: 1px solid #eeeeee;
+  padding: 3px 5px;
+  border-radius: 10px;
+  background: #e9e9e9;
+}
+.table-row .progress-bar {
+  height: 5px;
+  border-radius: 10px;
+  transition: width 1.5s ease-in-out;
+  border-radius: 5px;
+  width: 100px;
+}
+
 /* IMAGE GALLERY */
 .image-gallery__container {
   display: grid;
   grid-template-rows: 200px 200px;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   grid-gap: 30px;
 }
 .image-gallery__container--item {
@@ -611,14 +720,14 @@ p {
 
 /* TYPOGRAPHY-LISTS */
 .typography * {
-  color: #777;
+  color: var(--vt-c-grey-soft);
 }
 .typography h3 {
   margin-bottom: 0;
 }
 .unordered-list li {
   position: relative;
-  padding-left: 30px;
+  padding-left: 25px;
 }
 .unordered-list li:before {
   content: "";
@@ -646,8 +755,8 @@ p {
 }
 .unordered-list li,
 .ordered-list li {
-  color: #777;
-  line-height: 1.75rem;
+  color: var(--vt-c-grey-soft);
+  line-height: 1.75em;
 }
 ol {
   counter-reset: my-awesome-counter;
@@ -657,17 +766,19 @@ ol li {
   counter-increment: my-awesome-counter;
 }
 
-ol li::before {
+ol li:before {
   content: "0" counter(my-awesome-counter) ". ";
   color: var(--elements-c-primary);
   font-weight: bold;
 }
 .ordered-list .li-space-left__first-sub li:before {
   content: "a. ";
-  padding-left: 40px;
+  margin-left: 40px;
 }
 .ordered-list .li-space-left__second-sub li:before {
   content: "i. ";
-  padding-left: 80px;
+  margin-left: 80px;
 }
+
+/* FORMS */
 </style>

@@ -2,7 +2,7 @@
   <section class="footer p_120">
     <div class="container">
       <div class="footer__rows flex">
-        <div class="footer__about">
+        <div class="col footer__about">
           <h3>About Me</h3>
           <p>
             Do you want to be even more successful? Learn to love learning and
@@ -11,7 +11,7 @@
           <p>Copyright ©2022 All rights reserved</p>
         </div>
 
-        <div class="footer__newsletter">
+        <div class="col footer__newsletter">
           <h3>Newsletter</h3>
           <p>Stay updated with our latest trends</p>
           <form>
@@ -28,7 +28,7 @@
           </form>
         </div>
 
-        <div class="footer__social">
+        <div class="col footer__social">
           <h3>Follow Me</h3>
           <p>Let us be social</p>
 
@@ -84,13 +84,17 @@ export default {};
 .footer {
   background: #000;
 }
+.col {
+  width: calc((100% - 50px) / 3);
+  margin: 0 25px;
+}
 .footer svg {
   fill: #fff;
   width: 18px;
   height: 18px;
 }
 .footer h3 {
-  font-size: 1.125rem;
+  font-size: 1.125em;
   text-transform: none;
   font-weight: bold;
   margin-bottom: 35px;
@@ -98,11 +102,10 @@ export default {};
 }
 .footer p,
 input {
-  font-size: 0.875rem;
+  font-size: 0.875em;
 }
 .footer__about,
 .footer__newsletter {
-  max-width: 450px;
   width: 100%;
 }
 .footer__about {

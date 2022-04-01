@@ -1,41 +1,27 @@
 <template>
   <header id="header">
-    <div class="container">
+    <div class="header-container">
       <div class="header flex justify-between align-center">
         <div class="logo">
           <router-link to="/">
-            <h1 class="bold">meetus</h1>
+            <h1 class="uppercase">meetus</h1>
           </router-link>
         </div>
 
         <ul>
-          <li>
+          <li class="menu-item">
             <router-link to="/">home</router-link>
           </li>
-          <li>
+          <li class="menu-item">
             <router-link to="/about-us">about us</router-link>
           </li>
-          <li>
+          <li class="menu-item">
             <router-link to="/services">services</router-link>
           </li>
 
-          <li class="dropdown-toggle">
-            <a @mouseenter="toggleClass" @mouseleave="toggleClass" href=""
-              >pages</a
-            >
-            <ul
-              class="dropdown-menu"
-              :class="{ active: isActive ? true : false }"
-            >
-              <li>
-                <router-link to="/portfolio">portfolio</router-link>
-              </li>
-              <li>
-                <router-link to="/elements">elements</router-link>
-              </li>
-            </ul>
-          </li>
-          <li>
+          <Dropdown title="pages" :items="pages" />
+
+          <li class="menu-item">
             <router-link to="/contact">contact</router-link>
           </li>
         </ul>
@@ -47,8 +33,12 @@
 <script>
 import { ref, onMounted } from "vue";
 import { useRoute } from "vue-router";
+import Dropdown from "@/components/Dropdown.vue";
 
 export default {
+  components: {
+    Dropdown,
+  },
   setup() {
     const route = useRoute();
     const isActive = ref(false);
@@ -57,28 +47,27 @@ export default {
       isActive.value = !isActive.value;
     }
 
+    const pages = ref([
+      {
+        title: "portfolio",
+        link: "/portfolio",
+      },
+      {
+        title: "elements",
+        link: "/elements",
+      },
+    ]);
+
     onMounted(() => {
       window.onscroll = function () {
         scrollFunction();
       };
 
-      document.addEventListener("mouseover", (e) => {
-        if (
-          (e.target.closest(".dropdown-toggle") &&
-            e.relatedTarget.closest(".dropdown-toggle")) ||
-          (e.target.closest(".dropdown-menu") &&
-            e.relatedTarget.closest(".dropdown-menu"))
-        ) {
-          isActive.value = !isActive.value;
-        }
-        e.preventDefault();
-      });
-
       function scrollFunction() {
         if (
           route.name != "contact" &&
-          (document.body.scrollTop > 120 ||
-            document.documentElement.scrollTop > 120)
+          (document.body.scrollTop > 200 ||
+            document.documentElement.scrollTop > 200)
         ) {
           document.getElementById("header").className = "headerScroll";
         } else {
@@ -89,8 +78,7 @@ export default {
 
     return {
       route,
-      toggleClass,
-      isActive,
+      pages,
     };
   },
 };
@@ -113,54 +101,48 @@ header {
   top: 0;
   width: 100%;
   z-index: 99;
-  min-height: 70px;
+  min-height: 80px;
   transition: background 0.4s, all 0.5s ease-in-out;
 }
-.headerScroll ul li a:before,
-.headerScroll ul li a:after {
+.headerScroll .menu-item a:before,
+.headerScroll .menu-item a:after {
   background: var(--clr-secondary);
 }
-.headerScroll h1 {
-  font-size: 1.625rem;
-}
-.headerScroll .dropdown-menu {
-  top: 188%;
-}
-.headerScroll .dropdown-toggle a:not(".dropdown-menu") {
-  padding: 25px 0;
-}
-
-.logo h1 {
-  font-size: 1.75rem;
-}
-
-a {
-  color: #fff;
+.headerScroll .logo h1 {
+  font-size: 1.625em;
   font-weight: 500;
-  text-transform: uppercase;
+}
+.logo h1 {
+  font-size: 1.75em;
+  color: #fff;
+  font-weight: bold;
+}
+
+li {
+  list-style: none;
 }
 
 ul {
   display: flex;
 }
-
-li {
-  list-style: none;
+.menu-item {
+  color: #fff;
+  font-weight: 500;
+  text-transform: uppercase;
   margin: 0 20px;
+  cursor: pointer;
 }
-
-ul li:last-of-type {
+.menu-item:last-of-type {
   margin-right: 0;
 }
-
-ul li a {
+.menu-item a {
   position: relative;
   padding: 5px 0;
-  font-size: 0.875rem;
+  font-size: 0.875em;
+  color: #fff;
 }
-
-ul li a:before,
-ul li a:after {
+.menu-item a:before,
+.menu-item a:after {
   position: absolute;
   content: "";
   width: 0%;
@@ -168,67 +150,20 @@ ul li a:after {
   height: 2px;
   transition: all 0.25s ease-in-out;
 }
-
-ul li a:before {
+.menu-item a:before {
   top: 0;
   left: 0;
 }
-
-ul li a:after {
+.menu-item a:after {
   bottom: 0;
   right: 0;
 }
-
-ul li a:hover:before,
-ul li a:hover:after,
-ul li a.router-link-active:before {
+.menu-item a:hover:before,
+.menu-item a:hover:after,
+.menu-item a.router-link-active:before {
   width: 100%;
 }
-/* DROPDOWN MENU */
-.dropdown-toggle {
-  position: relative;
-}
-.dropdown-toggle a {
-  padding: 50px 0;
-}
-.dropdown-menu {
-  position: absolute;
-  top: 285%;
-  left: 0;
-  min-width: 200px;
-  max-height: 118px;
-  display: none;
-  transition: all 300ms ease-in;
-  box-shadow: 0px 3px 16px 0px rgb(0 0 0 / 10%);
-  opacity: 0;
-  background: #fff;
-  z-index: 90;
-}
-.dropdown-menu li {
-  margin: 0;
-}
-.dropdown-menu li a:hover {
-  background: var(--clr-primary);
-  color: #fff;
-}
-.dropdown-menu li a {
-  color: var(--vt-c-black-soft);
-  padding: 18px;
-  display: block;
-  transition: 300ms ease-in-out;
-}
-.dropdown-menu li:not(:last-of-type) {
-  border-bottom: 1px solid #ededed;
-}
-.dropdown-menu li a:before,
-.dropdown-menu li a:after,
-.dropdown-toggle a:after,
-.dropdown-toggle a:before {
-  display: none;
-}
-/* HELPERS */
-.active {
-  display: block;
-  opacity: 1;
+.menu-item a.router-link-active:after {
+  width: 0;
 }
 </style>

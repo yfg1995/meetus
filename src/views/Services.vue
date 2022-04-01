@@ -105,9 +105,9 @@ section {
   margin-bottom: 35px;
 }
 .services_cards__item h4 {
-  font-weight: bold;
+  font-weight: 500;
   text-transform: uppercase;
-  font-size: 1.313rem;
+  font-size: 1.313em;
   margin-bottom: 20px;
   transition: 300ms;
 }

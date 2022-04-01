@@ -202,6 +202,7 @@ section {
 .member__card h4,
 .member__card h6 {
   text-transform: uppercase;
+  font-weight: 500;
 }
 .member__card p {
   margin-bottom: 40px;
@@ -247,8 +248,8 @@ section {
 .member__contact li a {
   position: relative;
   padding-left: 30px;
-  color: #777;
-  font-size: 1rem;
+  color: var(--vt-c-grey-soft);
+  font-size: 1em;
   cursor: default;
 }
 .member__contact svg {
@@ -295,7 +296,7 @@ section {
   max-width: 47%;
 }
 .member__about h3 {
-  font-size: 2.25rem;
+  font-size: 2.25em;
 }
 .member__about p {
   margin-bottom: 40px;
@@ -307,8 +308,8 @@ section {
   width: calc((100% - 40px) / 3);
 }
 .member__about--item h4 {
-  font-weight: bold;
-  font-size: 1.5rem;
+  font-weight: 500;
+  font-size: 1.5em;
   margin: 15px 0 5px;
 }
 .member__about--item p {
@@ -327,6 +328,7 @@ section {
 }
 .member__card h6 {
   letter-spacing: 2.1px;
+  font-weight: 400;
 }
 .member__card p {
   max-width: 550px;

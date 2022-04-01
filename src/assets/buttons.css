@@ -3,224 +3,277 @@
   border: 1px solid transparent;
   color: var(--vt-c-black-soft);
 }
+
 .default:hover {
   border: 1px solid var(--elements-c-default);
   background: #fff;
 }
+
 .primary {
   background: var(--elements-c-primary);
   border: 1px solid transparent;
   color: #fff;
 }
+
 .primary .arrow svg {
   fill: var(--elements-c-primary);
 }
+
 .primary:hover {
   border: 1px solid var(--elements-c-primary);
   background: #fff;
   color: var(--elements-c-primary);
 }
+
 .success {
   background: var(--elements-c-success);
   border: 1px solid transparent;
   color: #fff;
 }
+
 .success:hover {
   border: 1px solid var(--elements-c-success);
   background: #fff;
   color: var(--elements-c-success);
 }
+
 .info {
   background: var(--elements-c-info);
   border: 1px solid transparent;
   color: #fff;
 }
+
 .info:hover {
   border: 1px solid var(--elements-c-info);
   background: #fff;
   color: var(--elements-c-info);
 }
+
 .warning {
   background: var(--elements-c-warning);
   border: 1px solid transparent;
   color: #fff;
 }
+
 .warning:hover {
   border: 1px solid var(--elements-c-warning);
   background: #fff;
   color: var(--elements-c-warning);
 }
+
 .danger {
   background: var(--elements-c-danger);
   border: 1px solid transparent;
   color: #fff;
 }
+
 .danger:hover {
   border: 1px solid var(--elements-c-danger);
   background: #fff;
   color: var(--elements-c-danger);
 }
+
 .link {
   background: var(--elements-c-default);
   border: 1px solid var(--elements-c-default);
   text-decoration: underline;
   color: var(--vt-c-black-soft);
 }
+
 .link:hover {
   background: #fff;
 }
+
 .disable {
   background: var(--elements-c-default);
   border: 1px solid transparent;
   cursor: not-allowed;
   color: var(--clr-primary);
 }
+
 /* ----------------------------- */
 .default-border {
   color: var(--clr-primary);
   border: 1px solid var(--elements-c-default);
   background: #fff;
 }
+
 .default-border:hover {
   color: var(--vt-c-black-soft);
   background: var(--elements-c-default);
   border: 1px solid transparent;
 }
+
 .primary-border {
   color: var(--elements-c-primary);
   border: 1px solid var(--elements-c-primary);
   background: #fff;
 }
+
 .primary-border:hover {
   color: #fff;
   background: var(--elements-c-primary);
   border: 1px solid transparent;
 }
+
 .success-border {
   color: var(--elements-c-success);
   border: 1px solid var(--elements-c-success);
   background: #fff;
 }
+
 .success-border:hover {
   color: #fff;
   background: var(--elements-c-success);
   border: 1px solid transparent;
 }
+
 .info-border {
   color: var(--elements-c-info);
   border: 1px solid var(--elements-c-info);
   background: #fff;
 }
+
 .info-border:hover {
   color: #fff;
   background: var(--elements-c-info);
   border: 1px solid transparent;
 }
+
 .warning-border {
   color: var(--elements-c-warning);
   border: 1px solid var(--elements-c-warning);
   background: #fff;
 }
+
 .warning-border:hover {
   color: #fff;
   background: var(--elements-c-warning);
   border: 1px solid transparent;
 }
+
 .danger-border {
   color: var(--elements-c-danger);
   border: 1px solid var(--elements-c-danger);
   background: #fff;
 }
+
 .danger-border:hover {
   color: #fff;
   background: var(--elements-c-danger);
   border: 1px solid transparent;
 }
+
 .link-border {
   color: var(--vt-c-black-soft);
   border: 1px solid var(--elements-c-default);
   background: #fff;
   text-decoration: underline;
 }
+
 .link-border:hover {
   background: var(--elements-c-default);
   border: 1px solid transparent;
 }
+
 /* ----------------------------- */
 .radius {
   border-radius: 5px;
 }
+
 .circle {
   border-radius: 20px;
 }
+
 .arrow {
   display: flex;
   align-items: center;
 }
+
 .arrow svg {
   margin-left: 10px;
   width: 12px;
   height: 12px;
   fill: #fff;
 }
+
 .arrow-white:hover svg {
   fill: #fff;
 }
+
 .arrow-c-black-soft svg {
   fill: var(--vt-c-black-soft);
 }
+
 .arrow-c-primary svg {
   fill: var(--clr-primary);
 }
+
 .arrow-c-primary:hover svg {
   fill: var(--vt-c-black-soft);
 }
+
 .default-c-arrow svg {
   fill: var(--elements-c-default);
 }
+
 .primary-c-arrow svg {
   fill: var(--elements-c-primary);
 }
+
 .success-c-arrow svg {
   fill: var(--elements-c-success);
 }
+
 .info-c-arrow svg {
   fill: var(--elements-c-info);
 }
+
 .warning-c-arrow svg {
   fill: var(--elements-c-warning);
 }
+
 .danger-c-arrow svg {
   fill: var(--elements-c-danger);
 }
+
 .default-arrow:hover svg {
   fill: var(--elements-c-default);
 }
+
 .primary-arrow:hover svg {
   fill: var(--elements-c-primary);
 }
+
 .success-arrow:hover svg {
   fill: var(--elements-c-success);
 }
+
 .info-arrow:hover svg {
   fill: var(--elements-c-info);
 }
+
 .warning-arrow:hover svg {
   fill: var(--elements-c-warning);
 }
+
 .danger-arrow:hover svg {
   fill: var(--elements-c-danger);
 }
+
 /* ----------------------------- */
 .e-large {
-  line-height: 3.438rem;
+  line-height: 3.438em !important;
 }
+
 .large {
-  line-height: 2.813rem;
+  line-height: 2.813em !important;
 }
+
 .medium {
-  line-height: 2.188rem;
+  line-height: 2.188em !important;
 }
+
 .small {
-  line-height: 1.563rem;
+  line-height: 1.563em !important;
 }
