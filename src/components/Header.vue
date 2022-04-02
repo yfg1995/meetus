@@ -41,11 +41,6 @@ export default {
   },
   setup() {
     const route = useRoute();
-    const isActive = ref(false);
-
-    function toggleClass() {
-      isActive.value = !isActive.value;
-    }
 
     const pages = ref([
       {
@@ -94,6 +89,7 @@ header {
     var(--clr-primary),
     var(--clr-secondary)
   );
+  transition: all 0.4s ease-in-out;
 }
 .headerScroll {
   background: #111;
@@ -102,7 +98,7 @@ header {
   width: 100%;
   z-index: 99;
   min-height: 80px;
-  transition: background 0.4s, all 0.5s ease-in-out;
+  transition: background 0.4s, all 0.4s ease-in-out;
 }
 .headerScroll .menu-item a:before,
 .headerScroll .menu-item a:after {
@@ -110,7 +106,6 @@ header {
 }
 .headerScroll .logo h1 {
   font-size: 1.625em;
-  font-weight: 500;
 }
 .logo h1 {
   font-size: 1.75em;

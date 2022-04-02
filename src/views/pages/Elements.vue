@@ -136,7 +136,6 @@
             href="#"
             class="
               generic-btn
-            
               primary-border
               circle
               arrow
@@ -150,7 +149,6 @@
             href="#"
             class="
               generic-btn
-            
               success-border
               circle
               arrow
@@ -164,7 +162,6 @@
             href="#"
             class="
               generic-btn
-            
               info-border
               circle
               arrow
@@ -178,7 +175,6 @@
             href="#"
             class="
               generic-btn
-            
               warning-border
               circle
               arrow
@@ -192,7 +188,6 @@
             href="#"
             class="
               generic-btn
-            
               danger-border
               circle
               arrow
@@ -464,42 +459,197 @@
       <!-- typography-lists -->
 
       <div class="section forms">
+        <h3>form element</h3>
         <div class="row flex justify-between">
-          <div class="col">
-            <h3>form element</h3>
+          <div class="inputs-col">
             <form>
-              <div><input type="text" placeholder="First Name" /></div>
-              <div><input type="text" placeholder="Last Name" /></div>
-              <div><input type="email" placeholder="Email Address" /></div>
-              <div><input type="text" placeholder="Address" /></div>
+              <div><input type="text" placeholder="First Name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'First Name'" /></div>
+              <div class="mt10"><input type="text" placeholder="Last Name" /></div>
+              <div class="mt10"><input type="email" placeholder="Email Address" /></div>
+              
+              <div class="input-group-icon flex align-center mt10">
+                <svg viewBox="0 0 384 512" class="thumb-thack_svg">
+                  <path d="M32 32C32 14.33 46.33 0 64 0H320C337.7 0 352 14.33 352 32C352 49.67 337.7 64 320 64H290.5L301.9 212.2C338.6 232.1 367.5 265.4 381.4 306.9L382.4 309.9C385.6 319.6 383.1 330.4 377.1 338.7C371.9 347.1 362.3 352 352 352H32C21.71 352 12.05 347.1 6.04 338.7C.0259 330.4-1.611 319.6 1.642 309.9L2.644 306.9C16.47 265.4 45.42 232.1 82.14 212.2L93.54 64H64C46.33 64 32 49.67 32 32zM224 384V480C224 497.7 209.7 512 192 512C174.3 512 160 497.7 160 480V384H224z"/>
+                </svg>
 
-              <div><textarea placeholder="Message"></textarea></div>
-              <div><input type="text" placeholder="Primary color" /></div>
-              <div><input type="text" placeholder="Accent color" /></div>
-              <div><input type="text" placeholder="Secondary color" /></div>
+                <input type="text" placeholder="Address" />
+              </div>
 
-              <svg viewBox="0 0 384 512">
-                <path d="M32 32C32 14.33 46.33 0 64 0H320C337.7 0 352 14.33 352 32C352 49.67 337.7 64 320 64H290.5L301.9 212.2C338.6 232.1 367.5 265.4 381.4 306.9L382.4 309.9C385.6 319.6 383.1 330.4 377.1 338.7C371.9 347.1 362.3 352 352 352H32C21.71 352 12.05 347.1 6.04 338.7C.0259 330.4-1.611 319.6 1.642 309.9L2.644 306.9C16.47 265.4 45.42 232.1 82.14 212.2L93.54 64H64C46.33 64 32 49.67 32 32zM224 384V480C224 497.7 209.7 512 192 512C174.3 512 160 497.7 160 480V384H224z"/>
-              </svg>
+              <div class="input-group-icon mt10">
+                <div class="flex w-full">
+                  <div class="input-group-icon__svg">
+                    <svg viewBox="0 0 576 512">
+                      <path d="M482.3 192C516.5 192 576 221 576 256C576 292 516.5 320 482.3 320H365.7L265.2 495.9C259.5 505.8 248.9 512 237.4 512H181.2C170.6 512 162.9 501.8 165.8 491.6L214.9 320H112L68.8 377.6C65.78 381.6 61.04 384 56 384H14.03C6.284 384 0 377.7 0 369.1C0 368.7 .1818 367.4 .5398 366.1L32 256L.5398 145.9C.1818 144.6 0 143.3 0 142C0 134.3 6.284 128 14.03 128H56C61.04 128 65.78 130.4 68.8 134.4L112 192H214.9L165.8 20.4C162.9 10.17 170.6 0 181.2 0H237.4C248.9 0 259.5 6.153 265.2 16.12L365.7 192H482.3z"/>
+                    </svg>
+                  </div>
 
-              <svg viewBox="0 0 576 512">
-                <path d="M482.3 192C516.5 192 576 221 576 256C576 292 516.5 320 482.3 320H365.7L265.2 495.9C259.5 505.8 248.9 512 237.4 512H181.2C170.6 512 162.9 501.8 165.8 491.6L214.9 320H112L68.8 377.6C65.78 381.6 61.04 384 56 384H14.03C6.284 384 0 377.7 0 369.1C0 368.7 .1818 367.4 .5398 366.1L32 256L.5398 145.9C.1818 144.6 0 143.3 0 142C0 134.3 6.284 128 14.03 128H56C61.04 128 65.78 130.4 68.8 134.4L112 192H214.9L165.8 20.4C162.9 10.17 170.6 0 181.2 0H237.4C248.9 0 259.5 6.153 265.2 16.12L365.7 192H482.3z"/>
-              </svg>
+                  <div class="form-select">
+                    <div class="nice-select">
+                      <span class="current">City</span>
+                    </div>
+                  </div>
+                </div>
 
-              <svg viewBox="0 0 512 512">
-                <path d="M512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256zM57.71 192.1L67.07 209.4C75.36 223.9 88.99 234.6 105.1 239.2L162.1 255.7C180.2 260.6 192 276.3 192 294.2V334.1C192 345.1 198.2 355.1 208 359.1C217.8 364.9 224 374.9 224 385.9V424.9C224 440.5 238.9 451.7 253.9 447.4C270.1 442.8 282.5 429.1 286.6 413.7L289.4 402.5C293.6 385.6 304.6 371.1 319.7 362.4L327.8 357.8C342.8 349.3 352 333.4 352 316.1V307.9C352 295.1 346.9 282.9 337.9 273.9L334.1 270.1C325.1 261.1 312.8 255.1 300.1 255.1H256.1C245.9 255.1 234.9 253.1 225.2 247.6L190.7 227.8C186.4 225.4 183.1 221.4 181.6 216.7C178.4 207.1 182.7 196.7 191.7 192.1L197.7 189.2C204.3 185.9 211.9 185.3 218.1 187.7L242.2 195.4C250.3 198.1 259.3 195 264.1 187.9C268.8 180.8 268.3 171.5 262.9 165L249.3 148.8C239.3 136.8 239.4 119.3 249.6 107.5L265.3 89.12C274.1 78.85 275.5 64.16 268.8 52.42L266.4 48.26C262.1 48.09 259.5 48 256 48C163.1 48 84.4 108.9 57.71 192.1L57.71 192.1zM437.6 154.5L412 164.8C396.3 171.1 388.2 188.5 393.5 204.6L410.4 255.3C413.9 265.7 422.4 273.6 433 276.3L462.2 283.5C463.4 274.5 464 265.3 464 256C464 219.2 454.4 184.6 437.6 154.5H437.6z"/>
-              </svg>
+                <ul class="list">
+                  <li class="option">dhaka</li>
+                  <li class="option">dilli</li>
+                  <li class="option">newyork</li>
+                  <li class="option">islamabad</li>
+                </ul>
+              </div>
+
+              <div class="input-group-icon flex mt10">
+                <div class="flex w-full">
+                  <div class="input-group-icon__svg">
+                    <svg viewBox="0 0 512 512">
+                      <path d="M512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256zM57.71 192.1L67.07 209.4C75.36 223.9 88.99 234.6 105.1 239.2L162.1 255.7C180.2 260.6 192 276.3 192 294.2V334.1C192 345.1 198.2 355.1 208 359.1C217.8 364.9 224 374.9 224 385.9V424.9C224 440.5 238.9 451.7 253.9 447.4C270.1 442.8 282.5 429.1 286.6 413.7L289.4 402.5C293.6 385.6 304.6 371.1 319.7 362.4L327.8 357.8C342.8 349.3 352 333.4 352 316.1V307.9C352 295.1 346.9 282.9 337.9 273.9L334.1 270.1C325.1 261.1 312.8 255.1 300.1 255.1H256.1C245.9 255.1 234.9 253.1 225.2 247.6L190.7 227.8C186.4 225.4 183.1 221.4 181.6 216.7C178.4 207.1 182.7 196.7 191.7 192.1L197.7 189.2C204.3 185.9 211.9 185.3 218.1 187.7L242.2 195.4C250.3 198.1 259.3 195 264.1 187.9C268.8 180.8 268.3 171.5 262.9 165L249.3 148.8C239.3 136.8 239.4 119.3 249.6 107.5L265.3 89.12C274.1 78.85 275.5 64.16 268.8 52.42L266.4 48.26C262.1 48.09 259.5 48 256 48C163.1 48 84.4 108.9 57.71 192.1L57.71 192.1zM437.6 154.5L412 164.8C396.3 171.1 388.2 188.5 393.5 204.6L410.4 255.3C413.9 265.7 422.4 273.6 433 276.3L462.2 283.5C463.4 274.5 464 265.3 464 256C464 219.2 454.4 184.6 437.6 154.5H437.6z"/>
+                    </svg>
+                  </div>
+                
+                  <div class="form-select">
+                    <div class="nice-select">
+                      <span class="current">Country</span>
+                    </div>
+                  </div>
+                </div>
+
+                <ul class="list">
+                  <li class="option">bangladesh</li>
+                  <li class="option">india</li>
+                  <li class="option">england</li>
+                  <li class="option">sri lanka</li>
+                </ul>
+              </div>
+
+              <div class="mt10"><textarea placeholder="Message"></textarea></div>
+              <div class="mt10 single-input-primary"><input type="text" placeholder="Primary color" /></div>
+              <div class="mt10 single-input-accent"><input type="text" placeholder="Accent color" /></div>
+              <div class="mt10 single-input-secondary"><input type="text" placeholder="Secondary color" /></div>
             </form>
           </div>
 
-          <div class="col"></div>
+          <!-- <div class="checkboxes-col">
+            <div class="col-lg-3 col-md-4 mt-sm-30 element-wrap">
+								<div class="single-element-widget">
+									<h3 class="mb-30 title_color">Switches</h3>
+									<div class="switch-wrap d-flex justify-content-between">
+										<p>01. Sample Switch</p>
+										<div class="primary-switch">
+											<input type="checkbox" id="default-switch">
+											<label for="default-switch"></label>
+										</div>
+									</div>
+									<div class="switch-wrap d-flex justify-content-between">
+										<p>02. Primary Color Switch</p>
+										<div class="primary-switch">
+											<input type="checkbox" id="primary-switch" checked="">
+											<label for="primary-switch"></label>
+										</div>
+									</div>
+									<div class="switch-wrap d-flex justify-content-between">
+										<p>03. Confirm Color Switch</p>
+										<div class="confirm-switch">
+											<input type="checkbox" id="confirm-switch" checked="">
+											<label for="confirm-switch"></label>
+										</div>
+									</div>
+								</div>
+								<div class="single-element-widget">
+									<h3 class="mb-30 title_color">Selectboxes</h3>
+									<div class="default-select" id="default-select">
+										<select style="display: none;">
+											<option value="1">English</option>
+											<option value="1">Spanish</option>
+											<option value="1">Arabic</option>
+											<option value="1">Portuguise</option>
+											<option value="1">Bengali</option>
+										</select><div class="nice-select" tabindex="0"><span class="current">English</span><ul class="list"><li data-value="1" class="option selected">English</li><li data-value="1" class="option">Spanish</li><li data-value="1" class="option">Arabic</li><li data-value="1" class="option">Portuguise</li><li data-value="1" class="option">Bengali</li></ul></div>
+									</div>
+								</div>
+								<div class="single-element-widget">
+									<h3 class="mb-30 title_color">Checkboxes</h3>
+									<div class="switch-wrap d-flex justify-content-between">
+										<p>01. Sample Checkbox</p>
+										<div class="primary-checkbox">
+											<input type="checkbox" id="default-checkbox">
+											<label for="default-checkbox"></label>
+										</div>
+									</div>
+									<div class="switch-wrap d-flex justify-content-between">
+										<p>02. Primary Color Checkbox</p>
+										<div class="primary-checkbox">
+											<input type="checkbox" id="primary-checkbox" checked="">
+											<label for="primary-checkbox"></label>
+										</div>
+									</div>
+									<div class="switch-wrap d-flex justify-content-between">
+										<p>03. Confirm Color Checkbox</p>
+										<div class="confirm-checkbox">
+											<input type="checkbox" id="confirm-checkbox">
+											<label for="confirm-checkbox"></label>
+										</div>
+									</div>
+									<div class="switch-wrap d-flex justify-content-between">
+										<p>04. Disabled Checkbox</p>
+										<div class="disabled-checkbox">
+											<input type="checkbox" id="disabled-checkbox" disabled="">
+											<label for="disabled-checkbox"></label>
+										</div>
+									</div>
+									<div class="switch-wrap d-flex justify-content-between">
+										<p>05. Disabled Checkbox active</p>
+										<div class="disabled-checkbox">
+											<input type="checkbox" id="disabled-checkbox-active" checked="" disabled="">
+											<label for="disabled-checkbox-active"></label>
+										</div>
+									</div>
+								</div>
+								<div class="single-element-widget">
+									<h3 class="mb-30 title_color">Radios</h3>
+									<div class="switch-wrap d-flex justify-content-between">
+										<p>01. Sample radio</p>
+										<div class="primary-radio">
+											<input type="checkbox" id="default-radio">
+											<label for="default-radio"></label>
+										</div>
+									</div>
+									<div class="switch-wrap d-flex justify-content-between">
+										<p>02. Primary Color radio</p>
+										<div class="primary-radio">
+											<input type="checkbox" id="primary-radio" checked="">
+											<label for="primary-radio"></label>
+										</div>
+									</div>
+									<div class="switch-wrap d-flex justify-content-between">
+										<p>03. Confirm Color radio</p>
+										<div class="confirm-radio">
+											<input type="checkbox" id="confirm-radio" checked="">
+											<label for="confirm-radio"></label>
+										</div>
+									</div>
+									<div class="switch-wrap d-flex justify-content-between">
+										<p>04. Disabled radio</p>
+										<div class="disabled-radio">
+											<input type="checkbox" id="disabled-radio" disabled="">
+											<label for="disabled-radio"></label>
+										</div>
+									</div>
+									<div class="switch-wrap d-flex justify-content-between">
+										<p>05. Disabled radio active</p>
+										<div class="disabled-radio">
+											<input type="checkbox" id="disabled-radio-active" checked="" disabled="">
+											<label for="disabled-radio-active"></label>
+										</div>
+									</div>
+								</div>
+							</div>
+          </div> -->
         </div>
       </div>
       <!-- forms -->
     </div>
   </section>
 </template>
-
 
 <script>
 import { ref, computed, onMounted } from "vue";
@@ -572,15 +722,16 @@ h5 {
 h6 {
   font-size: 0.875em;
 }
-
-p {
-  line-height: 1.5em;
-}
 .section {
   padding: 100px 0;
 }
 .section:not(:last-of-type) {
   border-bottom: 2px solid #eee;
+}
+
+/* SAMPLE TEXT */
+.sample-text {
+  padding-right: 20px;
 }
 
 /* SAMPLE BUTTONS */
@@ -607,8 +758,14 @@ p {
 .right-aligned .aligned-img {
   margin-left: 30px;
 }
+.right-aligned .aligned-text {
+  padding-left: 20px;
+}
 .left-aligned .aligned-img {
   margin-right: 30px;
+}
+.left-aligned .aligned-text {
+  padding-right: 20px;
 }
 
 /* DEFINITION COLUMNS */
@@ -669,17 +826,16 @@ p {
 }
 .table-row .progress-br {
   width: 80%;
-  border: 1px solid #eeeeee;
+  border: 1px solid #eee;
   padding: 3px 5px;
   border-radius: 10px;
-  background: #e9e9e9;
+  background: #f9f9f9;
 }
 .table-row .progress-bar {
   height: 5px;
   border-radius: 10px;
   transition: width 1.5s ease-in-out;
   border-radius: 5px;
-  width: 100px;
 }
 
 /* IMAGE GALLERY */
@@ -732,25 +888,25 @@ p {
 .unordered-list li:before {
   content: "";
   position: absolute;
-  width: 14px;
-  height: 14px;
+  width: 12px;
+  height: 12px;
   border: 3px solid var(--elements-c-primary);
   background: #fff;
   top: 50%;
   left: 0;
-  transform: translateY(-50%);
+  transform: translateY(-43%);
   border-radius: 50%;
 }
 .first-li:before {
-  top: 7px !important;
+  top: 9px !important;
   transform: translateY(0) !important;
 }
 .unordered-list .li-space-left__first-sub li:before {
-  top: 7px !important;
+  top: 9px !important;
   transform: translateY(0) !important;
 }
 .unordered-list .li-space-left__second-sub li:before {
-  top: 22% !important;
+  top: 30% !important;
   transform: translateY(0) !important;
 }
 .unordered-list li,
@@ -781,4 +937,114 @@ ol li:before {
 }
 
 /* FORMS */
+.forms .inputs-col {
+  width: 65%;
+}
+.forms .checkboxes-col {
+  width: 30%;
+}
+.forms form {
+  width: 100%;
+}
+.forms input,
+.forms textarea,
+.form-select .nice-select {
+  display: block;
+  width: 100%;
+  border: 1px solid transparent;
+  outline: none;
+  background: #f9f9ff;
+  padding: 10px 20px;
+  font-size: 1em;
+  color: var(--vt-c-black-soft);
+  transition: all 300ms ease-in-out;
+}
+.form-select .nice-select {
+  padding: 6px 20px;
+}
+.forms textarea {
+  height: 100px;
+  padding: 10px 20px;
+}
+.input-group-icon {
+  background: #f9f9ff;
+  padding-left: 20px;
+}
+.input-group-icon input {
+  padding-left: 15px;
+}
+.input-group-icon svg {
+  width: 15px;
+  height: 15px;
+  fill: #797979;
+  margin-top: 5px;
+}
+.single-input-primary input:focus {
+  border-color: var(--elements-c-primary);
+}
+.single-input-accent input:focus {
+  border-color: #eb6b55;
+}
+.single-input-secondary input:focus {
+  border-color: var(--table-bar-orange);
+}
+.input-group-icon {
+  position: relative;
+  cursor: pointer;
+}
+.input-group-icon .list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  padding: 10px 0 10px 50px;
+  background: #fff;
+  visibility: hidden;
+  opacity: 0;
+}
+.form-select {
+  width: 100%;
+}
+.form-select .nice-select {
+  padding-left: 15px;
+}
+.nice-select .current {
+  font-size: 1em;
+  color: var(--vt-c-grey-soft);
+  font-family: Arial, Helvetica, sans-serif;
+}
+.input-group-icon .list .option {
+  transition: all 0.3s ease;
+  line-height: 1.75em;
+  font-size: 1em;
+  color: var(--vt-c-grey-soft);
+  cursor: pointer;
+  text-transform: capitalize;
+}
+.thumb-thack_svg {
+  margin-top: 2px !important;
+}
+/* .input-group-icon .option.selected {
+  color: #f8b600;
+  background: transparent;
+} */
+.input-group-icon .list .option:hover {
+  color: var(--elements-c-primary);
+}
+.nice-select:after {
+  position: absolute;
+  content: "";
+  right: 3%;
+  top: 50%;
+  transform: rotate(45deg) translateY(-50%);
+  height: 7px;
+  width: 7px;
+  border-bottom: 2px solid var(--vt-c-grey-soft);
+  border-right: 2px solid var(--vt-c-grey-soft);
+  transition: all 0.3s ease-in-out;
+}
+.input-group-icon__svg svg {
+  margin-top: 13px;
+}
 </style>

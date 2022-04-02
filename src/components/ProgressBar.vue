@@ -65,7 +65,7 @@ export default {
 
 <style scoped>
 .member__skill_progress-br {
-  border: 1px solid #eeeeee;
+  border: 1px solid #eee;
   padding: 5px;
   border-radius: 10px;
 }

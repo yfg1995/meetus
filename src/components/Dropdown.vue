@@ -2,7 +2,7 @@
     <li @mouseenter="toggleClass" @mouseleave="toggleClass" class="menu-item uppercase">
       {{ title }}
 
-        <ul class="sub-item" :class="{ active: isActive ? true : false }">
+        <ul class="sub-item" :class="{ activeVisible: isActive ? true : false }">
           <li v-for="(item, idx) in items" :key="idx" class="menu-item">
             <router-link :to="item.link">{{ item.title }}</router-link>
           </li>
@@ -24,7 +24,10 @@ export default {
 
     onMounted(() => {
       document.addEventListener("mouseover", (e) => {
-        if (e.target.closets(".sub-item") || e.target.closets(".menu-item")) {
+        if (
+          e.target.classList.contains(".sub-item") ||
+          e.target.classList.contains(".menu-item")
+        ) {
           isActive.value = !isActive.value;
         }
       });
@@ -71,7 +74,7 @@ export default {
 }
 
 /* HELPERS */
-.active {
+.activeVisible {
   visibility: visible;
   opacity: 1;
 }

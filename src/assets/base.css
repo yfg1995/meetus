@@ -73,7 +73,7 @@ body {
 }
 
 .container {
-  max-width: 1400px;
+  max-width: 1300px;
 }
 
 ul,
@@ -153,6 +153,11 @@ body section:first-of-type {
   text-align: right;
 }
 
+.activeVisible {
+  visibility: visible;
+  opacity: 1;
+}
+
 .uppercase {
   text-transform: uppercase;
 }
@@ -165,12 +170,20 @@ body section:first-of-type {
   padding: 120px 0;
 }
 
+.mt10 {
+  margin-top: 10px;
+}
+
 .mb20 {
   margin-bottom: 20px;
 }
 
 .mb50 {
   margin-bottom: 50px;
+}
+
+.w-full {
+  width: 100%;
 }
 
 /* TABLE BAR COLORS */

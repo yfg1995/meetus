@@ -16,7 +16,12 @@
           <p>Stay updated with our latest trends</p>
           <form>
             <div class="form flex">
-              <input type="text" placeholder="Enter email address" />
+              <input
+                type="text"
+                placeholder="Enter email address"
+                onfocus="this.placeholder = ''"
+                onblur="this.placeholder = 'Enter email address'"
+              />
               <div class="footer__newsletter--btn flex">
                 <svg viewBox="0 0 448 512">
                   <path
