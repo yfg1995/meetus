@@ -1,7 +1,7 @@
 <template>
   <section class="p_120">
     <div class="container">
-      <div class="contact__rows flex justify-between">
+      <div class="contact__rows d-flex justify-between">
         <div class="contact__info">
           <div class="contact__info--item">
             <svg viewBox="0 0 576 512">
@@ -37,7 +37,7 @@
         </div>
 
         <form>
-          <div class="contact__form flex justify-between">
+          <div class="contact__form d-flex justify-between">
             <div class="contact__form--input">
               <input type="text" placeholder="Enter your name" />
               <input type="email" placeholder="Enter email address" />

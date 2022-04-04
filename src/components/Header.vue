@@ -1,14 +1,14 @@
 <template>
   <header id="header">
     <div class="header-container">
-      <div class="header flex justify-between align-center">
+      <div class="header d-flex justify-between align-center">
         <div class="logo">
           <router-link to="/">
             <h1 class="uppercase">meetus</h1>
           </router-link>
         </div>
 
-        <ul class="flex align-center">
+        <ul class="d-flex align-center">
           <li class="menu-item">
             <router-link to="/">home</router-link>
           </li>
@@ -98,7 +98,7 @@ header {
   width: 100%;
   z-index: 99;
   min-height: 80px;
-  transition: background 0.4s, all 0.4s ease-in-out;
+  transition: background 0.4s, all 0.45s ease-in-out;
 }
 .headerScroll .menu-item a:before,
 .headerScroll .menu-item a:after {

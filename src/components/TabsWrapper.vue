@@ -1,6 +1,6 @@
 <template>
   <div class="tabs">
-    <ul class="tabs__header flex justify-center align-center">
+    <ul class="tabs__header d-flex justify-center align-center">
       <li
         v-for="title in tabTitles"
         :key="title"

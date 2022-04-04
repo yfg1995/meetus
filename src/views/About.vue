@@ -2,7 +2,7 @@
   <section class="p_120">
     <div class="container">
       <div class="about" v-for="(member, index) in members" :key="index">
-        <div class="member__card flex">
+        <div class="member__card d-flex">
           <div class="member__bg">
             <div class="member__img">
               <img v-if="member.image" :src="member.image" alt="" />
@@ -66,7 +66,7 @@
             </ul>
             <!-- member contact -->
 
-            <ul class="member__links flex">
+            <ul class="member__links d-flex">
               <li>
                 <a href="#">
                   <svg viewBox="0 0 320 512">
@@ -97,7 +97,7 @@
         </div>
         <!-- member card -->
 
-        <div class="member__info flex justify-between align-center">
+        <div class="member__info d-flex justify-between align-center">
           <div class="member__about">
             <h3 class="bold">about myself</h3>
             <p>
@@ -108,7 +108,7 @@
               laughed.
             </p>
 
-            <div class="member__about--items flex justify-between align-center">
+            <div class="member__about--items d-flex justify-between align-center">
               <div class="member__about--item">
                 <svg viewBox="0 0 448 512">
                   <path

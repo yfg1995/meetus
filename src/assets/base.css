@@ -133,7 +133,7 @@ body section:first-of-type {
 }
 
 /* HELPERS */
-.flex {
+.d-flex {
   display: flex;
 }
 

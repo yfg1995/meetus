@@ -219,7 +219,7 @@
 
       <div class="section left-aligned-col">
         <h3>left aligned</h3>
-        <div class="left-aligned flex align-center justify-between">
+        <div class="left-aligned d-flex align-center justify-between">
           <div class="aligned-img">
             <img src="elements/d.jpg" alt="" />
           </div>
@@ -248,7 +248,7 @@
 
       <div class="section right-aligned-col tar">
         <h3>right aligned</h3>
-        <div class="right-aligned flex align-center justify-between">
+        <div class="right-aligned d-flex align-center justify-between">
           <div class="aligned-img">
             <img src="elements/d.jpg" alt="" />
           </div>
@@ -274,7 +274,7 @@
 
       <div class="section definition">
         <h3>definition</h3>
-        <div class="definiton-row flex justify-between align-center">
+        <div class="definiton-row d-flex justify-between align-center">
           <div class="definition-row__col">
             <h4>definition 01</h4>
             <p>
@@ -335,13 +335,13 @@
       <div class="section table">
         <h3>table</h3>
         <div class="progress-table">
-          <div class="table-head flex uppercase">
+          <div class="table-head d-flex uppercase">
             <div class="serial">#</div>
             <div class="country">Countries</div>
             <div class="visit">Visits</div>
             <div class="percentage">Percentages</div>
           </div>
-          <div class="table-row flex" v-for="(table, idx) in tableStats" :key="idx">
+          <div class="table-row d-flex" v-for="(table, idx) in tableStats" :key="idx">
             <div class="serial">0{{idx + 1}}</div>
             <div class="country">
               <img :src="table.flag" alt="flag" />{{table.country}}
@@ -394,7 +394,7 @@
       <!-- image-gallery -->
 
       <div class="section typography-lists">
-        <div class="row flex justify-between">
+        <div class="row d-flex justify-between">
           <div class="col">
             <h3>typography</h3>
             <div class="typography">
@@ -459,15 +459,15 @@
       <!-- typography-lists -->
 
       <div class="section forms">
-        <h3>form element</h3>
-        <div class="row flex justify-between">
+        <div class="d-flex justify-between">
           <div class="inputs-col">
+            <h3>form element</h3>
             <form>
               <div><input autocomplete="off" type="text" placeholder="First Name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'First Name'" /></div>
               <div class="mt10"><input autocomplete="off" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Last Name'" type="text" placeholder="Last Name" /></div>
               <div class="mt10"><input autocomplete="off" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email Address'" type="email" placeholder="Email Address" /></div>
               
-              <div class="input-group-icon flex align-center mt10">
+              <div class="input-group-icon d-flex align-center mt10">
                 <svg viewBox="0 0 384 512" class="thumb-thack_svg">
                   <path d="M32 32C32 14.33 46.33 0 64 0H320C337.7 0 352 14.33 352 32C352 49.67 337.7 64 320 64H290.5L301.9 212.2C338.6 232.1 367.5 265.4 381.4 306.9L382.4 309.9C385.6 319.6 383.1 330.4 377.1 338.7C371.9 347.1 362.3 352 352 352H32C21.71 352 12.05 347.1 6.04 338.7C.0259 330.4-1.611 319.6 1.642 309.9L2.644 306.9C16.47 265.4 45.42 232.1 82.14 212.2L93.54 64H64C46.33 64 32 49.67 32 32zM224 384V480C224 497.7 209.7 512 192 512C174.3 512 160 497.7 160 480V384H224z"/>
                 </svg>
@@ -476,48 +476,42 @@
               </div>
 
               <div class="input-group-icon mt10">
-                <div class="flex w-full">
+                <div class="d-flex w-full">
                   <div class="input-group-icon__svg">
                     <svg viewBox="0 0 576 512">
                       <path d="M482.3 192C516.5 192 576 221 576 256C576 292 516.5 320 482.3 320H365.7L265.2 495.9C259.5 505.8 248.9 512 237.4 512H181.2C170.6 512 162.9 501.8 165.8 491.6L214.9 320H112L68.8 377.6C65.78 381.6 61.04 384 56 384H14.03C6.284 384 0 377.7 0 369.1C0 368.7 .1818 367.4 .5398 366.1L32 256L.5398 145.9C.1818 144.6 0 143.3 0 142C0 134.3 6.284 128 14.03 128H56C61.04 128 65.78 130.4 68.8 134.4L112 192H214.9L165.8 20.4C162.9 10.17 170.6 0 181.2 0H237.4C248.9 0 259.5 6.153 265.2 16.12L365.7 192H482.3z"/>
                     </svg>
                   </div>
 
-                  <div class="form-select">
+                  <div class="form-select" @click="toggleClass">
                     <div class="nice-select">
                       <span class="current">City</span>
                     </div>
                   </div>
                 </div>
 
-                <ul class="list">
-                  <li class="option">dhaka</li>
-                  <li class="option">dilli</li>
-                  <li class="option">newyork</li>
-                  <li class="option">islamabad</li>
+                <ul class="list" v-show="isActive">
+                  <li v-for="(city, idx) in cities" :key="idx" class="option">{{ city }}</li>
                 </ul>
               </div>
 
-              <div class="input-group-icon flex mt10">
-                <div class="flex w-full">
+              <div class="input-group-icon d-flex mt10">
+                <div class="d-flex w-full">
                   <div class="input-group-icon__svg">
                     <svg viewBox="0 0 512 512">
                       <path d="M512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256zM57.71 192.1L67.07 209.4C75.36 223.9 88.99 234.6 105.1 239.2L162.1 255.7C180.2 260.6 192 276.3 192 294.2V334.1C192 345.1 198.2 355.1 208 359.1C217.8 364.9 224 374.9 224 385.9V424.9C224 440.5 238.9 451.7 253.9 447.4C270.1 442.8 282.5 429.1 286.6 413.7L289.4 402.5C293.6 385.6 304.6 371.1 319.7 362.4L327.8 357.8C342.8 349.3 352 333.4 352 316.1V307.9C352 295.1 346.9 282.9 337.9 273.9L334.1 270.1C325.1 261.1 312.8 255.1 300.1 255.1H256.1C245.9 255.1 234.9 253.1 225.2 247.6L190.7 227.8C186.4 225.4 183.1 221.4 181.6 216.7C178.4 207.1 182.7 196.7 191.7 192.1L197.7 189.2C204.3 185.9 211.9 185.3 218.1 187.7L242.2 195.4C250.3 198.1 259.3 195 264.1 187.9C268.8 180.8 268.3 171.5 262.9 165L249.3 148.8C239.3 136.8 239.4 119.3 249.6 107.5L265.3 89.12C274.1 78.85 275.5 64.16 268.8 52.42L266.4 48.26C262.1 48.09 259.5 48 256 48C163.1 48 84.4 108.9 57.71 192.1L57.71 192.1zM437.6 154.5L412 164.8C396.3 171.1 388.2 188.5 393.5 204.6L410.4 255.3C413.9 265.7 422.4 273.6 433 276.3L462.2 283.5C463.4 274.5 464 265.3 464 256C464 219.2 454.4 184.6 437.6 154.5H437.6z"/>
                     </svg>
                   </div>
                 
-                  <div class="form-select">
+                  <div class="form-select" @click="toggleClass">
                     <div class="nice-select">
                       <span class="current">Country</span>
                     </div>
                   </div>
                 </div>
 
-                <ul class="list">
-                  <li class="option">bangladesh</li>
-                  <li class="option">india</li>
-                  <li class="option">england</li>
-                  <li class="option">sri lanka</li>
+                <ul class="list" v-show="isActive">
+                  <li v-for="(country, idx) in countries" :key="idx" class="option">{{ country }}</li>
                 </ul>
               </div>
 
@@ -527,124 +521,131 @@
               <div class="mt10 single-input-secondary"><input autocomplete="off" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Secondary color'" type="text" placeholder="Secondary color" /></div>
             </form>
           </div>
+          <!-- inputs-col -->
 
-          <!-- <div class="checkboxes-col">
-            <div class="col-lg-3 col-md-4 mt-sm-30 element-wrap">
-								<div class="single-element-widget">
-									<h3 class="mb-30 title_color">Switches</h3>
-									<div class="switch-wrap d-flex justify-content-between">
-										<p>01. Sample Switch</p>
-										<div class="primary-switch">
-											<input type="checkbox" id="default-switch">
-											<label for="default-switch"></label>
-										</div>
-									</div>
-									<div class="switch-wrap d-flex justify-content-between">
-										<p>02. Primary Color Switch</p>
-										<div class="primary-switch">
-											<input type="checkbox" id="primary-switch" checked="">
-											<label for="primary-switch"></label>
-										</div>
-									</div>
-									<div class="switch-wrap d-flex justify-content-between">
-										<p>03. Confirm Color Switch</p>
-										<div class="confirm-switch">
-											<input type="checkbox" id="confirm-switch" checked="">
-											<label for="confirm-switch"></label>
-										</div>
-									</div>
-								</div>
-								<div class="single-element-widget">
-									<h3 class="mb-30 title_color">Selectboxes</h3>
-									<div class="default-select" id="default-select">
-										<select style="display: none;">
-											<option value="1">English</option>
-											<option value="1">Spanish</option>
-											<option value="1">Arabic</option>
-											<option value="1">Portuguise</option>
-											<option value="1">Bengali</option>
-										</select><div class="nice-select" tabindex="0"><span class="current">English</span><ul class="list"><li data-value="1" class="option selected">English</li><li data-value="1" class="option">Spanish</li><li data-value="1" class="option">Arabic</li><li data-value="1" class="option">Portuguise</li><li data-value="1" class="option">Bengali</li></ul></div>
-									</div>
-								</div>
-								<div class="single-element-widget">
-									<h3 class="mb-30 title_color">Checkboxes</h3>
-									<div class="switch-wrap d-flex justify-content-between">
-										<p>01. Sample Checkbox</p>
-										<div class="primary-checkbox">
-											<input type="checkbox" id="default-checkbox">
-											<label for="default-checkbox"></label>
-										</div>
-									</div>
-									<div class="switch-wrap d-flex justify-content-between">
-										<p>02. Primary Color Checkbox</p>
-										<div class="primary-checkbox">
-											<input type="checkbox" id="primary-checkbox" checked="">
-											<label for="primary-checkbox"></label>
-										</div>
-									</div>
-									<div class="switch-wrap d-flex justify-content-between">
-										<p>03. Confirm Color Checkbox</p>
-										<div class="confirm-checkbox">
-											<input type="checkbox" id="confirm-checkbox">
-											<label for="confirm-checkbox"></label>
-										</div>
-									</div>
-									<div class="switch-wrap d-flex justify-content-between">
-										<p>04. Disabled Checkbox</p>
-										<div class="disabled-checkbox">
-											<input type="checkbox" id="disabled-checkbox" disabled="">
-											<label for="disabled-checkbox"></label>
-										</div>
-									</div>
-									<div class="switch-wrap d-flex justify-content-between">
-										<p>05. Disabled Checkbox active</p>
-										<div class="disabled-checkbox">
-											<input type="checkbox" id="disabled-checkbox-active" checked="" disabled="">
-											<label for="disabled-checkbox-active"></label>
-										</div>
-									</div>
-								</div>
-								<div class="single-element-widget">
-									<h3 class="mb-30 title_color">Radios</h3>
-									<div class="switch-wrap d-flex justify-content-between">
-										<p>01. Sample radio</p>
-										<div class="primary-radio">
-											<input type="checkbox" id="default-radio">
-											<label for="default-radio"></label>
-										</div>
-									</div>
-									<div class="switch-wrap d-flex justify-content-between">
-										<p>02. Primary Color radio</p>
-										<div class="primary-radio">
-											<input type="checkbox" id="primary-radio" checked="">
-											<label for="primary-radio"></label>
-										</div>
-									</div>
-									<div class="switch-wrap d-flex justify-content-between">
-										<p>03. Confirm Color radio</p>
-										<div class="confirm-radio">
-											<input type="checkbox" id="confirm-radio" checked="">
-											<label for="confirm-radio"></label>
-										</div>
-									</div>
-									<div class="switch-wrap d-flex justify-content-between">
-										<p>04. Disabled radio</p>
-										<div class="disabled-radio">
-											<input type="checkbox" id="disabled-radio" disabled="">
-											<label for="disabled-radio"></label>
-										</div>
-									</div>
-									<div class="switch-wrap d-flex justify-content-between">
-										<p>05. Disabled radio active</p>
-										<div class="disabled-radio">
-											<input type="checkbox" id="disabled-radio-active" checked="" disabled="">
-											<label for="disabled-radio-active"></label>
-										</div>
-									</div>
-								</div>
-							</div>
-          </div> -->
+          <div class="checkboxes-col">
+            <h3>switches</h3>
+            <div class="single-element-widget">
+              <div class="switch-wrap d-flex">
+                <p>01. sample switch</p>
+                <div class="primary-switch">
+                  <input type="checkbox" id="default-switch" />
+                  <label for="default-switch"></label>
+                </div>
+              </div>
+
+              <div class="switch-wrap d-flex">
+                <p>02. primary color switch</p>
+                <div class="primary-switch">
+                  <input type="checkbox" id="primary-switch" checked="" />
+                  <label for="primary-switch"></label>
+                </div>
+              </div>
+
+              <div class="switch-wrap d-flex">
+                <p>03. confirm color switch</p>
+                <div class="confirm-switch">
+                  <input type="checkbox" id="confirm-switch" checked="" />
+                  <label for="confirm-switch"></label>
+                </div>
+              </div>
+            </div>
+
+            <div class="single-element-widget">
+              <h3>Selectboxes</h3>
+              <div class="form-select default-select" @click="toggleClass">
+                <div class="nice-select">
+                  <span class="current">English</span>
+
+                  <ul class="list" v-show="isActive">
+                    <li v-for="(language, idx) in languages" :key="idx" class="option">{{ language }}</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- <div class="single-element-widget">
+              <h3 class="mb-30 title_color">Checkboxes</h3>
+              <div class="switch-wrap d-flex justify-content-between">
+                <p>01. Sample Checkbox</p>
+                <div class="primary-checkbox">
+                  <input type="checkbox" id="default-checkbox">
+                  <label for="default-checkbox"></label>
+                </div>
+              </div>
+              <div class="switch-wrap d-flex justify-content-between">
+                <p>02. Primary Color Checkbox</p>
+                <div class="primary-checkbox">
+                  <input type="checkbox" id="primary-checkbox" checked="">
+                  <label for="primary-checkbox"></label>
+                </div>
+              </div>
+              <div class="switch-wrap d-flex justify-content-between">
+                <p>03. Confirm Color Checkbox</p>
+                <div class="confirm-checkbox">
+                  <input type="checkbox" id="confirm-checkbox">
+                  <label for="confirm-checkbox"></label>
+                </div>
+              </div>
+              <div class="switch-wrap d-flex justify-content-between">
+                <p>04. Disabled Checkbox</p>
+                <div class="disabled-checkbox">
+                  <input type="checkbox" id="disabled-checkbox" disabled="">
+                  <label for="disabled-checkbox"></label>
+                </div>
+              </div>
+              <div class="switch-wrap d-flex justify-content-between">
+                <p>05. Disabled Checkbox active</p>
+                <div class="disabled-checkbox">
+                  <input type="checkbox" id="disabled-checkbox-active" checked="" disabled="">
+                  <label for="disabled-checkbox-active"></label>
+                </div>
+              </div>
+            </div>
+            <div class="single-element-widget">
+              <h3 class="mb-30 title_color">Radios</h3>
+              <div class="switch-wrap d-flex justify-content-between">
+                <p>01. Sample radio</p>
+                <div class="primary-radio">
+                  <input type="checkbox" id="default-radio">
+                  <label for="default-radio"></label>
+                </div>
+              </div>
+              <div class="switch-wrap d-flex justify-content-between">
+                <p>02. Primary Color radio</p>
+                <div class="primary-radio">
+                  <input type="checkbox" id="primary-radio" checked="">
+                  <label for="primary-radio"></label>
+                </div>
+              </div>
+              <div class="switch-wrap d-flex justify-content-between">
+                <p>03. Confirm Color radio</p>
+                <div class="confirm-radio">
+                  <input type="checkbox" id="confirm-radio" checked="">
+                  <label for="confirm-radio"></label>
+                </div>
+              </div>
+              <div class="switch-wrap d-flex justify-content-between">
+                <p>04. Disabled radio</p>
+                <div class="disabled-radio">
+                  <input type="checkbox" id="disabled-radio" disabled="">
+                  <label for="disabled-radio"></label>
+                </div>
+              </div>
+              <div class="switch-wrap d-flex justify-content-between">
+                <p>05. Disabled radio active</p>
+                <div class="disabled-radio">
+                  <input type="checkbox" id="disabled-radio-active" checked="" disabled="">
+                  <label for="disabled-radio-active"></label>
+                </div>
+              </div>
+            </div> -->
+
+          
+          </div>
+          <!-- checkboxes-col -->
         </div>
+        <!-- row -->
       </div>
       <!-- forms -->
     </div>
@@ -666,7 +667,22 @@ export default {
     const tableStats = computed(() => {
       return store.getters["members/tableStats"];
     });
+    const cities = ref(["dhaka", "dilli", "new york", "islamabad"]);
+    const countries = ref(["bangladesh", "india", "england", "sri lanka"]);
+    const languages = ref([
+      "english",
+      "spanish",
+      "arabic",
+      "portuguise",
+      "bengali",
+    ]);
+
     let totalVisits = ref(null);
+    const isActive = ref(false);
+
+    function toggleClass() {
+      isActive.value = !isActive.value;
+    }
 
     onMounted(() => {
       tableStats.value.forEach((sum) => {
@@ -677,6 +693,11 @@ export default {
     return {
       tableStats,
       totalVisits,
+      isActive,
+      toggleClass,
+      cities,
+      countries,
+      languages,
     };
   },
 };
@@ -759,9 +780,6 @@ h6 {
 .right-aligned .aligned-img {
   margin-left: 30px;
 }
-.right-aligned .aligned-text {
-  padding-left: 20px;
-}
 .left-aligned .aligned-img {
   margin-right: 30px;
 }
@@ -788,7 +806,7 @@ h6 {
 /* TABLE */
 .progress-table {
   background: #fff;
-  padding: 15px 0px 30px 0px;
+  padding: 15px 0 0;
   min-width: 800px;
   overflow: hidden;
 }
@@ -938,11 +956,11 @@ ol li:before {
 }
 
 /* FORMS */
+.forms {
+  font-family: "Roboto", sans-serif;
+}
 .forms .inputs-col {
   width: 65%;
-}
-.forms .checkboxes-col {
-  width: 30%;
 }
 .forms form {
   width: 100%;
@@ -989,10 +1007,12 @@ ol li:before {
 .single-input-secondary input:focus {
   border-color: var(--table-bar-orange);
 }
-.input-group-icon {
+.input-group-icon,
+.single-element-widget {
   position: relative;
 }
-.input-group-icon .list {
+.input-group-icon .list,
+.single-element-widget .list {
   position: absolute;
   top: 100%;
   left: 0;
@@ -1000,8 +1020,6 @@ ol li:before {
   width: 100%;
   padding: 10px 0 10px 50px;
   background: #fff;
-  visibility: hidden;
-  opacity: 0;
 }
 .form-select {
   width: 100%;
@@ -1013,9 +1031,9 @@ ol li:before {
 .nice-select .current {
   font-size: 1em;
   color: var(--vt-c-grey-soft);
-  font-family: Arial, Helvetica, sans-serif;
 }
-.input-group-icon .list .option {
+.input-group-icon .list .option,
+.single-element-widget .list .option {
   transition: all 0.3s ease;
   line-height: 1.75em;
   font-size: 1em;
@@ -1023,14 +1041,14 @@ ol li:before {
   cursor: pointer;
   text-transform: capitalize;
 }
-/* .thumb-thack_svg {
-  margin-top: 2px !important;
-} */
-/* .input-group-icon .option.selected {
-  color: #f8b600;
-  background: transparent;
-} */
-.input-group-icon .list .option:hover {
+.thumb-thack_svg {
+  margin-top: 0 !important;
+}
+.input-group-icon__svg svg {
+  margin-top: 13px;
+}
+.input-group-icon .list .option:hover,
+.single-element-widget .list .option:hover {
   color: var(--elements-c-primary);
 }
 .nice-select:after {
@@ -1045,7 +1063,76 @@ ol li:before {
   border-right: 2px solid var(--vt-c-grey-soft);
   transition: all 0.3s ease-in-out;
 }
-.input-group-icon__svg svg {
-  margin-top: 13px;
+/* ------------------- */
+.checkboxes-col {
+  width: 30%;
+  padding-right: 100px;
+}
+.checkboxes-col p {
+  text-transform: capitalize;
+}
+.checkboxes-col .switch-wrap {
+  align-items: center;
+  justify-content: space-between;
+}
+.single-element-widget:not(:last-of-type) {
+  margin-bottom: 30px;
+}
+.primary-switch,
+.confirm-switch {
+  width: 35px;
+  height: 18px;
+  border-radius: 8px;
+  background: #fff;
+  position: relative;
+  cursor: pointer;
+  margin-left: 20px;
+}
+.primary-switch input,
+.confirm-switch input {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+.primary-switch input + label,
+.confirm-switch input + label {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.primary-switch input + label:before,
+.confirm-switch input + label:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.primary-switch input + label:after,
+.confirm-switch input + label:after {
+  content: "";
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #fff;
+  transition: all 0.2s;
+  box-shadow: 0px 4px 5px 0px rgb(0 0 0 / 20%);
+  cursor: pointer;
+}
+.single-element-widget .list {
+  padding-left: 15px;
 }
 </style>

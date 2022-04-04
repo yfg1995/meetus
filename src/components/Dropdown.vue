@@ -2,7 +2,7 @@
     <li @mouseenter="toggleClass" @mouseleave="toggleClass" class="menu-item menu-item_fot uppercase">
       {{ title }}
 
-        <ul class="sub-item" :class="{ activeVisible: isActive ? true : false }">
+        <ul class="sub-item" :class="{ activeVisible: isActive }">
           <li v-for="(item, idx) in items" :key="idx" class="menu-item" target="_blank">
             <router-link :to="item.link">{{ item.title }}</router-link>
           </li>
@@ -34,8 +34,8 @@ export default {
     });
 
     return {
-      toggleClass,
       isActive,
+      toggleClass,
     };
   },
 };
@@ -51,7 +51,7 @@ export default {
   left: 0;
   min-width: 200px;
   visibility: hidden;
-  transition: all 200ms ease-in;
+  transition: all 250ms ease-in;
   box-shadow: 0px 3px 16px 0px rgb(0 0 0 / 10%);
   opacity: 0;
   background: #fff;
@@ -72,7 +72,7 @@ export default {
   padding: 18px;
   font-weight: 500;
   display: block;
-  transition: 200ms ease-in-out;
+  transition: 250ms ease-in-out;
 }
 .sub-item .menu-item:not(:last-of-type) {
   border-bottom: 1px solid #ededed;
