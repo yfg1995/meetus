@@ -463,16 +463,16 @@
         <div class="row flex justify-between">
           <div class="inputs-col">
             <form>
-              <div><input type="text" placeholder="First Name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'First Name'" /></div>
-              <div class="mt10"><input type="text" placeholder="Last Name" /></div>
-              <div class="mt10"><input type="email" placeholder="Email Address" /></div>
+              <div><input autocomplete="off" type="text" placeholder="First Name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'First Name'" /></div>
+              <div class="mt10"><input autocomplete="off" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Last Name'" type="text" placeholder="Last Name" /></div>
+              <div class="mt10"><input autocomplete="off" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email Address'" type="email" placeholder="Email Address" /></div>
               
               <div class="input-group-icon flex align-center mt10">
                 <svg viewBox="0 0 384 512" class="thumb-thack_svg">
                   <path d="M32 32C32 14.33 46.33 0 64 0H320C337.7 0 352 14.33 352 32C352 49.67 337.7 64 320 64H290.5L301.9 212.2C338.6 232.1 367.5 265.4 381.4 306.9L382.4 309.9C385.6 319.6 383.1 330.4 377.1 338.7C371.9 347.1 362.3 352 352 352H32C21.71 352 12.05 347.1 6.04 338.7C.0259 330.4-1.611 319.6 1.642 309.9L2.644 306.9C16.47 265.4 45.42 232.1 82.14 212.2L93.54 64H64C46.33 64 32 49.67 32 32zM224 384V480C224 497.7 209.7 512 192 512C174.3 512 160 497.7 160 480V384H224z"/>
                 </svg>
 
-                <input type="text" placeholder="Address" />
+                <input autocomplete="off" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Address'" type="text" placeholder="Address" />
               </div>
 
               <div class="input-group-icon mt10">
@@ -521,10 +521,10 @@
                 </ul>
               </div>
 
-              <div class="mt10"><textarea placeholder="Message"></textarea></div>
-              <div class="mt10 single-input-primary"><input type="text" placeholder="Primary color" /></div>
-              <div class="mt10 single-input-accent"><input type="text" placeholder="Accent color" /></div>
-              <div class="mt10 single-input-secondary"><input type="text" placeholder="Secondary color" /></div>
+              <div class="mt10"><textarea placeholder="Message" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Message'"></textarea></div>
+              <div class="mt10 single-input-primary"><input autocomplete="off" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Primary color'" type="text" placeholder="Primary color" /></div>
+              <div class="mt10 single-input-accent"><input autocomplete="off" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Accent color'" type="text" placeholder="Accent color" /></div>
+              <div class="mt10 single-input-secondary"><input autocomplete="off" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Secondary color'" type="text" placeholder="Secondary color" /></div>
             </form>
           </div>
 
@@ -692,6 +692,7 @@ sub,
 sup,
 del {
   color: var(--clr-primary);
+  line-height: 1.625em;
 }
 
 h1 {
@@ -925,7 +926,7 @@ ol li {
 ol li:before {
   content: "0" counter(my-awesome-counter) ". ";
   color: var(--elements-c-primary);
-  font-weight: bold;
+  font-weight: 500;
 }
 .ordered-list .li-space-left__first-sub li:before {
   content: "a. ";
@@ -990,7 +991,6 @@ ol li:before {
 }
 .input-group-icon {
   position: relative;
-  cursor: pointer;
 }
 .input-group-icon .list {
   position: absolute;
@@ -1005,6 +1005,7 @@ ol li:before {
 }
 .form-select {
   width: 100%;
+  cursor: pointer;
 }
 .form-select .nice-select {
   padding-left: 15px;
@@ -1022,9 +1023,9 @@ ol li:before {
   cursor: pointer;
   text-transform: capitalize;
 }
-.thumb-thack_svg {
+/* .thumb-thack_svg {
   margin-top: 2px !important;
-}
+} */
 /* .input-group-icon .option.selected {
   color: #f8b600;
   background: transparent;
@@ -1037,9 +1038,9 @@ ol li:before {
   content: "";
   right: 3%;
   top: 50%;
-  transform: rotate(45deg) translateY(-50%);
-  height: 7px;
-  width: 7px;
+  transform: rotate(45deg) translateY(-90%);
+  height: 6px;
+  width: 6px;
   border-bottom: 2px solid var(--vt-c-grey-soft);
   border-right: 2px solid var(--vt-c-grey-soft);
   transition: all 0.3s ease-in-out;
