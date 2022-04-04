@@ -72,7 +72,7 @@ export default {
 .member__skill_progress {
   height: 10px;
   border-radius: 10px;
-  background: #e8e8e8;
+  background: #f2f2f2;
 }
 .member__skill_progress-bar {
   background: linear-gradient(

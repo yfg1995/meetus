@@ -8,7 +8,7 @@
           </router-link>
         </div>
 
-        <ul>
+        <ul class="flex align-center">
           <li class="menu-item">
             <router-link to="/">home</router-link>
           </li>
