@@ -976,7 +976,7 @@ ol li:before {
   padding: 10px 20px;
   font-size: 1em;
   color: var(--vt-c-black-soft);
-  transition: all 300ms ease-in-out;
+  transition: all 250ms ease-in-out;
 }
 .form-select .nice-select {
   padding: 6px 20px;
@@ -1036,7 +1036,7 @@ ol li:before {
 .single-element-widget .list .option {
   transition: all 0.3s ease;
   line-height: 1.75em;
-  font-size: 1em;
+  font-size: 0.875em;
   color: var(--vt-c-grey-soft);
   cursor: pointer;
   text-transform: capitalize;
@@ -1134,5 +1134,8 @@ ol li:before {
 }
 .single-element-widget .list {
   padding-left: 15px;
+}
+.single-element-widget .nice-select:after {
+  right: 8%;
 }
 </style>
