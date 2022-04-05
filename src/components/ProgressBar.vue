@@ -1,4 +1,4 @@
-<template>
+<template lang="">
   <div class="member__skill_item" v-for="(skill, idx) in skills" :key="idx">
     <h4>
       {{ skill[0] }}

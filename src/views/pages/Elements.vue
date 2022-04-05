@@ -254,18 +254,21 @@
           </div>
           <div class="aligned-text">
             <p>
-              Over time, even the most sophisticated, memory packed computer can
-              begin to run slow if we don't do something to prevent it. The
-              reason why has less to do with how computers are made and how they
-              age and more to do with the way we use them. You see, all of the
-              daily tasks that we do on our PC from running programs to
-              downloading and deleting software can make our computer sluggish.
-              To keep this from happening, you need to understand the reasons
-              why your PC is getting slower and do something to keep your PC
-              running at its best. You can do this through regular maintenance
-              and PC performance optimization programs Before we discuss all of
-              the things that could be affecting your PC's performance, let's
-              talk a little about what symptoms
+              Recently, the US Federal government banned online casinos from
+              operating in America by making it illegal to transfer money to
+              them through any US bank or payment system. As a result of this
+              law, most of the popular online casino networks such as Party
+              Gaming and PlayTech left the United States. Overnight, online
+              casino players found themselves being chased by the Federal
+              government. But, after a fortnight, the online casino industry
+              came up with a solution and new online casinos started taking
+              root. These began to operate under a different business umbrella,
+              and by doing that, rendered the transfer of money to and from them
+              legal. A major part of this was enlisting electronic banking
+              systems that would accept this new clarification and start doing
+              business with me. Listed in this article are the electronic
+              banking systems that accept players from the United States that
+              wish to play in online casinos.
             </p>
           </div>
         </div>
@@ -464,10 +467,10 @@
             <h3>form element</h3>
             <form>
               <div><input autocomplete="off" type="text" placeholder="First Name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'First Name'" /></div>
-              <div class="mt10"><input autocomplete="off" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Last Name'" type="text" placeholder="Last Name" /></div>
-              <div class="mt10"><input autocomplete="off" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email Address'" type="email" placeholder="Email Address" /></div>
+              <div class="mt15"><input autocomplete="off" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Last Name'" type="text" placeholder="Last Name" /></div>
+              <div class="mt15"><input autocomplete="off" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email Address'" type="email" placeholder="Email Address" /></div>
               
-              <div class="input-group-icon d-flex align-center mt10">
+              <div class="input-group-icon d-flex align-center mt15">
                 <svg viewBox="0 0 384 512" class="thumb-thack_svg">
                   <path d="M32 32C32 14.33 46.33 0 64 0H320C337.7 0 352 14.33 352 32C352 49.67 337.7 64 320 64H290.5L301.9 212.2C338.6 232.1 367.5 265.4 381.4 306.9L382.4 309.9C385.6 319.6 383.1 330.4 377.1 338.7C371.9 347.1 362.3 352 352 352H32C21.71 352 12.05 347.1 6.04 338.7C.0259 330.4-1.611 319.6 1.642 309.9L2.644 306.9C16.47 265.4 45.42 232.1 82.14 212.2L93.54 64H64C46.33 64 32 49.67 32 32zM224 384V480C224 497.7 209.7 512 192 512C174.3 512 160 497.7 160 480V384H224z"/>
                 </svg>
@@ -475,7 +478,7 @@
                 <input autocomplete="off" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Address'" type="text" placeholder="Address" />
               </div>
 
-              <div class="input-group-icon mt10">
+              <div class="input-group-icon mt15">
                 <div class="d-flex w-full">
                   <div class="input-group-icon__svg">
                     <svg viewBox="0 0 576 512">
@@ -483,19 +486,19 @@
                     </svg>
                   </div>
 
-                  <div class="form-select" @click="toggleClass">
+                  <div class="form-select" @click="toggleCitySelect">
                     <div class="nice-select">
-                      <span class="current">City</span>
+                      <span class="current">city</span>
                     </div>
                   </div>
                 </div>
 
-                <ul class="list" v-show="isActive">
+                <ul class="list" v-show="citySelectIsActive">
                   <li v-for="(city, idx) in cities" :key="idx" class="option">{{ city }}</li>
                 </ul>
               </div>
 
-              <div class="input-group-icon d-flex mt10">
+              <div class="input-group-icon d-flex mt15">
                 <div class="d-flex w-full">
                   <div class="input-group-icon__svg">
                     <svg viewBox="0 0 512 512">
@@ -503,22 +506,22 @@
                     </svg>
                   </div>
                 
-                  <div class="form-select" @click="toggleClass">
+                  <div class="form-select" @click="toggleCountrySelect">
                     <div class="nice-select">
-                      <span class="current">Country</span>
+                      <span class="current">country</span>
                     </div>
                   </div>
                 </div>
 
-                <ul class="list" v-show="isActive">
+                <ul class="list" v-show="countrySelectIsActive">
                   <li v-for="(country, idx) in countries" :key="idx" class="option">{{ country }}</li>
                 </ul>
               </div>
 
-              <div class="mt10"><textarea placeholder="Message" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Message'"></textarea></div>
-              <div class="mt10 single-input-primary"><input autocomplete="off" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Primary color'" type="text" placeholder="Primary color" /></div>
-              <div class="mt10 single-input-accent"><input autocomplete="off" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Accent color'" type="text" placeholder="Accent color" /></div>
-              <div class="mt10 single-input-secondary"><input autocomplete="off" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Secondary color'" type="text" placeholder="Secondary color" /></div>
+              <div class="mt15"><textarea placeholder="Message" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Message'"></textarea></div>
+              <div class="mt15 single-input-primary"><input autocomplete="off" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Primary color'" type="text" placeholder="Primary color" /></div>
+              <div class="mt15 single-input-accent"><input autocomplete="off" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Accent color'" type="text" placeholder="Accent color" /></div>
+              <div class="mt15 single-input-secondary"><input autocomplete="off" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Secondary color'" type="text" placeholder="Secondary color" /></div>
             </form>
           </div>
           <!-- inputs-col -->
@@ -528,7 +531,7 @@
             <div class="single-element-widget">
               <div class="switch-wrap d-flex">
                 <p>01. sample switch</p>
-                <div class="primary-switch">
+                <div class="switch primary-switch">
                   <input type="checkbox" id="default-switch" />
                   <label for="default-switch"></label>
                 </div>
@@ -536,7 +539,7 @@
 
               <div class="switch-wrap d-flex">
                 <p>02. primary color switch</p>
-                <div class="primary-switch">
+                <div class="switch primary-switch">
                   <input type="checkbox" id="primary-switch" checked="" />
                   <label for="primary-switch"></label>
                 </div>
@@ -544,104 +547,107 @@
 
               <div class="switch-wrap d-flex">
                 <p>03. confirm color switch</p>
-                <div class="confirm-switch">
+                <div class="switch confirm-switch">
                   <input type="checkbox" id="confirm-switch" checked="" />
                   <label for="confirm-switch"></label>
                 </div>
               </div>
             </div>
+            <!-- switches -->
 
             <div class="single-element-widget">
-              <h3>Selectboxes</h3>
-              <div class="form-select default-select" @click="toggleClass">
+              <h3>selectboxes</h3>
+              <div class="form-select default-select" @click="toggleLanguageSelect">
                 <div class="nice-select">
-                  <span class="current">English</span>
+                  <span class="current">english</span>
 
-                  <ul class="list" v-show="isActive">
+                  <ul class="list" v-show="languageSelectIsActive">
                     <li v-for="(language, idx) in languages" :key="idx" class="option">{{ language }}</li>
                   </ul>
                 </div>
               </div>
             </div>
+            <!-- selectboxes -->
 
-            <!-- <div class="single-element-widget">
-              <h3 class="mb-30 title_color">Checkboxes</h3>
-              <div class="switch-wrap d-flex justify-content-between">
-                <p>01. Sample Checkbox</p>
-                <div class="primary-checkbox">
+            <div class="single-element-widget">
+              <h3>checkboxes</h3>
+              <div class="switch-wrap d-flex justify-between">
+                <p>01. sample checkbox</p>
+                <div class="checkbox primary-checkbox">
                   <input type="checkbox" id="default-checkbox">
                   <label for="default-checkbox"></label>
                 </div>
               </div>
-              <div class="switch-wrap d-flex justify-content-between">
-                <p>02. Primary Color Checkbox</p>
-                <div class="primary-checkbox">
+              <div class="switch-wrap d-flex justify-between">
+                <p>02. primary color checkbox</p>
+                <div class="checkbox primary-checkbox">
                   <input type="checkbox" id="primary-checkbox" checked="">
                   <label for="primary-checkbox"></label>
                 </div>
               </div>
-              <div class="switch-wrap d-flex justify-content-between">
-                <p>03. Confirm Color Checkbox</p>
-                <div class="confirm-checkbox">
+              <div class="switch-wrap d-flex justify-between">
+                <p>03. confirm color checkbox</p>
+                <div class="checkbox confirm-checkbox">
                   <input type="checkbox" id="confirm-checkbox">
                   <label for="confirm-checkbox"></label>
                 </div>
               </div>
-              <div class="switch-wrap d-flex justify-content-between">
-                <p>04. Disabled Checkbox</p>
-                <div class="disabled-checkbox">
+              <div class="switch-wrap d-flex justify-between">
+                <p>04. disabled checkbox</p>
+                <div class="checkbox disabled-checkbox">
                   <input type="checkbox" id="disabled-checkbox" disabled="">
                   <label for="disabled-checkbox"></label>
                 </div>
               </div>
-              <div class="switch-wrap d-flex justify-content-between">
-                <p>05. Disabled Checkbox active</p>
-                <div class="disabled-checkbox">
+              <div class="switch-wrap d-flex justify-between">
+                <p>05. disabled checkbox active</p>
+                <div class="checkbox disabled-checkbox">
                   <input type="checkbox" id="disabled-checkbox-active" checked="" disabled="">
                   <label for="disabled-checkbox-active"></label>
                 </div>
               </div>
             </div>
+            <!-- checkboxes -->
+
             <div class="single-element-widget">
-              <h3 class="mb-30 title_color">Radios</h3>
-              <div class="switch-wrap d-flex justify-content-between">
-                <p>01. Sample radio</p>
-                <div class="primary-radio">
+              <h3>radios</h3>
+              <div class="switch-wrap d-flex justify-between">
+                <p>01. sample radio</p>
+                <div class="radio primary-radio">
                   <input type="checkbox" id="default-radio">
                   <label for="default-radio"></label>
                 </div>
               </div>
-              <div class="switch-wrap d-flex justify-content-between">
-                <p>02. Primary Color radio</p>
-                <div class="primary-radio">
+              <div class="switch-wrap d-flex justify-between">
+                <p>02. primary color radio</p>
+                <div class="radio primary-radio">
                   <input type="checkbox" id="primary-radio" checked="">
                   <label for="primary-radio"></label>
                 </div>
               </div>
-              <div class="switch-wrap d-flex justify-content-between">
-                <p>03. Confirm Color radio</p>
-                <div class="confirm-radio">
+              <div class="switch-wrap d-flex justify-between">
+                <p>03. confirm color radio</p>
+                <div class="radio confirm-radio">
                   <input type="checkbox" id="confirm-radio" checked="">
                   <label for="confirm-radio"></label>
                 </div>
               </div>
-              <div class="switch-wrap d-flex justify-content-between">
-                <p>04. Disabled radio</p>
-                <div class="disabled-radio">
+              <div class="switch-wrap d-flex justify-between">
+                <p>04. disabled radio</p>
+                <div class="radio disabled-radio">
                   <input type="checkbox" id="disabled-radio" disabled="">
                   <label for="disabled-radio"></label>
                 </div>
               </div>
-              <div class="switch-wrap d-flex justify-content-between">
-                <p>05. Disabled radio active</p>
-                <div class="disabled-radio">
+              <div class="switch-wrap d-flex justify-between">
+                <p>05. disabled radio active</p>
+                <div class="radio disabled-radio">
                   <input type="checkbox" id="disabled-radio-active" checked="" disabled="">
                   <label for="disabled-radio-active"></label>
                 </div>
               </div>
-            </div> -->
-
-          
+            </div>
+            <!-- radios -->
           </div>
           <!-- checkboxes-col -->
         </div>
@@ -676,12 +682,21 @@ export default {
       "portuguise",
       "bengali",
     ]);
-
+    const countrySelectIsActive = ref(false);
+    const citySelectIsActive = ref(false);
+    const languageSelectIsActive = ref(false);
     let totalVisits = ref(null);
-    const isActive = ref(false);
 
-    function toggleClass() {
-      isActive.value = !isActive.value;
+    function toggleCountrySelect() {
+      countrySelectIsActive.value = !countrySelectIsActive.value;
+    }
+
+    function toggleCitySelect() {
+      citySelectIsActive.value = !citySelectIsActive.value;
+    }
+
+    function toggleLanguageSelect() {
+      languageSelectIsActive.value = !languageSelectIsActive.value;
     }
 
     onMounted(() => {
@@ -691,10 +706,14 @@ export default {
     });
 
     return {
+      toggleCountrySelect,
+      countrySelectIsActive,
+      toggleCitySelect,
+      citySelectIsActive,
+      toggleLanguageSelect,
+      languageSelectIsActive,
       tableStats,
       totalVisits,
-      isActive,
-      toggleClass,
       cities,
       countries,
       languages,
@@ -899,6 +918,7 @@ h6 {
 }
 .typography h3 {
   margin-bottom: 0;
+  text-transform: none;
 }
 .unordered-list li {
   position: relative;
@@ -948,11 +968,11 @@ ol li:before {
 }
 .ordered-list .li-space-left__first-sub li:before {
   content: "a. ";
-  margin-left: 40px;
+  margin-left: 30px;
 }
 .ordered-list .li-space-left__second-sub li:before {
   content: "i. ";
-  margin-left: 80px;
+  margin-left: 60px;
 }
 
 /* FORMS */
@@ -1031,6 +1051,7 @@ ol li:before {
 .nice-select .current {
   font-size: 1em;
   color: var(--vt-c-grey-soft);
+  text-transform: capitalize;
 }
 .input-group-icon .list .option,
 .single-element-widget .list .option {
@@ -1063,13 +1084,16 @@ ol li:before {
   border-right: 2px solid var(--vt-c-grey-soft);
   transition: all 0.3s ease-in-out;
 }
-/* ------------------- */
+/* ----------------------------------- */
 .checkboxes-col {
-  width: 30%;
+  width: 32%;
   padding-right: 100px;
 }
 .checkboxes-col p {
   text-transform: capitalize;
+}
+.checkboxes-col .form-select {
+  width: 70%;
 }
 .checkboxes-col .switch-wrap {
   align-items: center;
@@ -1078,35 +1102,30 @@ ol li:before {
 .single-element-widget:not(:last-of-type) {
   margin-bottom: 30px;
 }
-.primary-switch,
-.confirm-switch {
+.single-element-widget h3 {
+  margin-bottom: 20px;
+}
+.switch-wrap:not(:last-of-type) {
+  margin-bottom: 8px;
+}
+.switch {
   width: 35px;
   height: 18px;
-  border-radius: 8px;
-  background: #fff;
+  border-radius: 10px;
   position: relative;
   cursor: pointer;
-  margin-left: 20px;
 }
-.primary-switch input,
-.confirm-switch input {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
+.switch input {
   opacity: 0;
 }
-.primary-switch input + label,
-.confirm-switch input + label {
+.switch input + label {
   position: absolute;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
 }
-.primary-switch input + label:before,
-.confirm-switch input + label:before {
+.switch input + label:before {
   content: "";
   position: absolute;
   left: 0;
@@ -1114,16 +1133,16 @@ ol li:before {
   width: 100%;
   height: 100%;
   background: transparent;
-  border-radius: 8px;
+  border-radius: 10px;
   cursor: pointer;
   transition: all 0.2s;
 }
-.primary-switch input + label:after,
-.confirm-switch input + label:after {
+.switch input + label:after {
   content: "";
   position: absolute;
-  top: 1px;
+  top: 50%;
   left: 1px;
+  transform: translateY(-50%);
   width: 15px;
   height: 15px;
   border-radius: 50%;
@@ -1132,10 +1151,101 @@ ol li:before {
   box-shadow: 0px 4px 5px 0px rgb(0 0 0 / 20%);
   cursor: pointer;
 }
+.primary-switch input:checked + label:before {
+  background: var(--elements-c-primary);
+}
+.primary-switch input:checked + label:after,
+.confirm-switch input:checked + label:after {
+  left: 19px;
+}
+.confirm-switch input:checked + label:before {
+  background: var(--elements-c-success);
+}
 .single-element-widget .list {
   padding-left: 15px;
 }
 .single-element-widget .nice-select:after {
   right: 8%;
+}
+/* ----------------------------------- */
+.checkbox {
+  width: 16px;
+  height: 16px;
+  border-radius: 3px;
+  background: #fff;
+  position: relative;
+  cursor: pointer;
+}
+.checkbox input {
+  opacity: 0;
+}
+.checkbox input + label {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 3px;
+  cursor: pointer;
+  border: 1px solid #f1f1f1;
+}
+.checkbox input:checked + label {
+  background: url(../elements/primary-check.png) no-repeat center center/cover;
+  border: none;
+}
+.disabled-checkbox input:disabled {
+  cursor: not-allowed;
+  z-index: 3;
+}
+.disabled-checkbox input:checked + label {
+  background: url(../elements/disabled-check.png) no-repeat center center/cover;
+  border: none;
+}
+.confirm-checkbox input:checked + label {
+  background: url(../elements/success-check.png) no-repeat center center/cover;
+  border: none;
+}
+/* ----------------------------------- */
+.radio {
+  width: 16px;
+  height: 16px;
+  border-radius: 8px;
+  background: #fff;
+  position: relative;
+  cursor: pointer;
+}
+.radio input {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+.radio input + label {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  cursor: pointer;
+  border: 1px solid #f1f1f1;
+}
+.primary-radio input:checked + label {
+  background: url(../elements/primary-radio.png) no-repeat center center/cover;
+  border: none;
+}
+.confirm-radio input:checked + label {
+  background: url(../elements/success-radio.png) no-repeat center center/cover;
+  border: none;
+}
+.disabled-radio input:disabled {
+  cursor: not-allowed;
+  z-index: 3;
+}
+.disabled-radio input:checked + label {
+  background: url(../elements/disabled-radio.png) no-repeat center center/cover;
+  border: none;
 }
 </style>
