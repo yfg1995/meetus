@@ -61,8 +61,8 @@ export default {
       function scrollFunction() {
         if (
           route.name != "contact" &&
-          (document.body.scrollTop > 200 ||
-            document.documentElement.scrollTop > 200)
+          (document.body.scrollTop > 80 ||
+            document.documentElement.scrollTop > 80)
         ) {
           document.getElementById("header").className = "headerScroll";
         } else {

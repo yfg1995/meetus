@@ -126,7 +126,7 @@ section:first-of-type {
   border-radius: 5px;
   border: 1px solid var(--clr-primary);
   cursor: pointer;
-  transition: all 300ms linear 0s;
+  transition: all 0.3 linear;
   margin-top: 20px;
   margin-left: calc(100% - 200px);
 }

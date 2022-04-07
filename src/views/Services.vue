@@ -96,7 +96,7 @@ section {
   justify-content: center;
   padding: 35px;
   border-radius: 10px;
-  transition: all 300ms linear 0s;
+  transition: all 0.3s linear;
   background: #f9f9ff;
 }
 .services_cards__item img {
@@ -109,7 +109,7 @@ section {
   text-transform: uppercase;
   font-size: 1.313em;
   margin-bottom: 20px;
-  transition: 300ms;
+  transition: all 0.3s ease-in-out;
 }
 .services_cards__item:hover {
   background: #fff;

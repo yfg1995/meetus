@@ -170,4 +170,35 @@ input {
 .footer__links li a:hover svg {
   fill: var(--clr-primary);
 }
+
+/* RESPONSIVE */
+@media (max-width: 1200px) {
+  .form input {
+    height: 40px;
+    font-size: 0.75em;
+  }
+  .footer__newsletter--btn {
+    width: 40px;
+    height: 40px;
+  }
+}
+@media (max-width: 992px) {
+  .footer h3 {
+    margin-bottom: 25px;
+  }
+}
+@media (max-width: 768px) {
+  .footer__rows {
+    flex-wrap: wrap;
+  }
+  .col {
+    width: 80%;
+  }
+  .col:not(:last-of-type) {
+    margin: 0 0 50px 0;
+  }
+  .form {
+    width: 70%;
+  }
+}
 </style>

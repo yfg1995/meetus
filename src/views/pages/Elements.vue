@@ -471,53 +471,44 @@
               <div class="mt15"><input autocomplete="off" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email Address'" type="email" placeholder="Email Address" /></div>
               
               <div class="input-group-icon d-flex align-center mt15">
-                <svg viewBox="0 0 384 512" class="thumb-thack_svg">
-                  <path d="M32 32C32 14.33 46.33 0 64 0H320C337.7 0 352 14.33 352 32C352 49.67 337.7 64 320 64H290.5L301.9 212.2C338.6 232.1 367.5 265.4 381.4 306.9L382.4 309.9C385.6 319.6 383.1 330.4 377.1 338.7C371.9 347.1 362.3 352 352 352H32C21.71 352 12.05 347.1 6.04 338.7C.0259 330.4-1.611 319.6 1.642 309.9L2.644 306.9C16.47 265.4 45.42 232.1 82.14 212.2L93.54 64H64C46.33 64 32 49.67 32 32zM224 384V480C224 497.7 209.7 512 192 512C174.3 512 160 497.7 160 480V384H224z"/>
-                </svg>
+                <div class="d-flex align-center w-full">
+                  <svg viewBox="0 0 384 512" class="thumb-thack_svg">
+                    <path d="M32 32C32 14.33 46.33 0 64 0H320C337.7 0 352 14.33 352 32C352 49.67 337.7 64 320 64H290.5L301.9 212.2C338.6 232.1 367.5 265.4 381.4 306.9L382.4 309.9C385.6 319.6 383.1 330.4 377.1 338.7C371.9 347.1 362.3 352 352 352H32C21.71 352 12.05 347.1 6.04 338.7C.0259 330.4-1.611 319.6 1.642 309.9L2.644 306.9C16.47 265.4 45.42 232.1 82.14 212.2L93.54 64H64C46.33 64 32 49.67 32 32zM224 384V480C224 497.7 209.7 512 192 512C174.3 512 160 497.7 160 480V384H224z"/>
+                  </svg>
 
-                <input autocomplete="off" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Address'" type="text" placeholder="Address" />
+                  <input autocomplete="off" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Address'" type="text" placeholder="Address" />
+                </div>
               </div>
 
               <div class="input-group-icon mt15">
-                <div class="d-flex w-full">
+                <div class="d-flex align-center w-full">
                   <div class="input-group-icon__svg">
                     <svg viewBox="0 0 576 512">
                       <path d="M482.3 192C516.5 192 576 221 576 256C576 292 516.5 320 482.3 320H365.7L265.2 495.9C259.5 505.8 248.9 512 237.4 512H181.2C170.6 512 162.9 501.8 165.8 491.6L214.9 320H112L68.8 377.6C65.78 381.6 61.04 384 56 384H14.03C6.284 384 0 377.7 0 369.1C0 368.7 .1818 367.4 .5398 366.1L32 256L.5398 145.9C.1818 144.6 0 143.3 0 142C0 134.3 6.284 128 14.03 128H56C61.04 128 65.78 130.4 68.8 134.4L112 192H214.9L165.8 20.4C162.9 10.17 170.6 0 181.2 0H237.4C248.9 0 259.5 6.153 265.2 16.12L365.7 192H482.3z"/>
                     </svg>
                   </div>
 
-                  <div class="form-select" @click="toggleCitySelect">
-                    <div class="nice-select">
-                      <span class="current">city</span>
-                    </div>
-                  </div>
+                  <CustomSelect
+                    :options="cities"
+                    :default="'City'"
+                  />
                 </div>
-
-                <ul class="list" v-show="citySelectIsActive">
-                  <li v-for="(city, idx) in cities" :key="idx" class="option">{{ city }}</li>
-                </ul>
               </div>
 
-              <div class="input-group-icon d-flex mt15">
-                <div class="d-flex w-full">
+              <div class="input-group-icon mt15">
+                <div class="d-flex align-center w-full">
                   <div class="input-group-icon__svg">
                     <svg viewBox="0 0 512 512">
                       <path d="M512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256zM57.71 192.1L67.07 209.4C75.36 223.9 88.99 234.6 105.1 239.2L162.1 255.7C180.2 260.6 192 276.3 192 294.2V334.1C192 345.1 198.2 355.1 208 359.1C217.8 364.9 224 374.9 224 385.9V424.9C224 440.5 238.9 451.7 253.9 447.4C270.1 442.8 282.5 429.1 286.6 413.7L289.4 402.5C293.6 385.6 304.6 371.1 319.7 362.4L327.8 357.8C342.8 349.3 352 333.4 352 316.1V307.9C352 295.1 346.9 282.9 337.9 273.9L334.1 270.1C325.1 261.1 312.8 255.1 300.1 255.1H256.1C245.9 255.1 234.9 253.1 225.2 247.6L190.7 227.8C186.4 225.4 183.1 221.4 181.6 216.7C178.4 207.1 182.7 196.7 191.7 192.1L197.7 189.2C204.3 185.9 211.9 185.3 218.1 187.7L242.2 195.4C250.3 198.1 259.3 195 264.1 187.9C268.8 180.8 268.3 171.5 262.9 165L249.3 148.8C239.3 136.8 239.4 119.3 249.6 107.5L265.3 89.12C274.1 78.85 275.5 64.16 268.8 52.42L266.4 48.26C262.1 48.09 259.5 48 256 48C163.1 48 84.4 108.9 57.71 192.1L57.71 192.1zM437.6 154.5L412 164.8C396.3 171.1 388.2 188.5 393.5 204.6L410.4 255.3C413.9 265.7 422.4 273.6 433 276.3L462.2 283.5C463.4 274.5 464 265.3 464 256C464 219.2 454.4 184.6 437.6 154.5H437.6z"/>
                     </svg>
                   </div>
                 
-                  <div class="form-select" @click="toggleCountrySelect">
-                    <div class="nice-select">
-                      <span class="current">country</span>
-                    </div>
-                  </div>
+                  <CustomSelect
+                    :options="countries"
+                    :default="'Country'"
+                  />
                 </div>
-
-                <ul class="list" v-show="countrySelectIsActive">
-                  <li v-for="(country, idx) in countries" :key="idx" class="option">{{ country }}</li>
-                </ul>
               </div>
-
               <div class="mt15"><textarea placeholder="Message" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Message'"></textarea></div>
               <div class="mt15 single-input-primary"><input autocomplete="off" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Primary color'" type="text" placeholder="Primary color" /></div>
               <div class="mt15 single-input-accent"><input autocomplete="off" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Accent color'" type="text" placeholder="Accent color" /></div>
@@ -557,15 +548,10 @@
 
             <div class="single-element-widget">
               <h3>selectboxes</h3>
-              <div class="form-select default-select" @click="toggleLanguageSelect">
-                <div class="nice-select">
-                  <span class="current">english</span>
-
-                  <ul class="list" v-show="languageSelectIsActive">
-                    <li v-for="(language, idx) in languages" :key="idx" class="option">{{ language }}</li>
-                  </ul>
-                </div>
-              </div>
+              <CustomSelect
+                :options="languages"
+                :default="'English'"
+              />
             </div>
             <!-- selectboxes -->
 
@@ -641,7 +627,7 @@
               </div>
               <div class="switch-wrap d-flex justify-between">
                 <p>05. disabled radio active</p>
-                <div class="radio disabled-radio">
+                <div class="radio disabled-radio disabled-radio-border">
                   <input type="checkbox" id="disabled-radio-active" checked="" disabled="">
                   <label for="disabled-radio-active"></label>
                 </div>
@@ -663,17 +649,20 @@ import { ref, computed, onMounted } from "vue";
 import store from "@/store/index.js";
 import LogoSvg from "@/components/UI-helpers/LogoSvg.vue";
 import Arrow from "@/components/UI-helpers/Arrow.vue";
+import CustomSelect from "@/components/CustomSelect.vue";
 
 export default {
   components: {
     LogoSvg,
     Arrow,
+    CustomSelect,
   },
   setup() {
     const tableStats = computed(() => {
       return store.getters["members/tableStats"];
     });
-    const cities = ref(["dhaka", "dilli", "new york", "islamabad"]);
+
+    const cities = ref(["dhaka", "bangkok", "new york", "islamabad"]);
     const countries = ref(["bangladesh", "india", "england", "sri lanka"]);
     const languages = ref([
       "english",
@@ -682,22 +671,8 @@ export default {
       "portuguise",
       "bengali",
     ]);
-    const countrySelectIsActive = ref(false);
-    const citySelectIsActive = ref(false);
-    const languageSelectIsActive = ref(false);
+
     let totalVisits = ref(null);
-
-    function toggleCountrySelect() {
-      countrySelectIsActive.value = !countrySelectIsActive.value;
-    }
-
-    function toggleCitySelect() {
-      citySelectIsActive.value = !citySelectIsActive.value;
-    }
-
-    function toggleLanguageSelect() {
-      languageSelectIsActive.value = !languageSelectIsActive.value;
-    }
 
     onMounted(() => {
       tableStats.value.forEach((sum) => {
@@ -706,12 +681,6 @@ export default {
     });
 
     return {
-      toggleCountrySelect,
-      countrySelectIsActive,
-      toggleCitySelect,
-      citySelectIsActive,
-      toggleLanguageSelect,
-      languageSelectIsActive,
       tableStats,
       totalVisits,
       cities,
@@ -871,7 +840,6 @@ h6 {
 }
 .table-row .progress-bar {
   height: 5px;
-  border-radius: 10px;
   transition: width 1.5s ease-in-out;
   border-radius: 5px;
 }
@@ -986,8 +954,7 @@ ol li:before {
   width: 100%;
 }
 .forms input,
-.forms textarea,
-.form-select .nice-select {
+.forms textarea {
   display: block;
   width: 100%;
   border: 1px solid transparent;
@@ -996,10 +963,7 @@ ol li:before {
   padding: 10px 20px;
   font-size: 1em;
   color: var(--vt-c-black-soft);
-  transition: all 250ms ease-in-out;
-}
-.form-select .nice-select {
-  padding: 6px 20px;
+  transition: all 0.25s ease-in-out;
 }
 .forms textarea {
   height: 100px;
@@ -1031,60 +995,37 @@ ol li:before {
 .single-element-widget {
   position: relative;
 }
-.input-group-icon .list,
-.single-element-widget .list {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  z-index: 1;
-  width: 100%;
-  padding: 10px 0 10px 50px;
-  background: #fff;
-}
-.form-select {
-  width: 100%;
-  cursor: pointer;
-}
-.form-select .nice-select {
-  padding-left: 15px;
-}
-.nice-select .current {
-  font-size: 1em;
-  color: var(--vt-c-grey-soft);
-  text-transform: capitalize;
-}
-.input-group-icon .list .option,
-.single-element-widget .list .option {
-  transition: all 0.3s ease;
-  line-height: 1.75em;
-  font-size: 0.875em;
-  color: var(--vt-c-grey-soft);
-  cursor: pointer;
-  text-transform: capitalize;
-}
+
 .thumb-thack_svg {
-  margin-top: 0 !important;
+  margin-top: 2px !important;
 }
 .input-group-icon__svg svg {
-  margin-top: 13px;
+  margin-top: 8px;
 }
-.input-group-icon .list .option:hover,
-.single-element-widget .list .option:hover {
-  color: var(--elements-c-primary);
+/* ----------------------------------------- */
+.switch,
+.checkbox,
+.radio {
+  background: #fff;
+  position: relative;
+  cursor: pointer;
 }
-.nice-select:after {
+.switch input,
+.checkbox input,
+.radio input {
+  opacity: 0;
+}
+.switch input + label,
+.checkbox input + label,
+.radio input,
+.radio input + label,
+.switch input + label:before {
   position: absolute;
-  content: "";
-  right: 3%;
-  top: 50%;
-  transform: rotate(45deg) translateY(-90%);
-  height: 6px;
-  width: 6px;
-  border-bottom: 2px solid var(--vt-c-grey-soft);
-  border-right: 2px solid var(--vt-c-grey-soft);
-  transition: all 0.3s ease-in-out;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
 }
-/* ----------------------------------- */
 .checkboxes-col {
   width: 32%;
   padding-right: 100px;
@@ -1112,30 +1053,13 @@ ol li:before {
   width: 35px;
   height: 18px;
   border-radius: 10px;
-  position: relative;
-  cursor: pointer;
-}
-.switch input {
-  opacity: 0;
-}
-.switch input + label {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
 }
 .switch input + label:before {
   content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
   background: transparent;
   border-radius: 10px;
   cursor: pointer;
-  transition: all 0.2s;
+  transition: all 0.2s ease-in-out;
 }
 .switch input + label:after {
   content: "";
@@ -1147,55 +1071,38 @@ ol li:before {
   height: 15px;
   border-radius: 50%;
   background: #fff;
-  transition: all 0.2s;
+  transition: all 0.2s ease-in-out;
   box-shadow: 0px 4px 5px 0px rgb(0 0 0 / 20%);
   cursor: pointer;
 }
-.primary-switch input:checked + label:before {
-  background: var(--elements-c-primary);
+.disabled-checkbox input:disabled,
+.disabled-radio input:disabled {
+  cursor: not-allowed;
+  z-index: 3;
 }
 .primary-switch input:checked + label:after,
 .confirm-switch input:checked + label:after {
   left: 19px;
 }
+.primary-switch input:checked + label:before {
+  background: var(--elements-c-primary);
+}
 .confirm-switch input:checked + label:before {
   background: var(--elements-c-success);
 }
-.single-element-widget .list {
-  padding-left: 15px;
-}
-.single-element-widget .nice-select:after {
-  right: 8%;
-}
-/* ----------------------------------- */
 .checkbox {
   width: 16px;
   height: 16px;
   border-radius: 3px;
-  background: #fff;
-  position: relative;
-  cursor: pointer;
-}
-.checkbox input {
-  opacity: 0;
 }
 .checkbox input + label {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
   border-radius: 3px;
   cursor: pointer;
-  border: 1px solid #f1f1f1;
+  border: 1px solid rgb(178, 178, 178);
 }
 .checkbox input:checked + label {
   background: url(../elements/primary-check.png) no-repeat center center/cover;
   border: none;
-}
-.disabled-checkbox input:disabled {
-  cursor: not-allowed;
-  z-index: 3;
 }
 .disabled-checkbox input:checked + label {
   background: url(../elements/disabled-check.png) no-repeat center center/cover;
@@ -1205,32 +1112,19 @@ ol li:before {
   background: url(../elements/success-check.png) no-repeat center center/cover;
   border: none;
 }
-/* ----------------------------------- */
 .radio {
   width: 16px;
   height: 16px;
   border-radius: 8px;
-  background: #fff;
-  position: relative;
-  cursor: pointer;
 }
-.radio input {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-}
+.radio input,
 .radio input + label {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
   border-radius: 8px;
   cursor: pointer;
-  border: 1px solid #f1f1f1;
+  border: 1px solid rgb(178, 178, 178);
+}
+.disabled-radio-border {
+  border: 4px solid #f1f1f1;
 }
 .primary-radio input:checked + label {
   background: url(../elements/primary-radio.png) no-repeat center center/cover;
@@ -1239,10 +1133,6 @@ ol li:before {
 .confirm-radio input:checked + label {
   background: url(../elements/success-radio.png) no-repeat center center/cover;
   border: none;
-}
-.disabled-radio input:disabled {
-  cursor: not-allowed;
-  z-index: 3;
 }
 .disabled-radio input:checked + label {
   background: url(../elements/disabled-radio.png) no-repeat center center/cover;

@@ -51,7 +51,7 @@ export default {
   left: 0;
   min-width: 200px;
   visibility: hidden;
-  transition: all 250ms ease-in;
+  transition: all 0.25s ease-in-out;
   box-shadow: 0px 3px 16px 0px rgb(0 0 0 / 10%);
   opacity: 0;
   background: #fff;
@@ -72,7 +72,7 @@ export default {
   padding: 18px;
   font-weight: 500;
   display: block;
-  transition: 250ms ease-in-out;
+  transition: all 0.25s ease-in-out;
 }
 .sub-item .menu-item:not(:last-of-type) {
   border-bottom: 1px solid #ededed;
