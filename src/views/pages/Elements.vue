@@ -345,9 +345,9 @@
             <div class="percentage">Percentages</div>
           </div>
           <div class="table-row d-flex" v-for="(table, idx) in tableStats" :key="idx">
-            <div class="serial">0{{idx + 1}}</div>
+            <div class="serial">0{{ idx + 1 }}</div>
             <div class="country">
-              <img :src="table.flag" alt="flag" />{{table.country}}
+              <img :src="table.flag" :alt="`${table.country} flag`" />{{table.country}}
             </div>
             <div class="visit">{{table.visit}}</div>
             <div class="percentage">
@@ -364,16 +364,16 @@
         <h3>image gallery</h3>
         <div class="image-gallery__container">
           <div class="image-gallery__container--item">
-            <img src="elements/g1.jpg" alt="" />
+            <img src="elements/g1.jpg" alt="gallery image" />
           </div>
           <div class="image-gallery__container--item">
-            <img src="elements/g2.jpg" alt="" />
+            <img src="elements/g2.jpg" alt="gallery image" />
           </div>
           <div class="image-gallery__container--item">
-            <img src="elements/g3.jpg" alt="" />
+            <img src="elements/g3.jpg" alt="gallery image" />
           </div>
           <div class="image-gallery__container--item">
-            <img src="elements/g4.jpg" alt="" />
+            <img src="elements/g4.jpg" alt="gallery image" />
           </div>
           <div class="image-gallery__container--item item-svg">
             <a href="https://www.webredone.com/" target="_blank">
@@ -381,16 +381,16 @@
             </a>
           </div>
           <div class="image-gallery__container--item">
-            <img src="elements/g5.jpg" alt="" />
+            <img src="elements/g5.jpg" alt="gallery image" />
           </div>
           <div class="image-gallery__container--item">
-            <img src="elements/g6.jpg" alt="" />
+            <img src="elements/g6.jpg" alt="gallery image" />
           </div>
           <div class="image-gallery__container--item">
-            <img src="elements/g7.jpg" alt="" />
+            <img src="elements/g7.jpg" alt="gallery image" />
           </div>
           <div class="image-gallery__container--item">
-            <img src="elements/g8.jpg" alt="" />
+            <img src="elements/g8.jpg" alt="gallery image" />
           </div>
         </div>
       </div>
@@ -466,9 +466,9 @@
           <div class="inputs-col">
             <h3>form element</h3>
             <form>
-              <div><input autocomplete="off" type="text" placeholder="First Name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'First Name'" /></div>
-              <div class="mt15"><input autocomplete="off" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Last Name'" type="text" placeholder="Last Name" /></div>
-              <div class="mt15"><input autocomplete="off" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email Address'" type="email" placeholder="Email Address" /></div>
+              <div><input type="text" placeholder="First Name" autocomplete="off" /></div>
+              <div class="mt15"><input type="text" placeholder="Last Name" autocomplete="off" /></div>
+              <div class="mt15"><input type="email" placeholder="Email Address" autocomplete="off" /></div>
               
               <div class="input-group-icon d-flex align-center mt15">
                 <div class="d-flex align-center w-full">
@@ -509,10 +509,10 @@
                   />
                 </div>
               </div>
-              <div class="mt15"><textarea placeholder="Message" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Message'"></textarea></div>
-              <div class="mt15 single-input-primary"><input autocomplete="off" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Primary color'" type="text" placeholder="Primary color" /></div>
-              <div class="mt15 single-input-accent"><input autocomplete="off" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Accent color'" type="text" placeholder="Accent color" /></div>
-              <div class="mt15 single-input-secondary"><input autocomplete="off" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Secondary color'" type="text" placeholder="Secondary color" /></div>
+              <div class="mt15"><textarea placeholder="Message"></textarea></div>
+              <div class="mt15 single-input-primary"><input  type="text" placeholder="Primary color" autocomplete="off" /></div>
+              <div class="mt15 single-input-accent"><input type="text" placeholder="Accent color" autocomplete="off" /></div>
+              <div class="mt15 single-input-secondary"><input type="text" placeholder="Secondary color" autocomplete="off" /></div>
             </form>
           </div>
           <!-- inputs-col -->
@@ -672,11 +672,21 @@ export default {
       "bengali",
     ]);
 
-    let totalVisits = ref(null);
+    const totalVisits = ref(null);
+    const barWidth = ref([]);
+
+    tableStats.value.forEach((sum) => {
+      totalVisits.value += sum.visit;
+    });
 
     onMounted(() => {
-      tableStats.value.forEach((sum) => {
-        totalVisits.value += sum.visit;
+      const bars = document.querySelectorAll(".progress-bar");
+
+      bars.forEach((bar) => {
+        tableStats.value.forEach((width) => {
+          barWidth.value = (width.visit * 100) / totalVisits.value;
+          console.log(bar);
+        });
       });
     });
 
@@ -686,6 +696,7 @@ export default {
       cities,
       countries,
       languages,
+      barWidth,
     };
   },
 };
@@ -842,6 +853,7 @@ h6 {
   height: 5px;
   transition: width 1.5s ease-in-out;
   border-radius: 5px;
+  background: red;
 }
 
 /* IMAGE GALLERY */
@@ -995,7 +1007,6 @@ ol li:before {
 .single-element-widget {
   position: relative;
 }
-
 .thumb-thack_svg {
   margin-top: 2px !important;
 }

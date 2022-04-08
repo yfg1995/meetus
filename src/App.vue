@@ -1,7 +1,13 @@
 <template>
   <Header />
   <router-view></router-view>
-  <Testimonials v-if="$route.name != 'contact' && $route.name != 'elements'" />
+  <Testimonials
+    v-if="
+      $route.name != 'contact' &&
+      $route.name != 'elements' &&
+      $route.name != 'notFound'
+    "
+  />
   <Footer />
 </template>
 

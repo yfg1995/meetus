@@ -289,6 +289,7 @@ section {
   height: 100%;
   background: #e8e8e8;
   border-radius: 6px;
+  transition: all 0.3s ease-in-out;
 }
 .member__links li a:hover {
   background: linear-gradient(

@@ -94,7 +94,7 @@ export default {
   transition: all 0.2s ease-in-out;
 }
 .custom-select .select-arrow svg {
-  fill: var(--vt-c-grey-soft);
+  fill: #797979;
   height: 11px;
   width: 11px;
 }

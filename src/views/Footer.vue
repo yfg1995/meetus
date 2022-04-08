@@ -21,6 +21,7 @@
                 placeholder="Enter email address"
                 onfocus="this.placeholder = ''"
                 onblur="this.placeholder = 'Enter email address'"
+                autocomplete="off"
               />
               <div class="footer__newsletter--btn d-flex">
                 <svg viewBox="0 0 448 512">

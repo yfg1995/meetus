@@ -31,7 +31,7 @@ export default {
       const counters = document.querySelectorAll(".counter");
       const speed = 200;
 
-      setInterval(() => {
+      function progressBar() {
         bars.forEach((bar) => {
           let getWidth = parseFloat(bar.dataset.progress);
           for (let i = 0; i < getWidth; i++) {
@@ -52,8 +52,9 @@ export default {
           };
           animate();
         });
-      }, 300);
-      clearInterval();
+      }
+      setInterval(progressBar, 300);
+      clearInterval(progressBar);
     });
 
     return {

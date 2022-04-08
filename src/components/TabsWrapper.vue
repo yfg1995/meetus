@@ -18,8 +18,8 @@
 import { ref, provide } from "vue";
 
 export default {
-  setup(_, { slots }) {
-    const tabTitles = ref(slots.default().map((tab) => tab.props.title));
+  setup() {
+    const tabTitles = ref(["all", "vector", "raster", "ui/ux", "printing"]);
     const selectedTitle = ref(tabTitles.value[0]);
 
     provide("selectedTitle", selectedTitle);
@@ -38,8 +38,8 @@ export default {
   margin: 0 22px;
   font-weight: 500;
   text-transform: uppercase;
-  font-size: 0.75em;
-  transition: 300ms;
+  font-size: 0.8125em;
+  transition: all 0.3s ease;
 }
 .tabs__header li:hover {
   color: var(--clr-primary);

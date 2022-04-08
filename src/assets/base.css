@@ -29,6 +29,7 @@ body::-webkit-scrollbar-track {
 
 body::-webkit-scrollbar-thumb {
   background: var(--clr-primary);
+  border-radius: 8px;
 }
 
 ::selection {
@@ -153,6 +154,10 @@ body section:first-of-type {
   text-align: right;
 }
 
+.tac {
+  text-align: center;
+}
+
 .activeVisible {
   visibility: visible;
   opacity: 1;
@@ -229,7 +234,7 @@ body section:first-of-type {
 
 @media (max-width: 1366px) {
   .container {
-    max-width: 1180px;
+    max-width: 1160px;
   }
 
   .header-container {

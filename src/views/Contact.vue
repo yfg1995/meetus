@@ -98,7 +98,7 @@ section:first-of-type {
 }
 .contact__form input {
   height: 40px;
-  padding: 0 20px;
+  padding: 0 15px;
 }
 .contact__form input:focus,
 .contact__form textarea:focus {
@@ -126,7 +126,7 @@ section:first-of-type {
   border-radius: 5px;
   border: 1px solid var(--clr-primary);
   cursor: pointer;
-  transition: all 0.3 linear;
+  transition: all 0.3s linear;
   margin-top: 20px;
   margin-left: calc(100% - 200px);
 }

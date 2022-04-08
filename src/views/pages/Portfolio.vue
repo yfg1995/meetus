@@ -8,16 +8,13 @@
 
       <TabsWrapper>
         <Tab title="all" />
-        <Tab title="vector" />
-        <Tab title="raster" />
-        <Tab title="ui/ux" />
-        <Tab title="printing" />
       </TabsWrapper>
     </div>
   </section>
 </template>
 
 <script>
+import { ref } from "vue";
 import TabsWrapper from "@/components/TabsWrapper.vue";
 import Tab from "@/components/Tab.vue";
 
@@ -27,7 +24,8 @@ export default {
     Tab,
   },
   setup() {
-    return {};
+    const tabTitles = ref(["all", "vector", "raster", "ui/ux", "printing"]);
+    return { tabTitles };
   },
 };
 </script>
