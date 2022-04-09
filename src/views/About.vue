@@ -5,7 +5,7 @@
         <div class="member__card d-flex">
           <div class="member__bg">
             <div class="member__img">
-              <img v-if="member.image" :src="member.image" alt="" />
+              <img v-if="member.image" :src="member.image" :alt="member.name" />
             </div>
           </div>
 
@@ -176,10 +176,7 @@ export default {
 };
 </script>
 
-<style scoped>
-section {
-  padding: 120px 0;
-}
+<style>
 .about {
   padding: 120px 0;
 }

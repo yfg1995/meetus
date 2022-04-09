@@ -674,20 +674,25 @@ export default {
 
     const totalVisits = ref(null);
     const barWidth = ref([]);
+    const getWidth = ref([]);
 
     tableStats.value.forEach((sum) => {
       totalVisits.value += sum.visit;
     });
 
-    onMounted(() => {
-      const bars = document.querySelectorAll(".progress-bar");
+    tableStats.value.forEach((width) => {
+      barWidth.value = (width.visit * 100) / totalVisits.value;
+      getWidth.value.push(ref(barWidth.value));
+      return { getWidth };
+    });
 
-      bars.forEach((bar) => {
-        tableStats.value.forEach((width) => {
-          barWidth.value = (width.visit * 100) / totalVisits.value;
-          console.log(bar);
-        });
-      });
+    onMounted(() => {
+      // const bars = document.querySelectorAll(".progress-bar");
+      // bars.forEach((bar) => {
+      //   for (let i = 0; i < getWidth.value; i++) {
+      //     bar.style.width = width + "%";
+      //   }
+      // });
     });
 
     return {
@@ -697,6 +702,7 @@ export default {
       countries,
       languages,
       barWidth,
+      getWidth,
     };
   },
 };
@@ -1094,6 +1100,7 @@ ol li:before {
 .primary-switch input:checked + label:after,
 .confirm-switch input:checked + label:after {
   left: 19px;
+  transition: all 0.2s ease-in-out;
 }
 .primary-switch input:checked + label:before {
   background: var(--elements-c-primary);
@@ -1122,6 +1129,7 @@ ol li:before {
 .confirm-checkbox input:checked + label {
   background: url(../elements/success-check.png) no-repeat center center/cover;
   border: none;
+  transition: all 0.2s ease-in-out;
 }
 .radio {
   width: 16px;

@@ -34,6 +34,7 @@ export default {
       function progressBar() {
         bars.forEach((bar) => {
           let getWidth = parseFloat(bar.dataset.progress);
+          console.log(getWidth);
           for (let i = 0; i < getWidth; i++) {
             bar.style.width = i + "%";
           }

@@ -10,7 +10,7 @@
         <Tab title="all" />
       </TabsWrapper>
 
-      <div class="more_btn tac">
+      <div class="portfolio_btn tac">
         <a class="main_btn" href="#">load more items</a>
       </div>
     </div>
@@ -35,7 +35,7 @@ export default {
 </script>
 
 <style scoped>
-.more_btn {
+.portfolio_btn {
   margin-top: 80px;
 }
 .main_btn {

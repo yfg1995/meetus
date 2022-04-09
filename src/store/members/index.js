@@ -15,8 +15,8 @@ export default {
           address: 'Santa Monica Bullevard',
           image: 'djordje.png',
           profession: 'front-end developer',
-          donation: 1.8,
-          projects: 565,
+          donation: 1.7,
+          projects: 863,
           volunteers: 1965,
           skills: {
             afterEffects: 85,
@@ -35,7 +35,7 @@ export default {
           profession: 'full stack developer',
           donation: 2.1,
           projects: 1233,
-          volunteers: 2965,
+          volunteers: 2512,
           skills: {
             afterEffects: 80,
             photoshop: 90,
@@ -54,7 +54,7 @@ export default {
           profession: 'full stack developer',
           donation: 2.5,
           projects: 1465,
-          volunteers: 3965,
+          volunteers: 3106,
           skills: {
             afterEffects: 85,
             photoshop: 80,
@@ -67,7 +67,7 @@ export default {
         {
           country: 'Canada',
           flag: 'elements/f1.jpg',
-          visit: 509222
+          visit: 409232
         },
         {
           country: 'United States',
