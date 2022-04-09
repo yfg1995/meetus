@@ -9,6 +9,10 @@
       <TabsWrapper>
         <Tab title="all" />
       </TabsWrapper>
+
+      <div class="more_btn tac">
+        <a class="main_btn" href="#">load more items</a>
+      </div>
     </div>
   </section>
 </template>
@@ -31,4 +35,29 @@ export default {
 </script>
 
 <style scoped>
+.more_btn {
+  margin-top: 80px;
+}
+.main_btn {
+  display: inline-block;
+  background-image: linear-gradient(
+    to right,
+    var(--clr-primary) 0%,
+    var(--clr-secondary) 50%,
+    var(--clr-primary) 100%
+  );
+  background-size: 200% auto;
+  padding: 4px 40px;
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  font-size: 0.875em;
+  font-weight: bold;
+  line-height: 3em;
+  border-radius: 5px;
+  transition: all 0.3s linear;
+  text-transform: capitalize;
+}
+.main_btn:hover {
+  background-position: right center;
+}
 </style>

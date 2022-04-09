@@ -253,7 +253,7 @@ section {
   color: var(--vt-c-grey-soft);
   font-size: 1em;
   cursor: default;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease;
 }
 .member__contact svg {
   position: absolute;
@@ -281,6 +281,7 @@ section {
 }
 .member__links svg {
   fill: #fff;
+  transition: all 0.3s ease;
 }
 .member__links li a {
   display: flex;
@@ -289,7 +290,7 @@ section {
   height: 100%;
   background: #e8e8e8;
   border-radius: 6px;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease;
 }
 .member__links li a:hover {
   background: linear-gradient(

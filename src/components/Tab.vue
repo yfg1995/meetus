@@ -143,8 +143,9 @@ export default {
   margin-top: 20px;
   transition: all 0.25s linear;
   font-size: 1.5em;
-  text-transform: capitalize;
+  font-weight: 500;
 }
+.g-text-item h4,
 .g-text-item p {
   text-transform: capitalize;
 }
