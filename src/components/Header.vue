@@ -84,13 +84,13 @@ export default {
 header {
   display: flex;
   align-items: center;
-  min-height: 120px;
+  min-height: 100px;
   background: linear-gradient(
     to right,
     var(--clr-primary),
     var(--clr-secondary)
   );
-  transition: all 0.3s ease;
+  transition: all 0.3s ease-in-out;
 }
 .headerScroll {
   background: #111;

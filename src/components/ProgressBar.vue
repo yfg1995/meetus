@@ -1,5 +1,5 @@
 <template lang="">
-  <div class="member__skill_item" v-for="(skill, idx) in skills" :key="idx">
+  <div class="member__skill_item" v-for="(skill, idx) in skills" :key="idx" :class="{ hide: skill[1] == null }">
     <h4>
       {{ skill[0] }}
       <span :data-progress="skill[1]" class="counter">0</span>%
@@ -34,7 +34,6 @@ export default {
       function progressBar() {
         bars.forEach((bar) => {
           let getWidth = parseFloat(bar.dataset.progress);
-          console.log(getWidth);
           for (let i = 0; i < getWidth; i++) {
             bar.style.width = i + "%";
           }
@@ -99,5 +98,8 @@ export default {
 }
 .counter {
   font-weight: bold;
+}
+.hide {
+  display: none;
 }
 </style>

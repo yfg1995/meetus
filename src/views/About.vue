@@ -166,7 +166,7 @@ export default {
   },
   setup() {
     const members = computed(() => {
-      return store.getters["members/members"];
+      return store.getters["info/members"];
     });
 
     return {

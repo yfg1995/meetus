@@ -170,7 +170,7 @@ import { computed } from "vue";
 import store from "@/store/index.js";
 import Services from "@/views/Services.vue";
 import Portfolio from "@/views/pages/Portfolio.vue";
-import About from "./About.vue";
+import About from "@/views/About.vue";
 import ProgressBar from "@/components/ProgressBar.vue";
 
 export default {
@@ -182,7 +182,7 @@ export default {
   },
   setup() {
     const members = computed(() => {
-      return store.getters["members/members"];
+      return store.getters["info/members"];
     });
 
     return {

@@ -1,10 +1,10 @@
 import { createStore } from "vuex";
 
-import membersModule from './members/index.js';
+import infoModule from './info/index.js';
 
 const store = createStore({
   modules: {
-    members: membersModule,
+    info: infoModule,
   },
 });
 

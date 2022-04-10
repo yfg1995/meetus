@@ -659,7 +659,7 @@ export default {
   },
   setup() {
     const tableStats = computed(() => {
-      return store.getters["members/tableStats"];
+      return store.getters["info/tableStats"];
     });
 
     const cities = ref(["dhaka", "bangkok", "new york", "islamabad"]);
@@ -693,6 +693,7 @@ export default {
       //     bar.style.width = width + "%";
       //   }
       // });
+      console.log(getWidth.value);
     });
 
     return {

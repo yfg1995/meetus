@@ -4,5 +4,8 @@ export default {
   },
   tableStats(state) {
     return state.tableStats;
+  },
+  projects(state) {
+    return state.projects;
   }
 }

@@ -5,7 +5,7 @@
         v-for="title in tabTitles"
         :key="title"
         @click="selectedTitle = title"
-        :class="{ active: selectedTitle == title ? true : false }"
+        :class="{ active: title == selectedTitle }"
       >
         {{ title }}
       </li>

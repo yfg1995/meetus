@@ -22,6 +22,7 @@ export default {
             afterEffects: 85,
             photoshop: 80,
             illustrator: 70,
+            sublime: 90,
             sketch: 75
           }
         },
@@ -41,7 +42,7 @@ export default {
             photoshop: 90,
             illustrator: 75,
             sublime: 90,
-            sketch: 85
+            sketch: null
           }
         },
         {
@@ -59,6 +60,7 @@ export default {
             afterEffects: 85,
             photoshop: 80,
             illustrator: 75,
+            sublime: null,
             sketch: 70
           }
         },
@@ -103,6 +105,38 @@ export default {
           country: 'Belgium',
           flag: 'elements/f8.jpg',
           visit: 197436
+        },
+      ],
+      projects: [
+        {
+          title: "3D helmet design",
+          image: "project-1.jpg",
+          category: "vector",
+        },
+        {
+          title: "2D vinyl design",
+          image: "project-2.jpg",
+          category: "vector",
+        },
+        {
+          title: "creative poster design",
+          image: "project-3.jpg",
+          category: "raster",
+        },
+        {
+          title: "embosed logo design",
+          image: "project-4.jpg",
+          category: "raster",
+        },
+        {
+          title: "3D disposable bottle",
+          image: "project-5.jpg",
+          category: "ui/ux",
+        },
+        {
+          title: "3D logo design",
+          image: "project-6.jpg",
+          category: "printing",
         },
       ],
     };

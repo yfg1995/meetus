@@ -47,11 +47,11 @@ export default {
 }
 .sub-item {
   position: absolute;
-  top: 285%;
+  top: 247%;
   left: 0;
   min-width: 200px;
   visibility: hidden;
-  transition: all 0.2s ease;
+  transition: all 0.2s ease-in;
   box-shadow: 0px 3px 16px 0px rgb(0 0 0 / 10%);
   opacity: 0;
   background: #fff;
@@ -72,7 +72,7 @@ export default {
   padding: 18px;
   font-weight: 500;
   display: block;
-  transition: all 0.3s linear 0s;
+  transition: all 0.3s ease-in-out;
 }
 .sub-item .menu-item:not(:last-of-type) {
   border-bottom: 1px solid #ededed;
