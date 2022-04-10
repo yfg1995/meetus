@@ -31,7 +31,11 @@ export default {
   transform: translateY(30px);
 }
 .projects-enter-active {
-  transition: all 0.3s ease-out;
+  transition: all 0.3s ease-in-out;
+}
+.projects-leave-active {
+  position: absolute;
+  z-index: -1;
 }
 .projects-enter-to,
 .projects-leave-from {
