@@ -69,42 +69,50 @@ export default {
         {
           country: 'Canada',
           flag: 'elements/f1.jpg',
-          visit: 409232
+          visit: 409232,
+          color: 'blue',
         },
         {
           country: 'United States',
           flag: 'elements/f2.jpg',
-          visit: 645032
+          visit: 645032,
+          color: 'pink',
         },
         {
           country: 'United Kingdom',
           flag: 'elements/f3.jpg',
-          visit: 386714
+          visit: 386714,
+          color: 'orange',
         },
         {
           country: 'Germany',
           flag: 'elements/f4.jpg',
-          visit: 415207
+          visit: 415207,
+          color: 'green',
         },
         {
           country: 'Australia',
           flag: 'elements/f5.jpg',
-          visit: 117845
+          visit: 117845,
+          color: 'pink',
         },
         {
           country: 'China',
           flag: 'elements/f6.jpg',
-          visit: 522934
+          visit: 522934,
+          color: 'blue',
         },
         {
           country: 'Bangladesh',
           flag: 'elements/f7.jpg',
-          visit: 96714
+          visit: 96714,
+          color: 'purple',
         },
         {
           country: 'Belgium',
           flag: 'elements/f8.jpg',
-          visit: 197436
+          visit: 197436,
+          color: 'blue',
         },
       ],
       projects: [
