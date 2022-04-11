@@ -18,7 +18,7 @@ export default {};
   flex-direction: column;
   width: 50%;
   text-align: center;
-  padding: 50px 0;
+  padding: 20px 0 50px;
 }
 .not-found h1 {
   font-size: 5em;

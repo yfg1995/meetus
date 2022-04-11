@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import Home from '@/views/Home.vue';
-import Portfolio from '../views/pages/Portfolio.vue';
-import Elements from '../views/pages/Elements.vue';
+import Portfolio from '@/views/pages/Portfolio.vue';
+import Elements from '@/views/pages/Elements.vue';
 import NotFound from '@/views/NotFound.vue';
 
 const router = createRouter({

@@ -1,4 +1,4 @@
-<template>
+<template lang="">
   <section class="home-about__banner">
     <div class="container">
       <div class="member__card d-flex">
@@ -117,7 +117,6 @@
 
           <div
             class="member__about--items d-flex justify-between align-center"
-            id="section"
           >
             <div class="member__about--item">
               <svg viewBox="0 0 448 512">
@@ -207,7 +206,7 @@ section:first-of-type {
   min-height: 700px;
   border-radius: 12px;
   background: #fff;
-  padding: 0 40px;
+  padding: 40px;
   bottom: -100px;
   box-shadow: 0px 20px 80px 0px rgb(153 153 153 / 30%);
 }
@@ -226,9 +225,6 @@ section:first-of-type {
 .home-about__banner .member__img {
   top: 3px;
 }
-/* .home-about__banner .member__img img {
-  object-fit: cover;
-} */
 .home-about__info {
   padding-top: 100px;
 }

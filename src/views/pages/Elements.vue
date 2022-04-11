@@ -20,7 +20,7 @@
           replication project.
         </p>
       </div>
-      <!-- text-sample -->
+      <!-- =======text-sample======= -->
 
       <div class="section sample-buttons">
         <h3>sample buttons</h3>
@@ -215,7 +215,7 @@
           <a href="#" class="generic-btn primary-border small">small</a>
         </div>
       </div>
-      <!-- sample-buttons -->
+      <!-- =======sample-buttons======= -->
 
       <div class="section left-aligned-col">
         <h3>left aligned</h3>
@@ -244,7 +244,7 @@
           </div>
         </div>
       </div>
-      <!-- left-aligned-col -->
+      <!-- =======left-aligned-col======= -->
 
       <div class="section right-aligned-col tar">
         <h3>right aligned</h3>
@@ -273,7 +273,7 @@
           </div>
         </div>
       </div>
-      <!-- right-aligned-col -->
+      <!-- =======right-aligned-col======= -->
 
       <div class="section definition">
         <h3>definition</h3>
@@ -312,7 +312,7 @@
           </div>
         </div>
       </div>
-      <!-- definition -->
+      <!-- =======definition======= -->
 
       <div class="section block-quotes">
         <h3>block quotes</h3>
@@ -333,7 +333,7 @@
           </p>
         </div>
       </div>
-      <!-- block-quotes -->
+      <!-- =======block-quotes======= -->
 
       <div class="section table">
         <h3>table</h3>
@@ -358,7 +358,7 @@
           </div>
         </div>
       </div>
-      <!-- table -->
+      <!-- =======table======= -->
 
       <div class="section image-gallery">
         <h3>image gallery</h3>
@@ -394,7 +394,7 @@
           </div>
         </div>
       </div>
-      <!-- image-gallery -->
+      <!-- =======image-gallery======= -->
 
       <div class="section typography-lists">
         <div class="row d-flex justify-between">
@@ -459,7 +459,7 @@
           </div>
         </div>
       </div>
-      <!-- typography-lists -->
+      <!-- =======typography-lists======= -->
 
       <div class="section forms">
         <div class="d-flex justify-between">
@@ -515,7 +515,7 @@
               <div class="mt15 single-input-secondary"><input type="text" placeholder="Secondary color" autocomplete="off" /></div>
             </form>
           </div>
-          <!-- inputs-col -->
+          <!-- =======inputs-col======= -->
 
           <div class="checkboxes-col">
             <h3>switches</h3>
@@ -544,7 +544,7 @@
                 </div>
               </div>
             </div>
-            <!-- switches -->
+            <!-- =======switches======= -->
 
             <div class="single-element-widget">
               <h3>selectboxes</h3>
@@ -553,7 +553,7 @@
                 :default="'English'"
               />
             </div>
-            <!-- selectboxes -->
+            <!-- =======selectboxes======= -->
 
             <div class="single-element-widget">
               <h3>checkboxes</h3>
@@ -593,7 +593,7 @@
                 </div>
               </div>
             </div>
-            <!-- checkboxes -->
+            <!-- =======checkboxes======= -->
 
             <div class="single-element-widget">
               <h3>radios</h3>
@@ -633,7 +633,7 @@
                 </div>
               </div>
             </div>
-            <!-- radios -->
+            <!-- =======radios======= -->
           </div>
           <!-- checkboxes-col -->
         </div>
@@ -688,10 +688,11 @@ export default {
 
     onMounted(() => {
       const bars = document.querySelectorAll(".progress-bar");
+
       bars.forEach((bar, idx) => {
         let width = getWidth.value[idx];
         for (let i = 0; i < width.value; i++) {
-          bar.style.width = i + "%";
+          bar.style.width = i + 10 + "%";
         }
       });
     });

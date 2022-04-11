@@ -93,7 +93,7 @@ export default {
         {
           country: 'Australia',
           flag: 'elements/f5.jpg',
-          visit: 117845,
+          visit: 187845,
           color: 'pink',
         },
         {
@@ -106,13 +106,13 @@ export default {
           country: 'Bangladesh',
           flag: 'elements/f7.jpg',
           visit: 96714,
-          color: 'purple',
+          color: 'green',
         },
         {
           country: 'Belgium',
           flag: 'elements/f8.jpg',
           visit: 197436,
-          color: 'blue',
+          color: 'purple',
         },
       ],
       projects: [
@@ -122,24 +122,24 @@ export default {
           category: "vector",
         },
         {
+          title: "2D vinyl design",
+          image: "project-2.jpg",
+          category: "ui/ux",
+        },
+        {
           title: "creative poster design",
           image: "project-3.jpg",
           category: "raster",
         },
         {
-          title: "2D vinyl design",
-          image: "project-2.jpg",
+          title: "embosed logo design",
+          image: "project-4.jpg",
           category: "vector",
         },
         {
           title: "3D disposable bottle",
           image: "project-5.jpg",
           category: "ui/ux",
-        },
-        {
-          title: "embosed logo design",
-          image: "project-4.jpg",
-          category: "raster",
         },
         {
           title: "3D logo design",

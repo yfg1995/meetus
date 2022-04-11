@@ -158,6 +158,10 @@ body section:first-of-type {
   text-align: center;
 }
 
+.cp {
+  cursor: pointer;
+}
+
 .activeVisible {
   visibility: visible;
   opacity: 1;
