@@ -1,5 +1,5 @@
 <template lang="">
-  <div class="custom-select" :tabindex="tabindex" @blur="open = false">
+  <div class="custom-select cp" :tabindex="tabindex" @blur="open = false">
     <div class="selected" @click="open = !open">
       {{ selected }}
       <div class="select-arrow" :class="{ rotateArrow: open }">
@@ -70,7 +70,6 @@ export default {
 .custom-select {
   position: relative;
   width: 100%;
-  cursor: pointer;
   outline: none;
 }
 .custom-select .selected {
