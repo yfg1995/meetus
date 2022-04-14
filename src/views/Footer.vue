@@ -158,11 +158,7 @@ input {
   fill: #fff;
 }
 .footer__newsletter--btn:hover {
-  background: linear-gradient(
-    to right,
-    var(--clr-primary),
-    var(--clr-secondary)
-  );
+  background: var(--bg-linear-gradient-right);
 }
 .footer__links li:not(:last-of-type) {
   margin-right: 15px;

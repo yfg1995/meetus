@@ -17,6 +17,18 @@
   --table-bar-orange: #f09359;
   --table-bar-green: #73fbaf;
   --table-bar-purple: #a367e7;
+
+  --bg-linear-gradient-right: linear-gradient(to right,
+      var(--clr-primary),
+      var(--clr-secondary));
+
+  --bg-linear-gradient-left: linear-gradient(to left,
+      var(--clr-primary),
+      var(--clr-secondary));
+
+  --bg-linear-gradient-bottom: linear-gradient(to bottom,
+      var(--clr-primary),
+      var(--clr-secondary));
 }
 
 body::-webkit-scrollbar {

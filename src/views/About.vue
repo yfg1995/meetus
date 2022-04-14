@@ -215,11 +215,7 @@ export default {
   border-radius: 12px 12px 0 0;
   max-width: 40%;
   width: 100%;
-  background: linear-gradient(
-    to bottom,
-    var(--clr-primary),
-    var(--clr-secondary)
-  );
+  background: var(--bg-linear-gradient-bottom);
   padding-bottom: 40%;
 }
 .member__img {
@@ -292,11 +288,7 @@ export default {
   transition: all 0.3s ease;
 }
 .member__links li a:hover {
-  background: linear-gradient(
-    to right,
-    var(--clr-primary),
-    var(--clr-secondary)
-  );
+  background: var(--bg-linear-gradient-right);
 }
 .member__about {
   max-width: 47%;

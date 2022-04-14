@@ -42,9 +42,6 @@ export default {
 </script>
 
 <style scoped>
-.headerScroll .sub-item {
-  top: 206%;
-}
 .sub-item {
   position: absolute;
   top: 247%;

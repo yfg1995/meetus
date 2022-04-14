@@ -130,21 +130,11 @@ export default {
   border-radius: 5px;
   padding: 0 15px;
   margin-top: 55px;
-  transform: all 0.3s ease-in-out;
 }
 .g-img-item,
 .g-img-item .img-fluid {
-  width: 100%;
   height: 100%;
-}
-.g-img-item:hover:before {
-  opacity: 0.7;
-}
-.g-img-item:hover .eyes {
-  opacity: 1;
-}
-.gallery-item:hover .g-text-item h4 {
-  color: var(--clr-primary);
+  width: 100%;
 }
 .g-img-item:before {
   position: absolute;
@@ -152,16 +142,18 @@ export default {
   left: 0;
   top: 0;
   width: 100%;
-  height: 98.2%;
+  height: 98.35%;
   opacity: 0;
   transition: all 0.25s linear;
   z-index: 2;
   border-radius: 10px;
-  background: linear-gradient(
-    to right,
-    var(--clr-primary),
-    var(--clr-secondary)
-  );
+  background: var(--bg-linear-gradient-right);
+}
+.g-img-item:hover:before {
+  opacity: 0.7;
+}
+.g-img-item .img-fluid {
+  max-height: 389px;
 }
 .g-img-item .eyes {
   position: absolute;
@@ -176,12 +168,18 @@ export default {
   width: 70px;
   height: 70px;
 }
+.g-img-item:hover .eyes {
+  opacity: 1;
+}
 .g-text-item h4 {
   color: var(--vt-c-black-soft);
   margin-top: 20px;
   transition: all 0.25s linear;
   font-size: 1.5em;
   font-weight: 500;
+}
+.gallery-item:hover .g-text-item h4 {
+  color: var(--clr-primary);
 }
 .g-text-item h4,
 .g-text-item p {

@@ -196,11 +196,8 @@ section:first-of-type {
   box-shadow: none;
 }
 .home-about__banner {
-  background: linear-gradient(
-    to right,
-    var(--clr-primary),
-    var(--clr-secondary)
-  );
+  padding-top: 100px;
+  background: var(--bg-linear-gradient-right);
 }
 .home-about__banner .member__card {
   border-radius: 12px;
