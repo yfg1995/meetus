@@ -3,9 +3,9 @@
   <router-view></router-view>
   <Testimonials
     v-if="
-      $route.name != 'contact' &&
-      $route.name != 'elements' &&
-      $route.name != 'notFound'
+      $route.name === 'home' ||
+      $route.name === 'services' ||
+      $route.name === 'about'
     "
   />
   <Footer />

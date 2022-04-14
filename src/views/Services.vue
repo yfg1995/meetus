@@ -6,7 +6,7 @@
         <p>
           If you are looking at blank cassettes on the web, you may be very
           confused at the difference in price. You may see some for as low as
-          $.17 each.
+          $17 each.
         </p>
       </div>
 
@@ -96,7 +96,7 @@ section {
   justify-content: center;
   padding: 35px;
   border-radius: 10px;
-  transition: all 0.3s linear;
+  transition: all 0.2s linear;
   background: #f9f9ff;
 }
 .services_cards__item img {
@@ -109,11 +109,12 @@ section {
   text-transform: uppercase;
   font-size: 1.313em;
   margin-bottom: 20px;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.2s linear;
 }
 .services_cards__item:hover {
   background: #fff;
   box-shadow: 0px 10px 30px 0px rgb(0 0 0 / 8%);
+  transform: translate(5px, -5px);
 }
 .services_cards__item:hover h4 {
   color: var(--clr-primary);

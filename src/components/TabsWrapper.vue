@@ -44,7 +44,6 @@ export default {
 .tabs__header li:hover {
   color: var(--clr-primary);
 }
-/* HELPERS */
 .active {
   color: var(--clr-primary);
 }

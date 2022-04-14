@@ -20,7 +20,7 @@
           replication project.
         </p>
       </div>
-      <!-- =======text-sample======= -->
+      <!-- ======= text-sample ======= -->
 
       <div class="section sample-buttons">
         <h3>sample buttons</h3>
@@ -215,7 +215,7 @@
           <a href="#" class="generic-btn primary-border small">small</a>
         </div>
       </div>
-      <!-- =======sample-buttons======= -->
+      <!-- ======= sample-buttons ======= -->
 
       <div class="section left-aligned-col">
         <h3>left aligned</h3>
@@ -244,7 +244,7 @@
           </div>
         </div>
       </div>
-      <!-- =======left-aligned-col======= -->
+      <!-- ======= left-aligned-col ======= -->
 
       <div class="section right-aligned-col tar">
         <h3>right aligned</h3>
@@ -273,7 +273,7 @@
           </div>
         </div>
       </div>
-      <!-- =======right-aligned-col======= -->
+      <!-- ======= right-aligned-col ======= -->
 
       <div class="section definition">
         <h3>definition</h3>
@@ -312,7 +312,7 @@
           </div>
         </div>
       </div>
-      <!-- =======definition======= -->
+      <!-- ======= definition ======= -->
 
       <div class="section block-quotes">
         <h3>block quotes</h3>
@@ -333,7 +333,7 @@
           </p>
         </div>
       </div>
-      <!-- =======block-quotes======= -->
+      <!-- ======= block-quotes ======= -->
 
       <div class="section table">
         <h3>table</h3>
@@ -358,7 +358,7 @@
           </div>
         </div>
       </div>
-      <!-- =======table======= -->
+      <!-- ======= table ======= -->
 
       <div class="section image-gallery">
         <h3>image gallery</h3>
@@ -394,7 +394,7 @@
           </div>
         </div>
       </div>
-      <!-- =======image-gallery======= -->
+      <!-- ======= image-gallery ======= -->
 
       <div class="section typography-lists">
         <div class="row d-flex justify-between">
@@ -459,7 +459,7 @@
           </div>
         </div>
       </div>
-      <!-- =======typography-lists======= -->
+      <!-- ======= typography-lists ======= -->
 
       <div class="section forms">
         <div class="d-flex justify-between">
@@ -476,7 +476,7 @@
                     <path d="M32 32C32 14.33 46.33 0 64 0H320C337.7 0 352 14.33 352 32C352 49.67 337.7 64 320 64H290.5L301.9 212.2C338.6 232.1 367.5 265.4 381.4 306.9L382.4 309.9C385.6 319.6 383.1 330.4 377.1 338.7C371.9 347.1 362.3 352 352 352H32C21.71 352 12.05 347.1 6.04 338.7C.0259 330.4-1.611 319.6 1.642 309.9L2.644 306.9C16.47 265.4 45.42 232.1 82.14 212.2L93.54 64H64C46.33 64 32 49.67 32 32zM224 384V480C224 497.7 209.7 512 192 512C174.3 512 160 497.7 160 480V384H224z"/>
                   </svg>
 
-                  <input autocomplete="off" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Address'" type="text" placeholder="Address" />
+                  <input type="text" placeholder="Address" autocomplete="off" />
                 </div>
               </div>
 
@@ -515,7 +515,7 @@
               <div class="mt15 single-input-secondary"><input type="text" placeholder="Secondary color" autocomplete="off" /></div>
             </form>
           </div>
-          <!-- =======inputs-col======= -->
+          <!-- ======= inputs-col ======= -->
 
           <div class="checkboxes-col">
             <h3>switches</h3>
@@ -544,7 +544,7 @@
                 </div>
               </div>
             </div>
-            <!-- =======switches======= -->
+            <!-- ======= switches ======= -->
 
             <div class="single-element-widget">
               <h3>selectboxes</h3>
@@ -553,7 +553,7 @@
                 :default="'English'"
               />
             </div>
-            <!-- =======selectboxes======= -->
+            <!-- ======= selectbox ======= -->
 
             <div class="single-element-widget">
               <h3>checkboxes</h3>
@@ -593,7 +593,7 @@
                 </div>
               </div>
             </div>
-            <!-- =======checkboxes======= -->
+            <!-- ======= checkboxes ======= -->
 
             <div class="single-element-widget">
               <h3>radios</h3>
@@ -633,7 +633,7 @@
                 </div>
               </div>
             </div>
-            <!-- =======radios======= -->
+            <!-- ======= radios ======= -->
           </div>
           <!-- checkboxes-col -->
         </div>

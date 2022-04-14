@@ -22,6 +22,9 @@ export default {
 </script>
 
 <style scoped>
+div {
+  width: calc((100% - 30px) / 3);
+}
 .projects-enter-from {
   opacity: 0;
   transform: scale(0.5) translateY(-80px);

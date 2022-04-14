@@ -27,7 +27,7 @@
             class="img-fluid"
             :src="`gallery/${project.image}`"
             :alt="`${project.title}`"
-            @click="changeActiveImage(index)"
+            id="image"
           />
           </div>
 
@@ -40,7 +40,7 @@
       </SlideModal>  
 
       <TabsWrapper>
-        <div class="tab-content d-flex justify-between">
+        <div class="tab-content d-flex">
           <Tab
             v-for="project in projects"
             :key="project.title"
@@ -98,28 +98,24 @@ export default {
       return store.getters["info/projects"];
     });
     const modalIsActive = ref(false);
-    const activeImage = ref(null);
+    const currentImage = ref(null);
     const indexOfActive = ref(0);
 
     function toggleModal() {
       modalIsActive.value = !modalIsActive.value;
     }
 
-    function changeActiveImage(index) {
-      activeImage.value = projects[index].image;
-      console.log(projects[index].image);
-      indexOfActive.value = index;
-    }
+    // function activeImage()
 
     onMounted(() => {});
 
     return {
       projects,
-      activeImage,
+      currentImage,
       modalIsActive,
       indexOfActive,
       toggleModal,
-      changeActiveImage,
+      // slideImages,
     };
   },
 };
@@ -210,14 +206,15 @@ export default {
   font-weight: bold;
   line-height: 3em;
   border-radius: 5px;
-  transition: all 0.3s linear;
+  transition: all 0.25s linear;
   text-transform: capitalize;
 }
 .main_btn a:hover {
   background-position: right center;
+  transform: translateY(-5px);
 }
 
-/* SLIDER */
+/* SLIDER MODAL */
 .gallery-slider {
   position: relative;
   max-width: 1000px;
@@ -250,10 +247,10 @@ export default {
   transition: all 0.25s ease-in-out;
 }
 .modal-previous {
-  left: -30%;
+  left: 0%;
 }
 .modal-next {
-  right: -30%;
+  right: 0%;
 }
 .modal-previous svg,
 .modal-next svg {

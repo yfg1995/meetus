@@ -203,11 +203,10 @@ section:first-of-type {
   );
 }
 .home-about__banner .member__card {
-  min-height: 700px;
   border-radius: 12px;
   background: #fff;
   padding: 40px;
-  bottom: -100px;
+  bottom: -90px;
   box-shadow: 0px 20px 80px 0px rgb(153 153 153 / 30%);
 }
 .home-about__banner .member__card h3 {

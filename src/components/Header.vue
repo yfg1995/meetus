@@ -1,7 +1,7 @@
 <template>
-  <header id="header">
+  <header class="header" :class="{ headerScroll: fixedHeader ? true : false }">
     <div class="header-container">
-      <div class="header d-flex justify-between align-center">
+      <div class="d-flex justify-between align-center">
         <div class="logo">
           <router-link to="/">
             <h1 class="uppercase">meetus</h1>
@@ -20,6 +20,8 @@
           </li>
 
           <Dropdown title="pages" :items="pages" />
+
+          <Dropdown title="blog" :items="blog" />
 
           <li class="menu-item">
             <router-link to="/contact">contact</router-link>
@@ -41,6 +43,7 @@ export default {
   },
   setup() {
     const route = useRoute();
+    const fixedHeader = ref(false);
 
     const pages = ref([
       {
@@ -50,6 +53,17 @@ export default {
       {
         title: "elements",
         link: "/elements",
+      },
+    ]);
+
+    const blog = ref([
+      {
+        title: "blog",
+        link: "/blog",
+      },
+      {
+        title: "blog details",
+        link: "/single-blog",
       },
     ]);
 
@@ -65,9 +79,9 @@ export default {
           (document.body.scrollTop > 20 ||
             document.documentElement.scrollTop > 20)
         ) {
-          document.getElementById("header").className = "headerScroll";
+          fixedHeader.value = true;
         } else {
-          document.getElementById("header").className = "";
+          fixedHeader.value = false;
         }
       }
     });
@@ -75,13 +89,15 @@ export default {
     return {
       route,
       pages,
+      blog,
+      fixedHeader,
     };
   },
 };
 </script>
 
 <style scoped>
-header {
+.header {
   display: flex;
   align-items: center;
   min-height: 100px;
@@ -90,16 +106,15 @@ header {
     var(--clr-primary),
     var(--clr-secondary)
   );
-  transition: all 0.3s ease-in-out;
+  transition: all 0.3s linear;
 }
 .headerScroll {
-  background: #111;
   position: fixed;
-  top: 0;
+  left: 0;
   width: 100%;
-  z-index: 99;
   min-height: 80px;
-  transition: background 0.4s, all 0.45s ease-in-out;
+  background: #111;
+  z-index: 99;
 }
 .headerScroll .menu-item a:before,
 .headerScroll .menu-item a:after {
@@ -112,6 +127,7 @@ header {
   font-size: 1.75em;
   color: #fff;
   font-weight: bold;
+  transition: all 0.3s linear;
 }
 
 li {
@@ -136,6 +152,7 @@ ul {
   padding: 5px 0;
   font-size: 0.875em;
   color: #fff;
+  transition: all 0.3s linear;
 }
 .menu-item a:before,
 .menu-item a:after {

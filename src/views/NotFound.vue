@@ -1,4 +1,4 @@
-<template>
+<template lang="">
   <section class="p_120">
     <div class="not-found flex align-center">
       <h1>404</h1>
