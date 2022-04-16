@@ -48,7 +48,7 @@ export default {
   left: 0;
   min-width: 200px;
   visibility: hidden;
-  transition: all 0.25s linear;
+  transition: all 0.3s linear;
   box-shadow: 0px 3px 16px 0px rgb(0 0 0 / 10%);
   opacity: 0;
   background: #fff;

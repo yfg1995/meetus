@@ -1,5 +1,5 @@
 <template>
-  <header class="header" :class="{ headerScroll: fixedHeader ? true : false }">
+  <header class="header" :class="{ headerScroll: fixedHeader }">
     <div class="header-container">
       <div class="d-flex justify-between align-center">
         <div class="logo">
@@ -8,7 +8,7 @@
           </router-link>
         </div>
 
-        <ul class="d-flex align-center">
+        <ul class="navbar d-flex align-center">
           <li class="menu-item">
             <router-link to="/">home</router-link>
           </li>
@@ -28,7 +28,7 @@
           </li>
         </ul>
 
-        <!-- <DropdownMenu /> -->
+        <DropdownMenu />
       </div>
     </div>
   </header>
@@ -38,12 +38,12 @@
 import { ref, onMounted } from "vue";
 import { useRoute } from "vue-router";
 import Dropdown from "@/components/Dropdown.vue";
-// import DropdownMenu from "@/components/DropdownMenu.vue";
+import DropdownMenu from "@/components/DropdownMenu.vue";
 
 export default {
   components: {
     Dropdown,
-    // DropdownMenu,
+    DropdownMenu,
   },
   setup() {
     const route = useRoute();
@@ -106,6 +106,7 @@ export default {
   align-items: center;
   width: 100%;
   min-height: 100px;
+  z-index: 99;
   background: var(--bg-linear-gradient-right);
   transition: all 0.3s linear;
 }
@@ -141,7 +142,6 @@ ul {
 .menu-item {
   text-transform: uppercase;
   margin: 0 20px;
-  cursor: pointer;
 }
 .menu-item:last-of-type {
   margin-right: 0;
@@ -154,6 +154,7 @@ ul {
   line-height: 1.5em;
   transition: all 0.3s linear;
   font-weight: 500;
+  cursor: pointer;
 }
 .menu-item a:before,
 .menu-item a:after {
@@ -192,6 +193,12 @@ ul {
   }
   .menu-item a {
     font-size: 0.875em;
+  }
+}
+
+@media (max-width: 767px) {
+  .navbar {
+    display: none;
   }
 }
 </style>

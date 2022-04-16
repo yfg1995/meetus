@@ -248,7 +248,7 @@ export default {
   color: var(--vt-c-grey-soft);
   font-size: 1em;
   cursor: default;
-  transition: all 0.3s ease;
+  transition: all 0.3s linear;
 }
 .member__contact svg {
   position: absolute;

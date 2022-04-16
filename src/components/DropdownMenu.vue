@@ -2,29 +2,13 @@
   <div class="header__item">
     <a href="#" class="header__link">
       <transition name="slide-fade">
-        <!-- Header Navigation Menu Icons -->
-        <button
-          class="header--button cp"
-          v-if="show"
-          key="on"
-          @click="show = false"
-        >
-          <svg viewBox="0 0 24 24" class="header--icon">
-            <path d="M0 0h24v24H0V0z" fill="none" />
-            <path
-              fill="currentColor"
-              d="M18.3 5.71c-.39-.39-1.02-.39-1.41 0L12 10.59 7.11 5.7c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41L10.59 12 5.7 16.89c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0L12 13.41l4.89 4.89c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L13.41 12l4.89-4.89c.38-.38.38-1.02 0-1.4z"
-            />
-          </svg>
-        </button>
-
-        <button class="header--button cp" v-else key="off" @click="show = true">
-          <svg viewBox="0 0 24 24" class="header--icon">
-            <path
-              fill="currentColor"
-              d="M6,8c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM12,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM6,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM6,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM12,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM16,6c0,1.1 0.9,2 2,2s2,-0.9 2,-2 -0.9,-2 -2,-2 -2,0.9 -2,2zM12,8c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM18,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM18,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2z"
-            />
-          </svg>
+        <!-- Header Navigation Menu Icon -->
+        <button class="header--button cp" @click="toggleClass">
+          <div class="hamburger" :class="{ showDropdown: show }">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
         </button>
       </transition>
     </a>
@@ -74,14 +58,57 @@ export default {
   setup() {
     const show = ref(false);
 
+    function toggleClass() {
+      show.value = !show.value;
+    }
+
     return {
       show,
+      toggleClass,
     };
   },
 };
 </script>
 
 <style scoped>
+.header--button {
+  color: var(--clr-primary);
+  border: 0;
+  background: transparent;
+  outline: none;
+  visibility: hidden;
+}
+.hamburger {
+  position: absolute;
+  right: 50px;
+  top: 50%;
+  transform: translateY(-40%);
+}
+.hamburger span {
+  display: block;
+  height: 2px;
+  width: 20px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  background: var(--clr-primary);
+  transition: all 0.3s ease-in-out;
+}
+.hamburger span:nth-child(1),
+.hamburger span:nth-child(3) {
+  transform-origin: left;
+}
+.hamburger span:nth-child(2) {
+  transform-origin: center;
+}
+.showDropdown span:nth-child(1) {
+  transform: rotate(45deg);
+}
+.showDropdown span:nth-child(2) {
+  transform: scaleX(0);
+}
+.showDropdown span:nth-child(3) {
+  transform: rotate(-45deg);
+}
 .header__item {
   position: absolute;
   right: 0;
@@ -93,55 +120,46 @@ export default {
   width: 30px;
   height: 30px;
 }
-.header--button {
-  top: 0;
-  right: 0;
-  position: absolute;
-  margin: 0;
-  padding: 0;
-  color: var(--clr-primary);
-  border: 1px solid transparent;
-  background-color: transparent;
-}
-.header--button:focus {
-  outline: 0;
-}
 
 /* Dropdown Menu */
 .dropdown__menu {
   position: absolute;
-  top: 100%;
+  top: 200%;
   right: 0;
-  z-index: 99;
   width: 100vw;
+  z-index: 99;
   padding: 10px 0;
   background: #fff;
+  display: none;
 }
 
 /* Animation Menu Icon */
 .slide-fade-enter-active,
 .slide-fade-leave-active {
-  transition: all 0.6s;
+  transition: all 0.5s;
 }
 .slide-fade-enter,
 .slide-fade-leave-active {
   opacity: 0;
 }
-.slide-fade-enter {
-  transform: translateX(31px);
-}
-.slide-fade-leave-active {
-  transform: translateX(-31px);
-}
 
 /* Dropdown Menu Animation */
 .dropdown-enter-active,
 .dropdown-leave-active {
-  transition: all 1s;
+  transition: all 0.5s;
 }
 .dropdown-enter,
 .dropdown-leave-to {
   opacity: 0;
-  transform: translateY(30px);
+}
+
+/* RESPONSIVE */
+@media (max-width: 767px) {
+  .header--button {
+    visibility: visible;
+  }
+  .dropdown__menu {
+    display: block;
+  }
 }
 </style>

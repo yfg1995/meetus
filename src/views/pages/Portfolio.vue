@@ -278,10 +278,10 @@ export default {
   transition: all 0.25s linear;
 }
 .modal-previous {
-  left: 0%;
+  left: 0;
 }
 .modal-next {
-  right: 0%;
+  right: 0;
 }
 .modal-previous svg,
 .modal-next svg {

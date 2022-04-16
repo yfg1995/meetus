@@ -120,4 +120,11 @@ section {
 .services_cards__item:hover h4 {
   color: var(--clr-primary);
 }
+
+/* RESPONSIVE */
+@media (max-width: 1366px) {
+  .services_cards {
+    grid-gap: 40px;
+  }
+}
 </style>

@@ -54,7 +54,6 @@ body::-webkit-scrollbar-thumb {
 *::after {
   box-sizing: border-box;
   margin: 0;
-  position: relative;
 }
 
 body {
@@ -166,12 +165,7 @@ body section:first-of-type {
 }
 
 .cp {
-  cursor: pointer;
-}
-
-.activeVisible {
-  visibility: visible;
-  opacity: 1;
+  cursor: pointer !important;
 }
 
 .uppercase {
@@ -179,7 +173,7 @@ body section:first-of-type {
 }
 
 .bold {
-  font-weight: 500;
+  font-weight: bold;
 }
 
 .p_120 {
