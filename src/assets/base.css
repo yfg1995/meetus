@@ -131,11 +131,6 @@ a {
   text-decoration: none;
 }
 
-a,
-svg {
-  transition: all 0.25s ease-in-out;
-}
-
 textarea {
   resize: none;
   font-family: "Heebo", sans-serif;

@@ -1,6 +1,6 @@
 <template lang="">
-    <li @mouseenter="isActive = true" @mouseleave="isActive = false" class="menu-item menu-item_fot uppercase">
-      {{ title }}
+    <li @mouseenter="isActive = true" @mouseleave="isActive = false" class="menu-item">
+      <a>{{ title }}</a>
 
         <ul class="sub-item" :class="{ activeVisible: isActive }">
           <li v-for="(item, idx) in items" :key="idx" class="menu-item" @click="toggleClass">
@@ -48,36 +48,48 @@ export default {
   left: 0;
   min-width: 200px;
   visibility: hidden;
-  transition: all 0.2s ease-in;
+  transition: all 0.25s linear;
   box-shadow: 0px 3px 16px 0px rgb(0 0 0 / 10%);
   opacity: 0;
   background: #fff;
   z-index: 90;
 }
-.sub-item .menu-item a:hover {
-  background: var(--clr-primary);
+.menu-item a {
   color: #fff;
-}
-.menu-item {
-  font-size: 0.875em;
-}
-.menu-item_fot {
-  padding-top: 3px;
+  padding: 5px 0;
+  font-size: 0.9375em;
+  line-height: 1.5em;
+  transition: all 0.3s linear;
+  font-weight: 500;
 }
 .sub-item .menu-item a {
   color: var(--vt-c-black-soft);
   padding: 18px;
   font-weight: 500;
   display: block;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in;
 }
-.sub-item .menu-item:not(:last-of-type) {
-  border-bottom: 1px solid #ededed;
+.sub-item .menu-item a:hover {
+  background: var(--clr-primary);
+  color: #fff;
 }
 
 /* HELPERS */
 .activeVisible {
   visibility: visible;
   opacity: 1;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1366px) {
+  .menu-item a {
+    font-size: 0.875em;
+  }
+  .sub-item {
+    top: 225%;
+  }
+  .sub-item .menu-item a {
+    padding: 16px;
+  }
 }
 </style>

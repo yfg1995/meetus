@@ -275,7 +275,7 @@ export default {
 }
 .member__links svg {
   fill: #fff;
-  transition: all 0.3s ease;
+  transition: all 0.25s linear;
 }
 .member__links li a {
   display: flex;
@@ -284,7 +284,7 @@ export default {
   height: 100%;
   background: #e8e8e8;
   border-radius: 6px;
-  transition: all 0.3s ease;
+  transition: all 0.25s linear;
 }
 .member__links li a:hover {
   background: var(--bg-linear-gradient-right);

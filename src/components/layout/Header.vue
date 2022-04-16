@@ -27,6 +27,8 @@
             <router-link to="/contact">contact</router-link>
           </li>
         </ul>
+
+        <!-- <DropdownMenu /> -->
       </div>
     </div>
   </header>
@@ -36,15 +38,16 @@
 import { ref, onMounted } from "vue";
 import { useRoute } from "vue-router";
 import Dropdown from "@/components/Dropdown.vue";
+// import DropdownMenu from "@/components/DropdownMenu.vue";
 
 export default {
   components: {
     Dropdown,
+    // DropdownMenu,
   },
   setup() {
     const route = useRoute();
     const fixedHeader = ref(false);
-
     const pages = ref([
       {
         title: "portfolio",
@@ -98,12 +101,13 @@ export default {
 
 <style scoped>
 .header {
+  position: relative;
   display: flex;
   align-items: center;
   width: 100%;
   min-height: 100px;
   background: var(--bg-linear-gradient-right);
-  transition: all 0.25s linear;
+  transition: all 0.3s linear;
 }
 .headerScroll {
   position: fixed;
@@ -124,7 +128,7 @@ export default {
   font-size: 2em;
   color: #fff;
   font-weight: bold;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.3s linear;
 }
 
 li {
@@ -135,8 +139,6 @@ ul {
   display: flex;
 }
 .menu-item {
-  color: #fff;
-  font-weight: 500;
   text-transform: uppercase;
   margin: 0 20px;
   cursor: pointer;
@@ -146,10 +148,12 @@ ul {
 }
 .menu-item a {
   position: relative;
-  padding: 5px 0;
-  font-size: 0.875em;
   color: #fff;
+  padding: 5px 0;
+  font-size: 0.9375em;
+  line-height: 1.5em;
   transition: all 0.3s linear;
+  font-weight: 500;
 }
 .menu-item a:before,
 .menu-item a:after {
@@ -175,5 +179,19 @@ ul {
 }
 .menu-item a.router-link-active:after {
   width: 0;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1366px) {
+  .header {
+    min-height: 90px;
+  }
+  .header .logo h1 {
+    transform: translateX(0);
+    font-size: 1.75em;
+  }
+  .menu-item a {
+    font-size: 0.875em;
+  }
 }
 </style>

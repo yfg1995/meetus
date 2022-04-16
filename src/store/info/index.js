@@ -146,6 +146,21 @@ export default {
           image: "project-6.jpg",
           category: "printing",
         },
+        {
+          title: "embosed logo design",
+          image: "project-3.jpg",
+          category: "printing",
+        },
+        {
+          title: "2D vinyl design",
+          image: "project-2.jpg",
+          category: "raster",
+        },
+        {
+          title: "creative poster design",
+          image: "project-1.jpg",
+          category: "ui/ux",
+        },
       ],
     };
   },

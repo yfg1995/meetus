@@ -196,6 +196,8 @@ section:first-of-type {
   box-shadow: none;
 }
 .home-about__banner {
+  position: relative;
+  z-index: -1;
   background: var(--bg-linear-gradient-right);
 }
 .home-about__banner .member__card {

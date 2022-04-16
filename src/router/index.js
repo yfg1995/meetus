@@ -5,6 +5,9 @@ import Elements from '@/views/pages/Elements.vue';
 import NotFound from '@/views/NotFound.vue';
 import BlogDetails from '@/views/blog/BlogDetails.vue';
 import Blog from '@/views/blog/Blog.vue';
+import About from '@/views/About.vue';
+import Services from '@/views/Services.vue';
+import Contact from '@/views/Contact.vue';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -17,12 +20,12 @@ const router = createRouter({
     {
       path: '/about-us',
       name: 'about',
-      component: () => import('@/views/About.vue')
+      component: About
     },
     {
       path: '/services',
       name: 'services',
-      component: () => import('@/views/Services.vue')
+      component: Services
     },
     {
       path: '/portfolio',
@@ -48,7 +51,7 @@ const router = createRouter({
     {
       path: '/contact',
       name: 'contact',
-      component: () => import('@/views/Contact.vue')
+      component: Contact
     },
     {
       path: '/:notFound(.*)',

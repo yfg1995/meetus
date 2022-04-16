@@ -994,6 +994,7 @@ ol li:before {
 }
 .input-group-icon input {
   padding-left: 15px;
+  transition: all 0.2s linear;
 }
 .input-group-icon svg {
   width: 15px;
@@ -1035,7 +1036,6 @@ ol li:before {
 }
 .switch input + label,
 .checkbox input + label,
-.radio input,
 .radio input + label,
 .switch input + label:before {
   position: absolute;
@@ -1043,6 +1043,7 @@ ol li:before {
   top: 0;
   width: 100%;
   height: 100%;
+  transition: all 0.25s ease-in;
 }
 .checkboxes-col {
   width: 32%;
@@ -1077,7 +1078,7 @@ ol li:before {
   background: transparent;
   border-radius: 10px;
   cursor: pointer;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.25s linear;
 }
 .switch input + label:after {
   content: "";

@@ -12,8 +12,8 @@
 </template>
 
 <script>
-import Header from "@/components/Header.vue";
-import Testimonials from "@/components/Testimonials.vue";
+import Header from "@/components/layout/Header.vue";
+import Testimonials from "@/components/layout/Testimonials.vue";
 import Footer from "@/views/Footer.vue";
 
 export default {

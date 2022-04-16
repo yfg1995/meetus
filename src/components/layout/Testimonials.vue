@@ -77,7 +77,7 @@
 
 <script>
 import "swiper/css";
-import Rating from "./UI-helpers/Rating.vue";
+import Rating from "@/components/UI-helpers/Rating.vue";
 import SwiperCore, { Autoplay } from "swiper/core";
 import { Swiper, SwiperSlide } from "swiper/vue";
 

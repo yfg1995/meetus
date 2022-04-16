@@ -110,7 +110,7 @@ section {
   text-transform: uppercase;
   font-size: 1.313em;
   margin-bottom: 20px;
-  transition: all 0.2s linear;
+  transition: all 0.15s linear;
 }
 .services_cards__item:hover {
   background: #fff;

@@ -1,5 +1,7 @@
 <template>
-  <section>
-    <div class="container">blog</div>
-  </section>
+  <section>blog</section>
 </template>
+
+<script>
+export default {};
+</script>
