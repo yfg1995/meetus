@@ -363,35 +363,35 @@
       <div class="section image-gallery">
         <h3>image gallery</h3>
         <div class="image-gallery__container">
-          <div class="image-gallery__container--item">
+          <a href="elements/g1.jpg" class="image-gallery__container--item" target="_blank">
             <img src="elements/g1.jpg" alt="gallery image" />
-          </div>
-          <div class="image-gallery__container--item">
+          </a>
+          <a href="elements/g2.jpg" class="image-gallery__container--item" target="_blank">
             <img src="elements/g2.jpg" alt="gallery image" />
-          </div>
-          <div class="image-gallery__container--item">
+          </a>
+          <a href="elements/g3.jpg" class="image-gallery__container--item" target="_blank">
             <img src="elements/g3.jpg" alt="gallery image" />
-          </div>
-          <div class="image-gallery__container--item">
+          </a>
+          <a href="elements/g4.jpg" class="image-gallery__container--item" target="_blank">
             <img src="elements/g4.jpg" alt="gallery image" />
-          </div>
+          </a>
           <div class="image-gallery__container--item item-svg">
             <a href="https://www.webredone.com/" target="_blank">
               <LogoSvg />
             </a>
           </div>
-          <div class="image-gallery__container--item">
+          <a href="elements/g5.jpg" class="image-gallery__container--item" target="_blank">
             <img src="elements/g5.jpg" alt="gallery image" />
-          </div>
-          <div class="image-gallery__container--item">
+          </a>
+          <a href="elements/g6.jpg" class="image-gallery__container--item" target="_blank">
             <img src="elements/g6.jpg" alt="gallery image" />
-          </div>
-          <div class="image-gallery__container--item">
+          </a>
+          <a href="elements/g7.jpg" class="image-gallery__container--item" target="_blank">
             <img src="elements/g7.jpg" alt="gallery image" />
-          </div>
-          <div class="image-gallery__container--item">
+          </a>
+          <a href="elements/g8.jpg" class="image-gallery__container--item" target="_blank">
             <img src="elements/g8.jpg" alt="gallery image" />
-          </div>
+          </a>
         </div>
       </div>
       <!-- ======= image-gallery ======= -->

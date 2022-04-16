@@ -1,5 +1,5 @@
 <template lang="">
-    <li @mouseenter="isActive = true" class="menu-item title-item">
+    <li @mouseenter="isActive = true" class="menu-item title-item cp">
       <a>{{ title }}</a>
 
         <ul class="sub-item" :class="{ activeVisible: isActive }" @mouseleave="isActive = false">

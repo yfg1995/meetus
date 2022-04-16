@@ -153,13 +153,13 @@ export default {
   flex-wrap: wrap;
 }
 .gallery-item {
-  position: relative;
   border-radius: 5px;
   padding: 0 15px;
   margin-top: 55px;
 }
 .g-img-item,
 .g-img-item .img-fluid {
+  position: relative;
   height: 100%;
   width: 100%;
 }
