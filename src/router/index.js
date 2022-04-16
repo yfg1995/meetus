@@ -3,8 +3,7 @@ import Home from '@/views/Home.vue';
 import Portfolio from '@/views/pages/Portfolio.vue';
 import Elements from '@/views/pages/Elements.vue';
 import NotFound from '@/views/NotFound.vue';
-import BlogDetails from '@/views/blog/BlogDetails.vue';
-import Blog from '@/views/blog/Blog.vue';
+import Blog from '@/views/Blog.vue';
 import About from '@/views/About.vue';
 import Services from '@/views/Services.vue';
 import Contact from '@/views/Contact.vue';
@@ -42,11 +41,6 @@ const router = createRouter({
       path: '/blog',
       name: 'blog',
       component: Blog
-    },
-    {
-      path: '/single-blog',
-      name: 'blogDetails',
-      component: BlogDetails
     },
     {
       path: '/contact',

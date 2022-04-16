@@ -21,7 +21,9 @@
 
           <Dropdown title="pages" :items="pages" />
 
-          <Dropdown title="blog" :items="blog" />
+          <li class="menu-item">
+            <router-link to="/blog">blog</router-link>
+          </li>
 
           <li class="menu-item">
             <router-link to="/contact">contact</router-link>
@@ -59,17 +61,6 @@ export default {
       },
     ]);
 
-    const blog = ref([
-      {
-        title: "blog",
-        link: "/blog",
-      },
-      {
-        title: "blog details",
-        link: "/single-blog",
-      },
-    ]);
-
     onMounted(() => {
       window.onscroll = function () {
         scrollFunction();
@@ -92,7 +83,6 @@ export default {
     return {
       route,
       pages,
-      blog,
       fixedHeader,
     };
   },

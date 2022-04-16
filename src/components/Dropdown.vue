@@ -1,8 +1,8 @@
 <template lang="">
-    <li @mouseenter="isActive = true" @mouseleave="isActive = false" class="menu-item">
+    <li @mouseenter="isActive = true" class="menu-item title-item">
       <a>{{ title }}</a>
 
-        <ul class="sub-item" :class="{ activeVisible: isActive }">
+        <ul class="sub-item" :class="{ activeVisible: isActive }" @mouseleave="isActive = false">
           <li v-for="(item, idx) in items" :key="idx" class="menu-item" @click="toggleClass">
             <router-link :to="item.link">{{ item.title }}</router-link>
           </li>
@@ -42,6 +42,9 @@ export default {
 </script>
 
 <style scoped>
+.title-item {
+  position: relative;
+}
 .sub-item {
   position: absolute;
   top: 247%;
