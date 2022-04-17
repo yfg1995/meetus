@@ -375,10 +375,10 @@
           <a href="elements/g4.jpg" class="image-gallery__container--item" target="_blank">
             <img src="elements/g4.jpg" alt="gallery image" />
           </a>
-          <div class="image-gallery__container--item item-svg">
+          <div class="item-svg d-flex align-center justify-center">
             <a href="https://www.webredone.com/" target="_blank">
-              <LogoSvg />
-            </a>
+            <LogoSvg />
+          </a>
           </div>
           <a href="elements/g5.jpg" class="image-gallery__container--item" target="_blank">
             <img src="elements/g5.jpg" alt="gallery image" />
@@ -873,14 +873,43 @@ h6 {
 .image-gallery__container--item {
   position: relative;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.3s linear;
 }
 .item-svg {
-  justify-self: center;
-  align-self: center;
+  position: relative;
+}
+.item-svg a {
+  transform: scale(0.6);
+  transition: all 0.3s linear;
+  width: 100%;
 }
 .item-svg svg {
-  width: 350px;
+  max-width: 350px;
+  width: 100%;
+}
+.item-svg:hover a {
+  transform: scale(0.8);
+}
+.item-svg:before,
+.item-svg:after {
+  position: absolute;
+  content: "";
+  width: 0;
+  background: var(--clr-primary);
+  height: 3px;
+  transition: all 0.3s linear;
+}
+.item-svg:before {
+  top: 0;
+  left: 0;
+}
+.item-svg:after {
+  bottom: 0;
+  right: 0;
+}
+.item-svg:hover:before,
+.item-svg:hover:after {
+  width: 100%;
 }
 .image-gallery__container--item:before {
   position: absolute;

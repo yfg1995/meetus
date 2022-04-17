@@ -154,7 +154,7 @@ export default {
 }
 .gallery-item {
   border-radius: 5px;
-  padding: 0 15px;
+  margin: 0 15px;
   margin-top: 55px;
 }
 .g-img-item,

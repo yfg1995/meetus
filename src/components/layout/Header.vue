@@ -150,7 +150,7 @@ ul {
 .menu-item a:after {
   position: absolute;
   content: "";
-  width: 0%;
+  width: 0;
   background: var(--clr-primary);
   height: 2px;
   transition: all 0.25s ease-in-out;
