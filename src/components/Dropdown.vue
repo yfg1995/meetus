@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import { ref, onMounted } from "vue";
+import { ref } from "vue";
 
 export default {
   props: ["title", "items"],
@@ -21,17 +21,6 @@ export default {
     function toggleClass() {
       isActive.value = !isActive.value;
     }
-
-    onMounted(() => {
-      document.addEventListener("mouseover", (e) => {
-        if (
-          e.target.classList.contains(".sub-item") ||
-          e.target.classList.contains(".menu-item")
-        ) {
-          isActive.value = !isActive.value;
-        }
-      });
-    });
 
     return {
       isActive,
@@ -57,18 +46,19 @@ export default {
   background: #fff;
   z-index: 90;
 }
-.menu-item a {
+.title-item a {
   color: #fff;
   padding: 5px 0;
   font-size: 0.9375em;
   line-height: 1.5em;
-  transition: all 0.3s linear;
   font-weight: 500;
 }
 .sub-item .menu-item a {
   color: var(--vt-c-black-soft);
   padding: 18px;
   font-weight: 500;
+  font-size: 0.875em;
+  line-height: 1.375em;
   display: block;
   transition: all 0.3s ease-in;
 }
@@ -85,8 +75,8 @@ export default {
 
 /* RESPONSIVE */
 @media (max-width: 1366px) {
-  .menu-item a {
-    font-size: 0.875em;
+  .sub-item .menu-item a {
+    font-size: 0.75em;
   }
   .sub-item {
     top: 225%;

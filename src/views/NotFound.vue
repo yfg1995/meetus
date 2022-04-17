@@ -21,7 +21,7 @@ export default {};
   padding: 20px 0 50px;
 }
 .not-found h1 {
-  font-size: 5em;
+  font-size: 6em;
   line-height: 1.25em;
 }
 .not-found h2 {
