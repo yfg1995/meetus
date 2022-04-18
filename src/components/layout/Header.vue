@@ -91,21 +91,17 @@ export default {
 
 <style scoped>
 .header {
-  position: relative;
+  position: fixed;
   display: flex;
   align-items: center;
   width: 100%;
   min-height: 100px;
   z-index: 99;
   background: var(--bg-linear-gradient-right);
-  transition: all 0.3s linear;
+  transition: all 0.2s linear;
 }
 .headerScroll {
-  position: fixed;
-  left: 0;
   background: #111;
-  z-index: 99;
-  width: 100%;
 }
 .headerScroll .menu-item a:before,
 .headerScroll .menu-item a:after {
@@ -119,7 +115,7 @@ export default {
   font-size: 2em;
   color: #fff;
   font-weight: bold;
-  transition: all 0.3s linear;
+  transition: all 0.25s linear;
 }
 
 li {

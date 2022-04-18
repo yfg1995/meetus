@@ -156,7 +156,7 @@
 </template>
 
 <script>
-import { onMounted, computed } from "vue";
+import { computed } from "vue";
 import store from "@/store/index.js";
 import ProgressBar from "@/components/ProgressBar.vue";
 
@@ -168,8 +168,6 @@ export default {
     const members = computed(() => {
       return store.getters["info/members"];
     });
-
-    onMounted(() => {});
 
     return {
       members,

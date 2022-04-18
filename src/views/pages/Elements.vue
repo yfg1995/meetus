@@ -692,7 +692,7 @@ export default {
       bars.forEach((bar, idx) => {
         let width = getWidth.value[idx];
         for (let i = 0; i < width.value; i++) {
-          bar.style.width = i + 10 + "%";
+          bar.style.width = i + "%";
         }
       });
     });
@@ -851,7 +851,7 @@ h6 {
   padding-right: 50px;
 }
 .table-row .progress-br {
-  width: 80%;
+  width: 100%;
   border: 1px solid #eee;
   padding: 3px 5px;
   border-radius: 10px;
@@ -1045,7 +1045,7 @@ ol li:before {
   position: relative;
 }
 .thumb-thack_svg {
-  margin-top: 2px !important;
+  margin-bottom: 5px;
 }
 .input-group-icon__svg svg {
   margin-top: 8px;
@@ -1061,6 +1061,7 @@ ol li:before {
 .switch input,
 .checkbox input,
 .radio input {
+  position: relative;
   opacity: 0;
 }
 .switch input + label,

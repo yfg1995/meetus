@@ -1,6 +1,6 @@
 <template>
   <Header />
-  <router-view></router-view>
+  <router-view class="router-view"></router-view>
   <Testimonials
     v-if="
       $route.name === 'home' ||
