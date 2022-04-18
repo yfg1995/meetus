@@ -115,7 +115,7 @@ export default {
   font-size: 2em;
   color: #fff;
   font-weight: bold;
-  transition: all 0.25s linear;
+  transition: all 0.2s linear;
 }
 
 li {
