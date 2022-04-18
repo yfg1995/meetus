@@ -89,6 +89,7 @@ export default {};
 <style scoped>
 .footer {
   background: #000;
+  margin-top: 0;
 }
 .col {
   width: calc((100% - 50px) / 3);
