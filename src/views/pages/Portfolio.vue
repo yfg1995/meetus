@@ -8,7 +8,7 @@
 
       <SlideModal :show="!!modalIsActive" @close="toggleModal" v-for="(project, index) in projects" :key="project.title">
         <div class="gallery-slider d-flex align-center justify-center">
-          <div class="modal-previous cp">
+          <div class="modal-previous cp" @click="prev">
             <svg viewBox="0 0 320 512">
               <path d="M224 480c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25l192-192c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25L77.25 256l169.4 169.4c12.5 12.5 12.5 32.75 0 45.25C240.4 476.9 232.2 480 224 480z"/>
             </svg>
@@ -27,11 +27,10 @@
             class="img-fluid"
             :src="`gallery/${project.image}`"
             :alt="`${project.title}`"
-            id="image"
           />
           </div>
 
-          <div class="modal-next cp">
+          <div class="modal-next cp" @click="next">
             <svg viewBox="0 0 320 512">
               <path d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z"/>
             </svg>
@@ -72,7 +71,7 @@
 
           <Tab
             v-if="$route.name !== 'home'"
-            v-for="project in projects"
+            v-for="project, index in projects"
             :key="project.title"
             :title="project.category"
           >
@@ -83,7 +82,7 @@
                     :src="`gallery/${project.image}`"
                     :alt="`${project.title}`"
                   />
-                  <a class="eyes" href="#" @click="toggleModal">
+                  <a class="eyes" href="#" @click="getCurrentImg(index)">
                     <svg viewBox="0 0 576 512">
                       <path
                         d="M279.6 160.4C282.4 160.1 285.2 160 288 160C341 160 384 202.1 384 256C384 309 341 352 288 352C234.1 352 192 309 192 256C192 253.2 192.1 250.4 192.4 247.6C201.7 252.1 212.5 256 224 256C259.3 256 288 227.3 288 192C288 180.5 284.1 169.7 279.6 160.4zM480.6 112.6C527.4 156 558.7 207.1 573.5 243.7C576.8 251.6 576.8 260.4 573.5 268.3C558.7 304 527.4 355.1 480.6 399.4C433.5 443.2 368.8 480 288 480C207.2 480 142.5 443.2 95.42 399.4C48.62 355.1 17.34 304 2.461 268.3C-.8205 260.4-.8205 251.6 2.461 243.7C17.34 207.1 48.62 156 95.42 112.6C142.5 68.84 207.2 32 288 32C368.8 32 433.5 68.84 480.6 112.6V112.6zM288 112C208.5 112 144 176.5 144 256C144 335.5 208.5 400 288 400C367.5 400 432 335.5 432 256C432 176.5 367.5 112 288 112z"
@@ -100,6 +99,7 @@
           </Tab>
         </div>
       </TabsWrapper>
+      <pre>{{ JSON.stringify(projects.image, null, 2) }}</pre>
 
       <div class="portfolio_btn tac" v-if="$route.name === 'home'">
         <div class="main_btn">
@@ -130,10 +130,28 @@ export default {
     const showFirstSix = computed(() => {
       return projects.value.slice(0, 6);
     });
+    const currentIndex = ref(0);
+    const currentImg = ref(null);
     const modalIsActive = ref(false);
 
     function toggleModal() {
       modalIsActive.value = !modalIsActive.value;
+    }
+
+    function next() {
+      currentIndex.value += 1;
+    }
+
+    function prev() {
+      currentIndex.value -= 1;
+    }
+
+    function getCurrentImg(index) {
+      modalIsActive.value = !modalIsActive.value;
+      if (!modalIsActive) {
+        currentIndex.value = index;
+        currentImg.value = projects.value[currentIndex.value];
+      }
     }
 
     onMounted(() => {});
@@ -143,6 +161,11 @@ export default {
       modalIsActive,
       toggleModal,
       showFirstSix,
+      currentImg,
+      currentIndex,
+      next,
+      prev,
+      getCurrentImg,
     };
   },
 };
@@ -154,7 +177,6 @@ export default {
 }
 .gallery-item {
   border-radius: 5px;
-  margin: 0 15px;
   margin-top: 55px;
 }
 .g-img-item,

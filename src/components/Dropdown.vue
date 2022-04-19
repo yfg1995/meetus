@@ -2,7 +2,7 @@
     <li @mouseenter="isActive = true" class="menu-item title-item cp">
       <a>{{ title }}</a>
 
-        <ul class="sub-item" :class="{ activeVisible: isActive }" @mouseleave="isActive = false">
+        <ul class="sub-item" :class="{ activeVisible: isActive }">
           <li v-for="(item, idx) in items" :key="idx" class="menu-item" @click="toggleClass">
             <router-link :to="item.link">{{ item.title }}</router-link>
           </li>
@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import { ref } from "vue";
+import { onMounted, ref } from "vue";
 
 export default {
   props: ["title", "items"],
@@ -21,6 +21,20 @@ export default {
     function toggleClass() {
       isActive.value = !isActive.value;
     }
+
+    onMounted(() => {
+      document.addEventListener("mouseover", (e) => {
+        if (
+          !e.target.closest(".sub-menu") &&
+          !e.target.closest(".title-item") &&
+          !e.target.closest("header")
+        ) {
+          if (isActive.value) {
+            isActive.value = false;
+          }
+        }
+      });
+    });
 
     return {
       isActive,

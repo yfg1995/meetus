@@ -24,6 +24,7 @@ export default {
 <style scoped>
 div {
   width: calc((100% - 30px) / 3);
+  padding: 0 15px;
 }
 .projects-enter-from {
   opacity: 0;

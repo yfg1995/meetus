@@ -140,7 +140,7 @@ body section:first-of-type {
 }
 
 section {
-  margin-top: 100px;
+  padding-top: 100px;
 }
 
 /* HELPERS */
@@ -248,6 +248,10 @@ section {
 
   .header-container {
     max-width: 1220px;
+  }
+
+  section {
+    padding-top: 90px;
   }
 }
 

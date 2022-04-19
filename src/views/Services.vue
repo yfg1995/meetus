@@ -12,7 +12,7 @@
 
       <div class="services_cards">
         <div class="services_cards__item">
-          <img src="/buildings.png" alt="" />
+          <img src="/buildings.png" alt="buildings image" />
           <h4>architecture</h4>
           <p>
             If you are looking at blank cassettes on the web, you may be very
@@ -22,7 +22,7 @@
         </div>
 
         <div class="services_cards__item">
-          <img src="/skyline.png" alt="" />
+          <img src="/skyline.png" alt="skyline image" />
           <h4>interior design</h4>
           <p>
             If you are looking at blank cassettes on the web, you may be very
@@ -32,7 +32,7 @@
         </div>
 
         <div class="services_cards__item">
-          <img src="/sketch.png" alt="" />
+          <img src="/sketch.png" alt="sketch image" />
           <h4>concept design</h4>
           <p>
             If you are looking at blank cassettes on the web, you may be very
@@ -42,7 +42,7 @@
         </div>
 
         <div class="services_cards__item">
-          <img src="/buildings.png" alt="" />
+          <img src="/buildings.png" alt="buildings image" />
           <h4>architecture</h4>
           <p>
             If you are looking at blank cassettes on the web, you may be very
@@ -52,7 +52,7 @@
         </div>
 
         <div class="services_cards__item">
-          <img src="/skyline.png" alt="" />
+          <img src="/skyline.png" alt="skyline image" />
           <h4>interior design</h4>
           <p>
             If you are looking at blank cassettes on the web, you may be very
@@ -62,7 +62,7 @@
         </div>
 
         <div class="services_cards__item">
-          <img src="/sketch.png" alt="" />
+          <img src="/sketch.png" alt="sketch image" />
           <h4>concept design</h4>
           <p>
             If you are looking at blank cassettes on the web, you may be very
@@ -74,10 +74,6 @@
     </div>
   </section>
 </template>
-
-<script>
-export default {};
-</script>
 
 <style scoped>
 section {

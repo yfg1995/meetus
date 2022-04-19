@@ -197,6 +197,7 @@ section:first-of-type {
 }
 .home-about__banner {
   background: var(--bg-linear-gradient-right);
+  padding-top: 0;
 }
 .home-about__banner .member__card {
   position: relative;

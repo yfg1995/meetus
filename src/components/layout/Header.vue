@@ -70,8 +70,8 @@ export default {
         if (
           route.name != "contact" &&
           route.name != "notFound" &&
-          (document.body.scrollTop > 20 ||
-            document.documentElement.scrollTop > 20)
+          (document.body.scrollTop > 100 ||
+            document.documentElement.scrollTop > 100)
         ) {
           fixedHeader.value = true;
         } else {
@@ -91,17 +91,18 @@ export default {
 
 <style scoped>
 .header {
-  position: fixed;
+  position: relative;
   display: flex;
   align-items: center;
   width: 100%;
   min-height: 100px;
   z-index: 99;
   background: var(--bg-linear-gradient-right);
-  transition: all 0.2s linear;
+  transition: all 0.3s linear;
 }
 .headerScroll {
   background: #111;
+  position: fixed;
 }
 .headerScroll .menu-item a:before,
 .headerScroll .menu-item a:after {
