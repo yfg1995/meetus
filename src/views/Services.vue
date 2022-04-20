@@ -104,7 +104,7 @@ section {
   position: relative;
   width: 100%;
   height: 100%;
-  border-radius: 10px;
+  border-radius: 1em;
   background: #fff;
   overflow: hidden;
 }
@@ -114,7 +114,7 @@ section {
 .services_card:before {
   position: absolute;
   content: "";
-  width: 1000px;
+  width: 800px;
   height: 100%;
   top: 5%;
   right: 300px;
