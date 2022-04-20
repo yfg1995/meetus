@@ -35,7 +35,7 @@ div {
   transform: translateY(30px);
 }
 .projects-enter-active {
-  transition: all 0.3s ease-in-out;
+  transition: all 0.2s linear;
 }
 .projects-leave-active {
   position: absolute;

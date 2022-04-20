@@ -11,64 +11,76 @@
       </div>
 
       <div class="services_cards">
-        <div class="services_cards__item">
-          <img src="/buildings.png" alt="buildings image" />
-          <h4>architecture</h4>
-          <p>
-            If you are looking at blank cassettes on the web, you may be very
-            confused at the difference in price. You may see some for as low as
-            $17 each.
-          </p>
+        <div class="services_card">
+          <div class="services_card__item">
+            <img src="/buildings.png" alt="buildings image" />
+            <h4>architecture</h4>
+            <p>
+              If you are looking at blank cassettes on the web, you may be very
+              confused at the difference in price. You may see some for as low
+              as $17 each.
+            </p>
+          </div>
         </div>
 
-        <div class="services_cards__item">
-          <img src="/skyline.png" alt="skyline image" />
-          <h4>interior design</h4>
-          <p>
-            If you are looking at blank cassettes on the web, you may be very
-            confused at the difference in price. You may see some for as low as
-            $17 each.
-          </p>
+        <div class="services_card">
+          <div class="services_card__item">
+            <img src="/skyline.png" alt="skyline image" />
+            <h4>interior design</h4>
+            <p>
+              If you are looking at blank cassettes on the web, you may be very
+              confused at the difference in price. You may see some for as low
+              as $17 each.
+            </p>
+          </div>
         </div>
 
-        <div class="services_cards__item">
-          <img src="/sketch.png" alt="sketch image" />
-          <h4>concept design</h4>
-          <p>
-            If you are looking at blank cassettes on the web, you may be very
-            confused at the difference in price. You may see some for as low as
-            $17 each.
-          </p>
+        <div class="services_card">
+          <div class="services_card__item">
+            <img src="/sketch.png" alt="sketch image" />
+            <h4>concept design</h4>
+            <p>
+              If you are looking at blank cassettes on the web, you may be very
+              confused at the difference in price. You may see some for as low
+              as $17 each.
+            </p>
+          </div>
         </div>
 
-        <div class="services_cards__item">
-          <img src="/buildings.png" alt="buildings image" />
-          <h4>architecture</h4>
-          <p>
-            If you are looking at blank cassettes on the web, you may be very
-            confused at the difference in price. You may see some for as low as
-            $17 each.
-          </p>
+        <div class="services_card">
+          <div class="services_card__item">
+            <img src="/buildings.png" alt="buildings image" />
+            <h4>architecture</h4>
+            <p>
+              If you are looking at blank cassettes on the web, you may be very
+              confused at the difference in price. You may see some for as low
+              as $17 each.
+            </p>
+          </div>
         </div>
 
-        <div class="services_cards__item">
-          <img src="/skyline.png" alt="skyline image" />
-          <h4>interior design</h4>
-          <p>
-            If you are looking at blank cassettes on the web, you may be very
-            confused at the difference in price. You may see some for as low as
-            $17 each.
-          </p>
+        <div class="services_card">
+          <div class="services_card__item">
+            <img src="/skyline.png" alt="skyline image" />
+            <h4>interior design</h4>
+            <p>
+              If you are looking at blank cassettes on the web, you may be very
+              confused at the difference in price. You may see some for as low
+              as $17 each.
+            </p>
+          </div>
         </div>
 
-        <div class="services_cards__item">
-          <img src="/sketch.png" alt="sketch image" />
-          <h4>concept design</h4>
-          <p>
-            If you are looking at blank cassettes on the web, you may be very
-            confused at the difference in price. You may see some for as low as
-            $17 each.
-          </p>
+        <div class="services_card">
+          <div class="services_card__item">
+            <img src="/sketch.png" alt="sketch image" />
+            <h4>concept design</h4>
+            <p>
+              If you are looking at blank cassettes on the web, you may be very
+              confused at the difference in price. You may see some for as low
+              as $17 each.
+            </p>
+          </div>
         </div>
       </div>
     </div>
@@ -86,7 +98,33 @@ section {
   grid-template-rows: 360px 360px;
   grid-gap: 30px;
 }
-.services_cards__item {
+.services_card {
+  display: grid;
+  place-items: center;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  background: #fff;
+  overflow: hidden;
+}
+.services_card:hover {
+  box-shadow: 0px 10px 30px 0px rgb(0 0 0 / 8%);
+}
+.services_card:before {
+  position: absolute;
+  content: "";
+  width: 1000px;
+  height: 100%;
+  top: 5%;
+  right: 300px;
+  background: var(--bg-linear-gradient-right);
+  transform: rotate(-45deg) translate(0, -100px);
+}
+.services_card:hover:before {
+  animation: cardEffect 1.5s;
+}
+.services_card__item {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -94,13 +132,20 @@ section {
   border-radius: 10px;
   transition: all 0.2s linear;
   background: #f9f9ff;
+  overflow: hidden;
+  z-index: 1;
+  height: 100%;
 }
-.services_cards__item img {
+.services_card__item:hover {
+  background: #fff;
+  transform: translate(5px, -5px);
+}
+.services_card__item img {
   width: 60px;
   height: 60px;
   margin-bottom: 35px;
 }
-.services_cards__item h4 {
+.services_card__item h4 {
   position: relative;
   font-weight: 500;
   text-transform: uppercase;
@@ -108,13 +153,14 @@ section {
   margin-bottom: 20px;
   transition: all 0.15s linear;
 }
-.services_cards__item:hover {
-  background: #fff;
-  box-shadow: 0px 10px 30px 0px rgb(0 0 0 / 8%);
-  transform: translate(5px, -5px);
-}
-.services_cards__item:hover h4 {
+.services_card__item:hover h4 {
   color: var(--clr-primary);
+}
+
+@keyframes cardEffect {
+  100% {
+    transform: rotate(-45deg) translate(0, 900px);
+  }
 }
 
 /* RESPONSIVE */

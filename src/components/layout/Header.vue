@@ -70,8 +70,8 @@ export default {
         if (
           route.name != "contact" &&
           route.name != "notFound" &&
-          (document.body.scrollTop > 200 ||
-            document.documentElement.scrollTop > 200)
+          (document.body.scrollTop > 150 ||
+            document.documentElement.scrollTop > 150)
         ) {
           fixedHeader.value = true;
         } else {
