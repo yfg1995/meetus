@@ -116,7 +116,7 @@ section {
   width: 800px;
   height: 100%;
   top: 5%;
-  right: 300px;
+  right: 320px;
   background: var(--bg-linear-gradient-right);
   transform: rotate(-45deg) translate(0, -100px);
 }
