@@ -104,8 +104,7 @@ section {
   position: relative;
   width: 100%;
   height: 100%;
-  border-radius: 1em;
-  background: #fff;
+  border-radius: 15px;
   overflow: hidden;
 }
 .services_card:hover {
@@ -122,7 +121,7 @@ section {
   transform: rotate(-45deg) translate(0, -100px);
 }
 .services_card:hover:before {
-  animation: cardEffect 1.5s;
+  animation: cardEffect 1s;
 }
 .services_card__item {
   display: flex;
