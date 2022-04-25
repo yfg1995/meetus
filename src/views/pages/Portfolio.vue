@@ -25,7 +25,7 @@
 
             <img
             class="img-fluid"
-            :src="`gallery/${project.image}`"
+            :src="`${project.image}`"
             :alt="`${project.title}`"
           />
           </div>
@@ -50,7 +50,7 @@
                 <div class="g-img-item">
                   <img
                     class="img-fluid"
-                    :src="`gallery/${project.image}`"
+                    :src="`${project.image}`"
                     :alt="`${project.title}`"
                   />
                   <a class="eye" href="#" @click="toggleModal">
@@ -79,7 +79,7 @@
                 <div class="g-img-item">
                   <img
                     class="img-fluid"
-                    :src="`gallery/${project.image}`"
+                    :src="`${project.image}`"
                     :alt="`${project.title}`"
                   />
                   <a class="eye" href="#" @click="toggleModal">
@@ -130,7 +130,6 @@ export default {
       return projects.value.slice(0, 6);
     });
     const currentIndex = ref(0);
-    const currentImg = ref(null);
     const modalIsActive = ref(false);
 
     function toggleModal() {
@@ -145,19 +144,13 @@ export default {
       currentIndex.value -= 1;
     }
 
-    onMounted(() => {
-      document.addEventListener("click", (e) => {
-        currentImg.value = e.target.id;
-        console.log(currentImg);
-      });
-    });
+    onMounted(() => {});
 
     return {
       projects,
       modalIsActive,
       toggleModal,
       showFirstSix,
-      currentImg,
       currentIndex,
       next,
       prev,

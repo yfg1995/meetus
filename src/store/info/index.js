@@ -118,47 +118,47 @@ export default {
       projects: [
         {
           title: "3D helmet design",
-          image: "project-1.jpg",
+          image: "gallery/project-1.jpg",
           category: "vector",
         },
         {
           title: "2D vinyl design",
-          image: "project-2.jpg",
+          image: "gallery/project-2.jpg",
           category: "ui/ux",
         },
         {
           title: "creative poster design",
-          image: "project-3.jpg",
+          image: "gallery/project-3.jpg",
           category: "raster",
         },
         {
           title: "embosed logo design",
-          image: "project-4.jpg",
+          image: "gallery/project-4.jpg",
           category: "vector",
         },
         {
           title: "3D disposable bottle",
-          image: "project-5.jpg",
+          image: "gallery/project-5.jpg",
           category: "ui/ux",
         },
         {
           title: "3D logo design",
-          image: "project-6.jpg",
+          image: "gallery/project-6.jpg",
           category: "printing",
         },
         {
           title: "embosed logo design",
-          image: "project-3.jpg",
+          image: "gallery/project-3.jpg",
           category: "printing",
         },
         {
           title: "2D vinyl design",
-          image: "project-2.jpg",
+          image: "gallery/project-2.jpg",
           category: "raster",
         },
         {
           title: "creative poster design",
-          image: "project-1.jpg",
+          image: "gallery/project-1.jpg",
           category: "ui/ux",
         },
       ],

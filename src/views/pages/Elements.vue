@@ -345,7 +345,7 @@
             <div class="percentage">Percentages</div>
           </div>
           <div class="table-row d-flex" v-for="(table, idx) in tableStats" :key="idx">
-            <div class="serial">0{{ idx + 1 }}</div>
+            <div class="serial">{{ idx < 9 ? '0' + (idx + 1) : idx + 1 }}</div>
             <div class="country">
               <img :src="table.flag" :alt="`${table.country} flag`" />{{table.country}}
             </div>
