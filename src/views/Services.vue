@@ -2,12 +2,17 @@
   <section class="p_120">
     <div class="container">
       <div class="main_title">
-        <h2 class="bold uppercase">offerings to my clients</h2>
-        <p>
-          If you are looking at blank cassettes on the web, you may be very
-          confused at the difference in price. You may see some for as low as
-          $17 each.
-        </p>
+        <observable mode="btm">
+          <h2 class="bold uppercase">offerings to my clients</h2>
+        </observable>
+
+        <observable mode="left">
+          <p>
+            If you are looking at blank cassettes on the web, you may be very
+            confused at the difference in price. You may see some for as low as
+            $17 each.
+          </p>
+        </observable>
       </div>
 
       <div class="services_cards">

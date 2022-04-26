@@ -2,8 +2,13 @@
   <section class="p_120">
     <div class="container">
       <div class="main_title">
-        <h2 class="bold uppercase">our latest featured projects</h2>
-        <p>Who are in extremely love with eco friendly system.</p>
+        <observable mode="btm">
+          <h2 class="bold uppercase">our latest featured projects</h2>
+        </observable>
+
+        <observable mode="left">
+          <p>Who are in extremely love with eco friendly system.</p>
+        </observable>
       </div>
 
       <SlideModal :show="!!modalIsActive" @close="toggleModal">
