@@ -112,42 +112,62 @@
           <observable mode="btm">
             <h3 class="bold">about myself</h3>
           </observable>
-          <p>
+          <observable mode="left">
+            <p>
             Inappropriate behavior is often laughed off as “boys will be boys,”
             women face higher conduct standards especially in the workplace.
             That's why it's crucial that, as women, our behavior on the job is
             beyond reproach. Inappropriate behavior is often laughed.
           </p>
+          </observable>
 
           <div
             class="member__about--items d-flex justify-between align-center"
           >
             <div class="member__about--item">
+              <observable mode="btm">
               <svg viewBox="0 0 448 512">
                 <path
                   d="M448 80V128C448 172.2 347.7 208 224 208C100.3 208 0 172.2 0 128V80C0 35.82 100.3 0 224 0C347.7 0 448 35.82 448 80zM393.2 214.7C413.1 207.3 433.1 197.8 448 186.1V288C448 332.2 347.7 368 224 368C100.3 368 0 332.2 0 288V186.1C14.93 197.8 34.02 207.3 54.85 214.7C99.66 230.7 159.5 240 224 240C288.5 240 348.3 230.7 393.2 214.7V214.7zM54.85 374.7C99.66 390.7 159.5 400 224 400C288.5 400 348.3 390.7 393.2 374.7C413.1 367.3 433.1 357.8 448 346.1V432C448 476.2 347.7 512 224 512C100.3 512 0 476.2 0 432V346.1C14.93 357.8 34.02 367.3 54.85 374.7z"
                 />
               </svg>
+              </observable>
+               <observable mode="btm">
               <h4>${{ members[0].donation }}M</h4>
+              </observable>
+              <observable mode="btm">
               <p>Total Donation</p>
+              </observable>
             </div>
             <div class="member__about--item">
+              <observable mode="btm">
               <svg viewBox="0 0 448 512">
                 <path
                   d="M448 336v-288C448 21.49 426.5 0 400 0H96C42.98 0 0 42.98 0 96v320c0 53.02 42.98 96 96 96h320c17.67 0 32-14.33 32-31.1c0-11.72-6.607-21.52-16-27.1v-81.36C441.8 362.8 448 350.2 448 336zM143.1 128h192C344.8 128 352 135.2 352 144C352 152.8 344.8 160 336 160H143.1C135.2 160 128 152.8 128 144C128 135.2 135.2 128 143.1 128zM143.1 192h192C344.8 192 352 199.2 352 208C352 216.8 344.8 224 336 224H143.1C135.2 224 128 216.8 128 208C128 199.2 135.2 192 143.1 192zM384 448H96c-17.67 0-32-14.33-32-32c0-17.67 14.33-32 32-32h288V448z"
                 />
               </svg>
+              </observable>
+              <observable mode="btm">
               <h4>{{ members[0].projects }}</h4>
+              </observable>
+              <observable mode="btm">
               <p>Total Projects</p>
+              </observable>
             </div>
             <div class="member__about--item">
+              <observable mode="btm">
               <svg viewBox="0 0 640 512">
                 <path
                   d="M319.9 320c57.41 0 103.1-46.56 103.1-104c0-57.44-46.54-104-103.1-104c-57.41 0-103.1 46.56-103.1 104C215.9 273.4 262.5 320 319.9 320zM369.9 352H270.1C191.6 352 128 411.7 128 485.3C128 500.1 140.7 512 156.4 512h327.2C499.3 512 512 500.1 512 485.3C512 411.7 448.4 352 369.9 352zM512 160c44.18 0 80-35.82 80-80S556.2 0 512 0c-44.18 0-80 35.82-80 80S467.8 160 512 160zM183.9 216c0-5.449 .9824-10.63 1.609-15.91C174.6 194.1 162.6 192 149.9 192H88.08C39.44 192 0 233.8 0 285.3C0 295.6 7.887 304 17.62 304h199.5C196.7 280.2 183.9 249.7 183.9 216zM128 160c44.18 0 80-35.82 80-80S172.2 0 128 0C83.82 0 48 35.82 48 80S83.82 160 128 160zM551.9 192h-61.84c-12.8 0-24.88 3.037-35.86 8.24C454.8 205.5 455.8 210.6 455.8 216c0 33.71-12.78 64.21-33.16 88h199.7C632.1 304 640 295.6 640 285.3C640 233.8 600.6 192 551.9 192z"
                 />
               </svg>
+              </observable>
+              <observable mode="btm">
               <h4>{{ members[0].volunteers }}</h4>
+              </observable>
+              <observable mode="btm">
               <p>Total Volunteers</p>
+              </observable>
             </div>
           </div>
         </div>

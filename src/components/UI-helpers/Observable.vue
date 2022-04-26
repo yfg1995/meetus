@@ -1,12 +1,11 @@
 <template>
-  <!-- <span ref="spanRef"> -->
+  <span ref="spanRef" />
   <slot></slot>
-  <!-- </span> -->
 </template>
 
 <script>
 import { onMounted, ref } from "vue";
-// import { IntersectionTransitions } from "@/helpers/IntersectionTransitions.js";
+import { IntersectionTransitions } from "@/helpers/IntersectionTransitions.js";
 
 export default {
   props: {
@@ -15,14 +14,14 @@ export default {
   setup(props) {
     const spanRef = ref(null);
     onMounted(() => {
-      // const el = spanRef.value.children[0];
-      // const el = spanRef.value;
-      // console.log(el);
-      // el.classList.add("ivtr");
-      // if (props.mode) {
-      //   el.classList.add(`ivtr--${props.mode}`);
-      // }
-      // new IntersectionTransitions(el);
+      const el = spanRef.value.nextElementSibling;
+      console.log(el);
+
+      el.classList.add("ivtr");
+      if (props.mode) {
+        el.classList.add(`ivtr--${props.mode}`);
+      }
+      new IntersectionTransitions(el);
     });
 
     return {
@@ -32,4 +31,14 @@ export default {
 };
 </script>
 
+
+<style scoped>
+span {
+  position: absolute;
+  width: 0;
+  height: 0;
+  visibility: hidden;
+  display: none;
+}
+</style>
 

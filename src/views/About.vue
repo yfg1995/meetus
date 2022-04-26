@@ -301,6 +301,8 @@ export default {
   padding: 20px;
   border-radius: 6px;
   width: calc((100% - 40px) / 3);
+  display: flex;
+  flex-direction: column;
 }
 .member__about--item h4 {
   font-weight: 500;

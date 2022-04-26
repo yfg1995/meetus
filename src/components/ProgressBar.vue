@@ -53,22 +53,24 @@ export default {
   border-radius: 10px;
 }
 .member__skill_progress {
+  position: relative;
   height: 10px;
   border-radius: 10px;
   background: #f2f2f2;
 }
 .member__skill_progress-bar {
+  position: absolute;
   background: var(--bg-linear-gradient-left);
   transition: width 1s ease-in-out;
   height: 10px;
   border-radius: 5px;
   width: 0;
-  width: calc(var(--progressWidth) * 1%);
+  /* width: calc(var(--progressWidth) * 1%); */
 }
 
-/* .member__skill_progress-bar.inView {
+.member__skill_progress-bar.inView {
   width: calc(var(--progressWidth) * 1%);
-} */
+}
 
 .member__skill_item:not(:last-of-type) {
   margin-bottom: 18px;
