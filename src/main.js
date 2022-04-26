@@ -8,7 +8,9 @@ import Observable from './components/UI-helpers/Observable.vue';
 const app = createApp(App);
 
 app.component('vue-select', VueSelect);
-app.component('observable', Observable)
+app.component('observable', Observable);
+
 app.use(router);
 app.use(store);
+
 app.mount('#app');

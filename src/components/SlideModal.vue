@@ -57,11 +57,10 @@ dialog {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 100%;
+  width: 30%;
   z-index: 9900;
   border: none;
   background: transparent;
-  overflow: hidden;
   user-select: none;
 }
 

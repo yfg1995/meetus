@@ -297,12 +297,12 @@ export default {
   margin-bottom: 40px;
 }
 .member__about--item {
+  display: flex;
+  flex-direction: column;
   border: 1px solid #eee;
   padding: 20px;
   border-radius: 6px;
   width: calc((100% - 40px) / 3);
-  display: flex;
-  flex-direction: column;
 }
 .member__about--item h4 {
   font-weight: 500;

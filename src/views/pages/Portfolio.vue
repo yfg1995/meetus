@@ -259,16 +259,22 @@ export default {
 /* SLIDER MODAL */
 .gallery-slider {
   position: relative;
-  max-width: 1000px;
-  margin: 0 auto;
+  margin: 20px auto;
+}
+.slide-img-wrap {
+  display: flex;
+  width: 340px;
+  height: 340px;
+  overflow: hidden;
 }
 .modal-close {
+  position: absolute;
+  top: -10%;
+  right: -5%;
   width: 18px;
   height: 18px;
   z-index: 9999;
   transition: all 0.25s linear;
-  margin-bottom: 20px;
-  margin-left: 107%;
 }
 .modal-close svg {
   width: 18px;
@@ -289,10 +295,10 @@ export default {
   transition: all 0.25s linear;
 }
 .modal-previous {
-  left: 0;
+  left: -50%;
 }
 .modal-next {
-  right: 0;
+  right: -50%;
 }
 .modal-previous svg,
 .modal-next svg {
@@ -313,13 +319,6 @@ export default {
 .slide-enter-from,
 .slide-leave-to {
   opacity: 0;
-}
-
-.slide-img-wrap {
-  display: flex;
-  width: 340px;
-  height: 340px;
-  overflow: hidden;
 }
 
 /* RESPONSIVE */
