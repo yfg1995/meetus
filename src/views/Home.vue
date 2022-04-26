@@ -19,11 +19,13 @@
           </h3>
           <h4 class="bold">{{ members[0].profession }}</h4>
 
-          <p>
-            You will begin to realise why this exercise is called the Dickens
-            Pattern (with reference to the ghost showing Scrooge some different
-            futures).
-          </p>
+          
+            <p>
+              You will begin to realise why this exercise is called the Dickens
+              Pattern (with reference to the ghost showing Scrooge some different
+              futures).
+            </p>
+    
 
           <ul class="member__contact">
             <li>
@@ -107,7 +109,9 @@
     <div class="container">
       <div class="member__info d-flex justify-between align-center">
         <div class="member__about">
-          <h3 class="bold">about myself</h3>
+          <observable mode="btm">
+            <h3 class="bold">about myself</h3>
+          </observable>
           <p>
             Inappropriate behavior is often laughed off as “boys will be boys,”
             women face higher conduct standards especially in the workplace.
@@ -161,7 +165,7 @@
     <!-- container -->
   </section>
   <Services />
-  <Portfolio />
+  <Portfolio :showSix="true" />
 </template>
 
 <script>

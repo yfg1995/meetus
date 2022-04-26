@@ -48,7 +48,7 @@ export default {
   left: 0;
   height: 100vh;
   width: 100vw;
-  background: rgba(0, 0, 0, 0.25);
+  background: rgba(0, 0, 0, 0.8);
   z-index: 9500;
 }
 
@@ -62,7 +62,9 @@ dialog {
   border: none;
   background: transparent;
   overflow: hidden;
+  user-select: none;
 }
+
 .dialog-enter-from,
 .dialog-leave-to {
   opacity: 0;

@@ -7,7 +7,9 @@
 
     <div class="member__skill_progress-br">
       <div class="member__skill_progress">
-        <div :data-progress="skill[1]" class="member__skill_progress-bar"></div>
+        <observable mode="custom">
+          <div :data-progress="skill[1]" class="member__skill_progress-bar"></div>
+        </observable>
       </div>
     </div>
   </div>
@@ -29,32 +31,12 @@ export default {
     onMounted(() => {
       const bars = document.querySelectorAll(".member__skill_progress-bar");
       const counters = document.querySelectorAll(".counter");
-      const speed = 200;
-
-      function progressBar() {
-        bars.forEach((bar) => {
-          let getWidth = parseFloat(bar.dataset.progress);
-          for (let i = 0; i < getWidth; i++) {
-            bar.style.width = i + "%";
-          }
-        });
-        counters.forEach((counter) => {
-          const animate = () => {
-            const value = +counter.getAttribute("data-progress");
-            const data = +counter.innerText;
-            const time = value / speed;
-            if (data < value) {
-              counter.innerText = Math.ceil(data + time);
-              setTimeout(animate, 100);
-            } else {
-              counter.innerText = value;
-            }
-          };
-          animate();
-        });
-      }
-      setInterval(progressBar, 300);
-      clearInterval(progressBar);
+      bars.forEach((bar, key) => {
+        for (let i = 0; i <= parseFloat(bar.dataset.progress); i++) {
+          bar.style.setProperty("--progressWidth", i);
+          counters[key].innerText = i;
+        }
+      });
     });
 
     return {
@@ -77,11 +59,17 @@ export default {
 }
 .member__skill_progress-bar {
   background: var(--bg-linear-gradient-left);
-  transition: width 1.5s ease-in-out;
+  transition: width 1s ease-in-out;
   height: 10px;
   border-radius: 5px;
-  width: 0%;
+  width: 0;
+  width: calc(var(--progressWidth) * 1%);
 }
+
+/* .member__skill_progress-bar.inView {
+  width: calc(var(--progressWidth) * 1%);
+} */
+
 .member__skill_item:not(:last-of-type) {
   margin-bottom: 18px;
 }

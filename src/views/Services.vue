@@ -119,9 +119,10 @@ section {
   right: 320px;
   background: var(--bg-linear-gradient-right);
   transform: rotate(-45deg) translate(0, -100px);
+  transition: transform 0.65s ease-in-out;
 }
 .services_card:hover:before {
-  animation: cardEffect 1s;
+  transform: rotate(-45deg) translate(0, 900px);
 }
 .services_card__item {
   display: flex;
@@ -154,12 +155,6 @@ section {
 }
 .services_card__item:hover h4 {
   color: var(--clr-primary);
-}
-
-@keyframes cardEffect {
-  100% {
-    transform: rotate(-45deg) translate(0, 900px);
-  }
 }
 
 /* RESPONSIVE */

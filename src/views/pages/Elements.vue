@@ -352,7 +352,7 @@
             <div class="visit">{{table.visit}}</div>
             <div class="percentage">
               <div class="progress-br">
-                <div class="progress-bar" :class="`table-bar-${table.color}`"></div>
+                <div class="progress-bar" :style="{'--color': table.color}"></div>
               </div>
             </div>
           </div>
@@ -680,20 +680,14 @@ export default {
       totalVisits.value += sum.visit;
     });
 
-    tableStats.value.forEach((width) => {
-      barWidth.value = (width.visit * 100) / totalVisits.value;
-      getWidth.value.push(ref(barWidth.value));
-      return { getWidth };
-    });
-
     onMounted(() => {
       const bars = document.querySelectorAll(".progress-bar");
 
-      bars.forEach((bar, idx) => {
-        let width = getWidth.value[idx];
-        for (let i = 0; i < width.value; i++) {
-          bar.style.width = i + "%";
-        }
+      tableStats.value.forEach((bar, k) => {
+        bars[k].style.setProperty(
+          "--progress",
+          (bar.visit * 100) / totalVisits.value
+        );
       });
     });
 
@@ -861,6 +855,8 @@ h6 {
   height: 5px;
   transition: width 1.5s ease-in-out;
   border-radius: 5px;
+  background: var(--color);
+  width: calc(var(--progress) * 1%);
 }
 
 /* IMAGE GALLERY */
